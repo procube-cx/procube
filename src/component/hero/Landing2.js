@@ -7,15 +7,16 @@ const Landing2 = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".cont",
-        start: "top bottom",
-        end: "bottom bottom",
-        scrub: true,
-        markers: false
-      }
-    });
+    // const tl = gsap.timeline({
+    //   scrollTrigger: {
+        // trigger: ".cont",
+        // start: "top bottom",
+        // end: "bottom bottom",
+        // scrub: true,
+        // markers: false
+    //   }
+    // });
+    const tl = gsap.timeline();
     const halfScreenHeight = window.innerHeight / 1;
 
     tl.from(".image-wrapper img", {
@@ -24,10 +25,16 @@ const Landing2 = () => {
       scale: 0.2, 
       ease: "none"
     });
+    // tl.to(".image-wrapper img", {
+    //     x:30,
+    //     y:-halfScreenHeight/2,
+    //   scale: 0.5, 
+    //   ease: "none"
+    // });
     tl.to(".image-wrapper img", {
-        x:30,
-        y:-halfScreenHeight/2,
-      scale: 0.5, 
+        x:0,
+        y:0,
+      scale: 0.8, 
       ease: "none"
     });
     tl.to(".image-wrapper img", {
@@ -36,12 +43,15 @@ const Landing2 = () => {
       scale: 0.8, 
       ease: "none"
     });
-    tl.to(".image-wrapper img", {
-        x:0,
-        y:0,
-      scale: 0.8, 
-      ease: "none"
-    });
+
+    ScrollTrigger.create({
+        trigger: ".cont",
+        start: "top bottom",
+        end: "bottom bottom",
+        animation: tl,
+        scrub: true,
+        markers: false
+    })
   }, []);
 
   return (
