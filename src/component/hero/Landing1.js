@@ -8,9 +8,9 @@ const Landing1 = () => {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from(".line span", {
-      duration: 0.2,
+      duration: 0.6,
       y: -100,
-      opacity: 1,
+      opacity: 0,
       ease: "power4.out",
       delay: 1,
       stagger: {

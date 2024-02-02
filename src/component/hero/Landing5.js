@@ -42,8 +42,6 @@ const card = (heading, icon, title, key) => {
         </div>
     </div>
 </div>
-
-
     )
 }
 

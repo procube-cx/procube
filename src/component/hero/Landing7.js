@@ -9,7 +9,7 @@ const data = [
     }
 ]
 
-const Lanidng6 = () => {
+const Landing7 = () => {
   return (
     <div className='bg-vector bg-no-repeat h-screen max-h-[900px] px-6 md:px-24 py-6'>
         <div className='flex flex-col justify-center items-center h-full'>
@@ -27,4 +27,4 @@ const Lanidng6 = () => {
   )
 }
 
-export default Lanidng6
+export default Landing7
