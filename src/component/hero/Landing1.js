@@ -28,13 +28,13 @@ const Landing1 = () => {
         <div className='flex w-full h-full flex-col justify-center'>
           <div class="container">
             <div class="line">
-              <span className='text-white'>Crafting Exceptional </span>
+              <span>Crafting Exceptional </span>
             </div>
             <div class="line">
-              <span className='text-white'>Digital Products, Designs,</span>
+              <span>Digital Products, Designs,</span>
             </div>
             <div class="line">
-              <span className='text-white'> and Branding</span>
+              <span> and Branding</span>
             </div>
           </div>
         </div>

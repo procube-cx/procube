@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import large from '../../assets/images/large.png'
 
-const ImageScrollEffect = () => {
+const Landing2 = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +36,12 @@ const ImageScrollEffect = () => {
       scale: 0.8, 
       ease: "none"
     });
+    tl.to(".image-wrapper img", {
+        x:0,
+        y:0,
+      scale: 0.8, 
+      ease: "none"
+    });
   }, []);
 
   return (
@@ -47,5 +53,5 @@ const ImageScrollEffect = () => {
   );
 };
 
-export default ImageScrollEffect;
+export default Landing2;
 
