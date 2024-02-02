@@ -26,14 +26,14 @@ const Landing1 = () => {
     <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] pt-0 md:py-4 px-3 bg-black'>
       <div className='w-full h-full purplegradient rounded-md'>
         <div className='flex w-full h-full flex-col justify-center'>
-          <div class="container">
-            <div class="line">
+          <div className="container">
+            <div className="line">
               <span>Crafting Exceptional </span>
             </div>
-            <div class="line">
+            <div className="line">
               <span>Digital Products, Designs,</span>
             </div>
-            <div class="line">
+            <div className="line">
               <span> and Branding</span>
             </div>
           </div>
