@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing1 from './component/hero/Landing1';
+import Landing2 from './component/hero/Landing2';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-black'>
+      <Landing1 />
+      <Landing2 />
     </div>
   );
 }
