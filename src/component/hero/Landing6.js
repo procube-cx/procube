@@ -73,8 +73,10 @@ const Landing6 = () => {
     }, [activeCard]);
 
     return (
-        <div className='relative flex flex-col md:flex-row w-full px-6 md:px-24 py-6 md:py-10 overflow-hidden gap-x-28 h-screen max-h-[900px]'>
-            <div className='flex md:flex-1 h-full flex-col justify-center'>
+        <div className='w-full px-6 md:px-24 py-6 md:py-10  min-h-screen max-h-[900px]'>
+            <p className='w-1/2 font-normal text-8xl !leading-tight uppercase'>Process & Approach</p>
+        <div className='w-full flex flex-col md:flex-row overflow-hidden gap-x-28'>
+            <div className='flex md:flex-1 h-full flex-col my-auto'>
                 {data.map((cardDetail) => (
                     <Card
                         key={cardDetail.id} // added key prop
@@ -89,6 +91,7 @@ const Landing6 = () => {
             <div className='flex md:flex-1 h-full flex-col justify-center'>
                 <img src={process} alt="process" className='w-full mx-auto' />
             </div>
+        </div>
         </div>
     );
 };
