@@ -14,23 +14,23 @@ const Landing2 = () => {
     tl.from(".image-wrapper img", {
       x: 60,
       y: -halfScreenHeight,
-      scale: 0.2,
+      scale: 0.15,
       ease: "none"
     });
 
-    // tl.to(".image-wrapper img", {
-    //   x: 0,
-    //   y: 0,
-    //   scale: 0.8,
-    //   ease: "none"
-    // });
+    tl.to(".image-wrapper img", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      ease: "none"
+    });
 
-    // tl.to(".image-wrapper img", {
-    //   x: 0,
-    //   y: 0,
-    //   scale: 0.8,
-    //   ease: "none"
-    // });
+    tl.to(".image-wrapper img", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      ease: "none"
+    });
 
     ScrollTrigger.create({
       trigger: ".cont",

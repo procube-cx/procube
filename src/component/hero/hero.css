@@ -2,15 +2,13 @@
 
 .container{
   .line{
-    width: 70%;
-    height: 70px;
+    width: 100%;
+    /* height: 100px; */
     position: relative;
     overflow: hidden;
     span{
       position: absolute;
       color: white;
-      font-size: 3rem;
-      line-height: 4.2rem;
     }
   }
 }
