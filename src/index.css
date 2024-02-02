@@ -2,8 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* use font neue montreal */
-
 
 body {
   margin: 0;
@@ -14,9 +12,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family : nneue montreal;
+}
+
+@font-face {
+  font-family: 'neue montreal';
+  src: url('./font/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 .purplegradient{
