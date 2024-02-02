@@ -28,7 +28,7 @@ const Landing4 = () => {
             <motion.div 
                 initial={{opacity: 0, x: 100}}
                 animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 100}}
-                transition={{duration: 1}}  
+                transition={{duration: 1, delay: 0.5}}  
                 className='flex md:flex-1 h-full flex-col justify-end col-span-5'
             >
                 <p className='font-normal text-[120px] !leading-tight uppercase italic'>Drive Change</p>
