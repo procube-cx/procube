@@ -6,11 +6,11 @@ import that from '../../assets/images/that.png'
 const Landing4 = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.5
+        threshold: 0.1
     });
 
     return (
-        <div className='grid grid-cols-3 md:grid-cols-11 w-full px-6 md:px-24 py-6 md:py-10 gap-x-28 min-h-screen max-h-[900px] md:overflow-y-hidden'>
+        <div className='grid grid-cols-3 md:grid-cols-11 w-full px-6 md:px-24 py-6 md:py-10 gap-x-28 min-h-screen max-h-[900px] overflow-y-hidden'>
             <motion.div
                 ref={ref}
                 initial={{opacity: 0, x: -100}}
