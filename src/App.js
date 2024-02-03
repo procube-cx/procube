@@ -25,9 +25,9 @@ function App() {
       {/* <Landing8 /> */}
       <Landing9 />
       </div>
-      {/* <div className='min-h-screen relative bg-black'> */}
-      {/* <Footer /> */}
-      {/* </div> */}
+      <div className='min-h-screen relative bg-black'>
+      <Footer />
+      </div>
     </div>
   );
 }

@@ -6,27 +6,32 @@ const data = [
     {
         id: 1,
         title: "Statergy",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. "
+        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        icon: process
     },
     {
         id: 2,
         title: "Design",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. "
+        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        icon: process
     },
     {
         id: 3,
         title: "Visualization",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. "
+        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        icon: process
     },
     {
         id: 4,
         title: "Development",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. "
+        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        icon: process
     },
     {
         id: 5,
         title: "Improve",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. "
+        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        icon: process
     }
 
 ]
@@ -122,7 +127,7 @@ const Landing6 = () => {
                     ))}
                 </div>
                 <div className='flex md:flex-1 h-full flex-col justify-center'>
-                    <img src={process} alt="process" className='w-full mx-auto' />
+                    <img src={data[activeCard-1].icon} alt="process" className='w-full mx-auto' />
                 </div>
             </div>
         </div>
