@@ -80,7 +80,7 @@ const data = {
 
 const Footer = () => {
     return (
-            <div className='flex flex-col w-full gap-40 md:px-24 fixed top-0'>
+            <div className='flex flex-col w-full gap-40 md:px-24 '>
                 <div className='flex flex-col w-full items-center gap-8'>
                     <div className='font-normal text-8xl max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
                     <div className='bg-[#7605C1] px-16 py-4 text-4xl rounded-full'>Contact Us</div>
