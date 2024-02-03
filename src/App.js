@@ -8,11 +8,13 @@ import Lanidng7 from './component/hero/Landing7';
 import Landing6 from './component/hero/Landing6';
 import Landing8 from './component/hero/Landing8';
 import Landing9 from './component/hero/Landing9';
+import Footer from './component/hero/Footer';
 
 
 function App() {
   return (
     <div className='bg-black text-white'>
+      <div className='relative bg-black z-50 '>
       <Landing1 />
       <Landing2 />
       <Landing3 />
@@ -22,6 +24,10 @@ function App() {
       <Landing6 />
       <Landing8 />
       <Landing9 />
+      </div>
+      <div className='min-h-screen relative overflow-y-auto'>
+      <Footer />
+      </div>
     </div>
   );
 }
