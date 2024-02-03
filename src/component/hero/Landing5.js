@@ -37,15 +37,15 @@ const Card = (heading, icon, title, key) => {
 
     useEffect(() => {
         // Set initial CSS properties for the image
-        gsap.set(`#img-${key}`, { x: 0, y: 100, skewY: -90, opacity: 0, transformOrigin: "right bottom" });
+        gsap.set(`.line #img-${key}`, { x: 0, y: 100, skewY: -90, opacity: 0, transformOrigin: "right bottom" });
     }, [key]);
 
     const handleHover = (e) => {
-        gsap.to(`#img-${key}`, { x: 0, y: 0, skewY: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" }); // Scale up on hover
+        gsap.to(`.line #img-${key}`, { x: 0, y: 0, skewY: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" }); // Scale up on hover
     };
 
     const handleHoverExit = (e) => {
-        gsap.to(`#img-${key}`, { x: 0, y: 100, skewY: -90, duration: 0.3, opacity: 0, transformOrigin: "right bottom" }); // Scale down on hover exit
+        gsap.to(`.line #img-${key}`, { x: 0, y: 100, skewY: -90, duration: 0.3, opacity: 0, transformOrigin: "right bottom" }); // Scale down on hover exit
     };
 
     return (

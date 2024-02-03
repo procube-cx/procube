@@ -16,7 +16,7 @@ function App() {
     <div className='bg-black text-white'>
       <div className='relative bg-black z-50 '>
       <Landing1 />
-      {/* <Landing2 /> */}
+      <Landing2 />
       <Landing3 />
       <Landing4 />
       <Landing5 />
