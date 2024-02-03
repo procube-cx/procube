@@ -7,6 +7,7 @@ import Landing5 from './component/hero/Landing5';
 import Lanidng7 from './component/hero/Landing7';
 import Landing6 from './component/hero/Landing6';
 import Landing8 from './component/hero/Landing8';
+import Landing9 from './component/hero/Landing9';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Lanidng7 />
       <Landing6 />
       <Landing8 />
+      <Landing9 />
     </div>
   );
 }
