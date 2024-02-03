@@ -24,7 +24,7 @@ const Landing1 = () => {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] py-0 px-0 md:py-6 md:px-6 bg-black'>
+    <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] py-0 px-0 md:py-6 md:px-6'>
       <div className='w-full h-full purplegradient md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex items-center justify-center'>
         <div className="container font-normal text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
           <div className="line h-20 md:h-24 lg:h-28">
