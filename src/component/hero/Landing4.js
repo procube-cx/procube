@@ -10,7 +10,7 @@ const Landing4 = () => {
     });
 
     return (
-        <div className='grid grid-cols-11 w-full px-6 md:px-24 py-6 md:py-10 overflow-hidden gap-x-28 h-screen max-h-[900px]'>
+        <div className='grid grid-cols-11 w-full px-6 md:px-24 py-6 md:py-10 gap-x-28 h-screen max-h-[900px]'>
             <motion.div
                 ref={ref}
                 initial={{opacity: 0, x: -100}}
