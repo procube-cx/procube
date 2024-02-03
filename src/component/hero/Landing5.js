@@ -59,20 +59,20 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     };
 
     return (
-        <motion.div className='flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-3' key={index}
+        <motion.div className='flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 ' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={handleClick}
         >
-            <div className='grid grid-cols-3 flex-1 line'>
+            <div className='grid grid-cols-3 flex-1 line py-5 md:py-12'>
                 <div className='col-span-3 md:col-span-1 md:my-auto flex flex-row '>
                     <p className='font-normal text-2xl md:text-5xl flex-1'>{heading}</p>
                     <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${ isOpen && 'rotate-180 '}`} />
                 </div>
-                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 w-24 md:w-48 mx-auto my-auto hidden md:flex' />
-                <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-24 md:w-48 mx-auto my-auto md:hidden ${isOpen ? 'flex':"hidden"} `} />
+                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 h-full mx-auto my-auto hidden md:flex' />
+                <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex':"hidden"} `} />
                 <div className='col-span-3 md:col-span-1 grid grid-cols-2 gap-y-2'>
-                     <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex`}>{description}</p>
+                     <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto`}>{description}</p>
                 </div>
             </div>
         </motion.div>

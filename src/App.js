@@ -13,19 +13,19 @@ import Footer from './component/hero/Footer';
 
 function App() {
   return (
-    <div className=' text-white'>
-      <div className='relative bg-[#121212] z-50 '>
+    <div className=' text-white bg-[#121212]' >
+      <div className='relative  z-50 '>
       <Landing1 />
       {/* <Landing2 /> */}
       <Landing3 />
-      {/* <Landing4 /> */}
+      <Landing4 />
       <Landing5 />
       <Lanidng7 />
       <Landing6 />
       {/* <Landing8 /> */}
       <Landing9 />
       </div>
-      <div className='min-h-screen relative bg-black'>
+      <div className='min-h-screen relative '>
       <Footer />
       </div>
     </div>
