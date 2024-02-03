@@ -12,14 +12,6 @@ const Landing2 = () => {
     const halfScreenHeight = 2*window.innerHeight/5 ;
 
     tl.from(".image-wrapper img", {
-      x: 60,
-      y: -halfScreenHeight,
-      scale: 0.15,
-      transformOrigin:"top center",
-      ease: "power4.out",
-    });
-
-    tl.to(".image-wrapper img", {
       x: 0,
       y: 0,
       scale: 0.8,
@@ -30,10 +22,18 @@ const Landing2 = () => {
     tl.to(".image-wrapper img", {
       x: 0,
       y: 0,
-      scale: 0.8,
+      scale: 0.5,
       transformOrigin:"top center",
       ease: "power4.out",
     });
+
+    // tl.to(".image-wrapper img", {
+    //   x: 60,
+    //   y: -halfScreenHeight,
+    //   scale: 0.15,
+    //   transformOrigin:"top center",
+    //   ease: "power4.out",
+    // });
 
     ScrollTrigger.create({
       trigger: ".cont",
