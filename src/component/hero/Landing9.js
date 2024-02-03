@@ -12,12 +12,12 @@ const data = [
         date: "June 23, 2023",
     },
     {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
+        heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
         icon: icon,
         date: "June 23, 2023",
     },
     {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
+        heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
         icon: icon,
         date: "June 23, 2023",
     },
@@ -54,8 +54,8 @@ const Card = (heading, icon, date, key) => {
         >
             <div className='grid grid-cols-7 flex-1 landing'>
                 <img id={`img-${key}`} src={icon} alt="icon" className='col-span-2 w-full md:w-3/4 my-auto' />
-                <div className='col-span-5 flex justify-center'>
-                <p className='my-auto font-normal text-5xl'>{heading}</p>
+                <div className='col-span-7 md:col-span-5 flex justify-center'>
+                <p className='my-auto font-normal text-2xl md:text-5xl'>{heading}</p>
                 </div>
             </div>
         </motion.div>
@@ -66,7 +66,7 @@ const Landing9 = () => {
     return (
         <div className='px-6 md:px-24 py-14'>
             {data.map((cardDetail, index) => (Card(cardDetail.heading, cardDetail.icon, cardDetail.date, index)))}
-            <img src={arrowIcon} alt="arrow" className='mx-auto my-16 hover:opacity-55' />
+            <img src={arrowIcon} alt="arrow" className='w-24 md:w-48 mx-auto my-10 md:my-24 hover:opacity-55' />
         </div>
     );
 };

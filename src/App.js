@@ -20,10 +20,10 @@ function App() {
       <Landing3 />
       {/* <Landing4 /> */}
       <Landing5 />
-      {/* <Lanidng7 />
+      <Lanidng7 />
       <Landing6 />
-      <Landing8 />
-      <Landing9 /> */}
+      {/* <Landing8 /> */}
+      <Landing9 />
       </div>
       {/* <div className='min-h-screen relative bg-black'> */}
       {/* <Footer /> */}
