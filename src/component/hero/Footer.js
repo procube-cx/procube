@@ -113,7 +113,7 @@ const Footer = () => {
                             )}
                         </div>
                         <div className='flex flex-col col-span-1 gap-10'>
-                            {data.option1.map((item, index) => {
+                            {data.option2.map((item, index) => {
                                 return (
                                     <a key={index} href={item.links} className='text-xl'>{item.title}</a>
                                 )
@@ -121,7 +121,7 @@ const Footer = () => {
                             )}
                         </div>
                         <div className='flex flex-col col-span-1 gap-10'>
-                            {data.option1.map((item, index) => {
+                            {data.option3.map((item, index) => {
                                 return (
                                     <a key={index} href={item.links} className='text-xl'>{item.title}</a>
                                 )
