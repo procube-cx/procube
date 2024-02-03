@@ -36,15 +36,15 @@ const data = [
 const Card = (heading, icon, date, key) => {
 
     useEffect(() => {
-        gsap.set(`#img-${key}`, { x: -300, y: 0, skewY: 0, opacity: 0, transformOrigin: "right bottom" });
+        gsap.set(`.landing #img-${key}`, { x: -300, y: 0, skewY: 0, opacity: 0, transformOrigin: "right bottom" });
     }, [key]);
 
     const handleHover = (e) => {
-        gsap.to(`#img-${key}`, { x: 0, y: 0, skewY: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" }); // Scale up on hover
+        gsap.to(`.landing #img-${key}`, { x: 0, y: 0, skewY: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" }); // Scale up on hover
     };
 
     const handleHoverExit = (e) => {
-        gsap.to(`#img-${key}`, { x: -300, y: 0, skewY: 0, duration: 0.3, opacity: 0, transformOrigin: "right bottom" }); // Scale down on hover exit
+        gsap.to(`.landing #img-${key}`, { x: -300, y: 0, skewY: 0, duration: 0.3, opacity: 0, transformOrigin: "right bottom" }); // Scale down on hover exit
     };
 
     return (
@@ -52,7 +52,7 @@ const Card = (heading, icon, date, key) => {
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >
-            <div className='grid grid-cols-7 flex-1 line'>
+            <div className='grid grid-cols-7 flex-1 landing'>
                 <img id={`img-${key}`} src={icon} alt="icon" className='col-span-2 w-full md:w-3/4 my-auto' />
                 <div className='col-span-5 flex justify-center'>
                 <p className='my-auto font-normal text-5xl'>{heading}</p>
