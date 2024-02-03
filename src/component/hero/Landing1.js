@@ -25,15 +25,15 @@ const Landing1 = () => {
 
   return (
     <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] py-0 px-0 md:py-6 md:px-6'>
-      <div className='w-full h-full purplegradient md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex items-center justify-center'>
-        <div className="container font-normal text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
-          <div className="line h-20 md:h-24 lg:h-28">
+      <div className='w-full h-full purplegradient rounded-b-xl md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex items-center justify-center'>
+        <div className="container font-normal text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[50px]">
+          <div className="line h-[98px] md:h-24 lg:h-28">
             <span>Crafting Exceptional </span>
           </div>
-          <div className="line h-20 md:h-24 lg:h-28">
+          <div className="line h-[152px] md:h-24 lg:h-28">
             <span>Digital Products, Designs,</span>
           </div>
-          <div className="line h-20 md:h-24 lg:h-28">
+          <div className="line h-[98px] md:h-24 lg:h-28">
             <span> and Branding</span>
           </div>
         </div>

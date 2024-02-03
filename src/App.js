@@ -16,18 +16,18 @@ function App() {
     <div className=' text-white'>
       <div className='relative bg-[#121212] z-50 '>
       <Landing1 />
-      <Landing2 />
+      {/* <Landing2 /> */}
       <Landing3 />
-      <Landing4 />
+      {/* <Landing4 /> */}
       <Landing5 />
-      <Lanidng7 />
+      {/* <Lanidng7 />
       <Landing6 />
       <Landing8 />
-      <Landing9 />
+      <Landing9 /> */}
       </div>
-      <div className='min-h-screen relative bg-black'>
-      <Footer />
-      </div>
+      {/* <div className='min-h-screen relative bg-black'> */}
+      {/* <Footer /> */}
+      {/* </div> */}
     </div>
   );
 }
