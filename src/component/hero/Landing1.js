@@ -25,8 +25,8 @@ const Landing1 = () => {
 
   return (
     <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] py-0 px-0 md:py-6 md:px-6'>
-      <div className='w-full h-full purplegradient rounded-b-xl md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex items-center justify-center'>
-        <div className="container font-normal text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[50px]">
+      <div className='w-full h-full purplegradient rounded-b-xl md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex flex-col items-center justify-center'>
+        <div className="container font-normal text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[50px] md:mt-auto">
           {/* <div className="line h-[98px] md:h-24 lg:h-28">
             <span>Crafting Your Digital Experience</span>
           </div>
@@ -41,6 +41,9 @@ const Landing1 = () => {
         {/* <div className="md:ml-auto md:mt-auto hidden md:flex">
           <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-52" />
         </div> */}
+        <div className="md:ml-auto md:mt-auto hidden md:flex">
+          <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-52" />
+        </div>  
       </div>
     </div>
   );

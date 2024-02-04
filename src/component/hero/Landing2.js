@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import large from '../../assets/images/large.png';
-import video from '../../assets/video/service-1.webm'
+// import video from '../../assets/video/service-1.webm'
 
 const Landing2 = () => {
   useEffect(() => {
@@ -52,9 +52,9 @@ const Landing2 = () => {
   return (
     <div className="cont">
       <div className="image-wrapper ">
-        <img src={large} alt="Image" id="img"  className='hidden md:flex'/>
+        <img src={large} alt="large" id="img" className='hidden md:flex' />
       </div>
-        <img src={large} alt="Image" className='md:hidden py-9 px-6'/>
+      <img src={large} alt="large" className='md:hidden py-9 px-6' />
     </div>
   );
 };

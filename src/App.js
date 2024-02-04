@@ -10,7 +10,8 @@ import Landing8 from './component/hero/Landing8';
 import Landing9 from './component/hero/Landing9';
 import Footer from './component/hero/Footer';
 import Marquee from './component/hero/Marquee';
-import  Navbar  from './component/hero/Navbar';
+import Navbar from './component/hero/Navbar';
+import Landing10 from './component/hero/Landing10';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Landing5 />
         <Marquee />
         <Lanidng7 />
+        <Landing10 />
         <Landing6 />
         <Landing8 />
         <Landing9 />

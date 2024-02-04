@@ -26,7 +26,7 @@ const Marquee = () => {
           animate="animate"
         >
           <div className="font-normal text-4xl md:text-8xl py-5 md:py-14">
-          ImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImage
+            ImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImage
           </div>
         </motion.div>
       </div>
