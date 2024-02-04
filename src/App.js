@@ -9,24 +9,25 @@ import Landing6 from './component/hero/Landing6';
 import Landing8 from './component/hero/Landing8';
 import Landing9 from './component/hero/Landing9';
 import Footer from './component/hero/Footer';
-
+import Marquee from './component/hero/Marquee';
 
 function App() {
   return (
     <div className=' text-white bg-[#121212]' >
       <div className='relative  z-50 '>
-      <Landing1 />
-      {/* <Landing2 /> */}
-      <Landing3 />
-      <Landing4 />
-      <Landing5 />
-      <Lanidng7 />
-      <Landing6 />
-      {/* <Landing8 /> */}
-      <Landing9 />
+        <Landing1 />
+        <Landing2 />
+        <Landing3 />
+        <Landing4 />
+        <Landing5 />
+        <Marquee />
+        <Lanidng7 />
+        <Landing6 />
+        <Landing8 />
+        <Landing9 />
       </div>
       <div className='min-h-screen relative '>
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

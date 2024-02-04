@@ -59,7 +59,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     };
 
     return (
-        <motion.div className='flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 ' key={index}
+        <motion.div className='flex w-full even:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 ' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={handleClick}
@@ -95,6 +95,7 @@ const Landing5 = () => {
 
     return (
         <div className='px-6 md:px-24 py-14'>
+            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:py-24'>OUR EXPERTISE</p>
             {cardData.map((cardDetail, index) => (
                 <Card
                     key={index}

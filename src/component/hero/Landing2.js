@@ -51,9 +51,10 @@ const Landing2 = () => {
 
   return (
     <div className="cont">
-      <div className="image-wrapper">
-        <img src={large} alt="Image" id="img" />
+      <div className="image-wrapper ">
+        <img src={large} alt="Image" id="img"  className='hidden md:flex'/>
       </div>
+        <img src={large} alt="Image" className='md:hidden py-9 px-6'/>
     </div>
   );
 };
