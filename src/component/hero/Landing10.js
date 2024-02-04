@@ -34,7 +34,7 @@ const Landing10 = () => {
 
   const cardVariants = {
     expanded: {
-      scale: 1.5,
+      scale: 1,
       transition: {
         layout: true,
       },
