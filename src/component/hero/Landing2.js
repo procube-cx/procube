@@ -9,13 +9,13 @@ const Landing2 = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const tl = gsap.timeline();
-    const halfScreenHeight = 2*window.innerHeight/5 ;
+    const halfScreenHeight = 2 * window.innerHeight / 5;
 
     tl.from(".image-wrapper #img", {
       x: 60,
       y: -halfScreenHeight,
       scale: 0.15,
-      transformOrigin:"top center",
+      transformOrigin: "top center",
       ease: "power4.out",
     });
 
@@ -23,7 +23,7 @@ const Landing2 = () => {
       x: 0,
       y: 0,
       scale: 0.8,
-      transformOrigin:"top center",
+      transformOrigin: "top center",
       ease: "power4.out",
     });
 
@@ -31,7 +31,7 @@ const Landing2 = () => {
       x: 0,
       y: 0,
       scale: 0.8,
-      transformOrigin:"top center",
+      transformOrigin: "top center",
       ease: "power4.out",
     });
 
@@ -52,7 +52,7 @@ const Landing2 = () => {
   return (
     <div className="cont">
       <div className="image-wrapper">
-        <img src={large} alt="Image" id="img"/>
+        <img src={large} alt="Image" id="img" />
       </div>
     </div>
   );

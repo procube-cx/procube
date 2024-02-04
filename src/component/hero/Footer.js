@@ -80,60 +80,60 @@ const data = {
 
 const Footer = () => {
     return (
-            <div className='flex flex-col w-full  px-6 md:px-24 pt-12 md:pt-32 bg-black rounded-t-[30px] md:rounded-t-[60px]'>
-                <div className='flex flex-col w-full items-center gap-5 md:gap-14 mb-16 md:mb-48'>
-                    <div className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
-                    <div className='bg-[#7605C1] px-12 md:px-16 py-3 md:py-4 text-base md:text-4xl rounded-full'>Contact Us</div>
+        <div className='flex flex-col w-full  px-6 md:px-24 pt-12 md:pt-32 bg-black rounded-t-[30px] md:rounded-t-[60px]'>
+            <div className='flex flex-col w-full items-center gap-5 md:gap-14 mb-16 md:mb-48'>
+                <div className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
+                <div className='bg-[#7605C1] px-12 md:px-16 py-3 md:py-4 text-base md:text-4xl rounded-full'>Contact Us</div>
+            </div>
+            <div className='flex flex-col md:flex-row mb-10  md:mb-20'>
+                <div className=' border px-5 py-10 md:px-7 md:py-16 rounded-full h-auto md:h-44 w-16 md:w-auto my-8 mr-16'>
+                    <img src={arrow} alt='arrow' className='w-6 md:w-8  ' />
                 </div>
-                <div className='flex flex-col md:flex-row mb-10  md:mb-20'>
-                    <div className=' border px-5 py-10 md:px-7 md:py-16 rounded-full h-auto md:h-44 w-16 md:w-auto my-8 mr-16'>
-                        <img src={arrow} alt='arrow' className='w-6 md:w-8  ' />
-                    </div>
-                    <div className='flex-1'>
-                        <div className='flex flex-col gap-8'>
-                            <div className='flex flex-wrap justify-between w-full md:w-3/4'>
-                                {data.option4.map((item, index) => {
-                                    return (
-                                        <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
-                                    )
-                                }
-                                )}
+                <div className='flex-1'>
+                    <div className='flex flex-col gap-8'>
+                        <div className='flex flex-wrap justify-between w-full md:w-3/4'>
+                            {data.option4.map((item, index) => {
+                                return (
+                                    <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
+                                )
+                            }
+                            )}
 
-                            </div>
-                            <div className='font-normal text-sm md:text-xl'>© 2023  All Right Reserved | Powered by procube.cx</div>
                         </div>
-                    </div>
-                    <div className='flex-1 flex justify-between font-normal py-8'>
-                        <div className='flex flex-col col-span-1 gap-8'>
-                            {data.option1.map((item, index) => {
-                                return (
-                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
-                                )
-                            }
-                            )}
-                        </div>
-                        <div className='flex flex-col col-span-1 gap-8'>
-                            {data.option2.map((item, index) => {
-                                return (
-                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
-                                )
-                            }
-                            )}
-                        </div>
-                        <div className='flex flex-col col-span-1 gap-8'>
-                            {data.option3.map((item, index) => {
-                                return (
-                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
-                                )
-                            }
-                            )}
-                        </div>
+                        <div className='font-normal text-sm md:text-xl'>© 2023  All Right Reserved | Powered by procube.cx</div>
                     </div>
                 </div>
+                <div className='flex-1 flex justify-between font-normal py-8'>
+                    <div className='flex flex-col col-span-1 gap-8'>
+                        {data.option1.map((item, index) => {
+                            return (
+                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                            )
+                        }
+                        )}
+                    </div>
+                    <div className='flex flex-col col-span-1 gap-8'>
+                        {data.option2.map((item, index) => {
+                            return (
+                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                            )
+                        }
+                        )}
+                    </div>
+                    <div className='flex flex-col col-span-1 gap-8'>
+                        {data.option3.map((item, index) => {
+                            return (
+                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                            )
+                        }
+                        )}
+                    </div>
+                </div>
+            </div>
             <div className='flex flex-col w-full items-center gap-8'>
                 <img src={logo} alt='logo' className='w-full' />
             </div>
-            </div>
+        </div>
     )
 }
 

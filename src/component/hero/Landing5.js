@@ -1,4 +1,4 @@
-import React, { useEffect ,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import icon from '../../assets/images/expertise.png';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import gsap from 'gsap';
@@ -10,31 +10,31 @@ const data = [
     {
         heading: "DIGITAL STRATEGY",
         icon: icon,
-        description:" Accelerate Your Business with Our Technology-Driven Strategic Approach. We conduct market research and customize online initiatives to align with your goals. Engaging audiences, boosting brand visibility, and driving conversions are our key strategies, ensuring resounding success in the digital landscape.",
+        description: " Accelerate Your Business with Our Technology-Driven Strategic Approach. We conduct market research and customize online initiatives to align with your goals. Engaging audiences, boosting brand visibility, and driving conversions are our key strategies, ensuring resounding success in the digital landscape.",
         title: ["Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping", "Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping"]
     },
     {
         heading: "BRANDING",
         icon: icon,
-        description:"We specialize in creating visually stunning designs that enhance brand recognition, leaving an unforgettable impact on your audience. Whether it's brand kits, graphic posters, motion graphics, or UI/UX designs, we guarantee a lasting impression that sets your brand apart.",
+        description: "We specialize in creating visually stunning designs that enhance brand recognition, leaving an unforgettable impact on your audience. Whether it's brand kits, graphic posters, motion graphics, or UI/UX designs, we guarantee a lasting impression that sets your brand apart.",
         title: ["Brand Strategy", "Brand Identity", "Brand Naming", "Brand Guidelines", "Brand Strategy", "Brand Identity", "Brand Naming", "Brand Guidelines"]
     },
     {
         heading: "UI/UX DESIGN",
         icon: icon,
-        description:" We excel in developing user-friendly websites, applications, and e-commerce platforms. Our focus lies in crafting seamless customer experiences where intuitive design and smooth functionality come together to provide exceptional interactions, ultimately enhancing user satisfaction.",
+        description: " We excel in developing user-friendly websites, applications, and e-commerce platforms. Our focus lies in crafting seamless customer experiences where intuitive design and smooth functionality come together to provide exceptional interactions, ultimately enhancing user satisfaction.",
         title: ["User Research", "User Experience Design", "User Interface Design", "User Research", "User Experience Design", "User Interface Design"]
     },
     {
         heading: "DEVELOPMENT",
         icon: icon,
-        description:"Enhance your brand's visibility, attract your ideal customers, and boost conversions through our targeted campaigns. We utilize strategic tactics, precise targeting, and compelling messaging to guarantee that your brand distinguishes itself, engages the right audience, and delivers measurable results.",
+        description: "Enhance your brand's visibility, attract your ideal customers, and boost conversions through our targeted campaigns. We utilize strategic tactics, precise targeting, and compelling messaging to guarantee that your brand distinguishes itself, engages the right audience, and delivers measurable results.",
         title: ["Web Development", "Mobile Development", "Web Development", "Mobile Development"]
     },
     {
         heading: "MARKETING",
         icon: icon,
-        description:"Our marketing strategies are designed to elevate your brand's online presence, boost traffic, and drive conversions. We specialize in SEO, social media marketing, and content marketing, ensuring that your brand stands out in the digital landscape.",
+        description: "Our marketing strategies are designed to elevate your brand's online presence, boost traffic, and drive conversions. We specialize in SEO, social media marketing, and content marketing, ensuring that your brand stands out in the digital landscape.",
         title: ["SEO", "Social Media Marketing", "Content Marketing", "SEO", "Social Media Marketing", "Content Marketing"]
     }
 ];
@@ -67,12 +67,12 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             <div className='grid grid-cols-3 flex-1 line py-5 md:py-12'>
                 <div className='col-span-3 md:col-span-1 md:my-auto flex flex-row '>
                     <p className='font-normal text-2xl md:text-5xl flex-1'>{heading}</p>
-                    <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${ isOpen && 'rotate-180 '}`} />
+                    <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${isOpen && 'rotate-180 '}`} />
                 </div>
                 <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 h-full mx-auto my-auto hidden md:flex' />
-                <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex':"hidden"} `} />
+                <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex' : "hidden"} `} />
                 <div className='col-span-3 md:col-span-1 grid grid-cols-2 gap-y-2'>
-                     <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto`}>{description}</p>
+                    <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto`}>{description}</p>
                 </div>
             </div>
         </motion.div>

@@ -4,6 +4,7 @@ import arrowIcon from '../../assets/images/exploreMore.png';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import './hero.css';
+import icon2 from '../../assets/images/icons/icon2.png'
 
 const data = [
     {
@@ -48,14 +49,21 @@ const Card = (heading, icon, date, key) => {
     };
 
     return (
-        <motion.div className='flex w-full odd:border-y-[0.5px] border-opacity-40 border-white gap-2 md:gap-4 py-3' key={key}
+        <motion.div className='flex w-full odd:border-y-[0.5px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={key}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >
-            <div className='grid grid-cols-7 flex-1 landing'>
-                <img id={`img-${key}`} src={icon} alt="icon" className='col-span-2 w-full md:w-3/4 my-auto' />
-                <div className='col-span-7 md:col-span-5 flex justify-center'>
-                <p className='my-auto font-normal text-2xl md:text-5xl'>{heading}</p>
+            <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
+                <img id={`img-${key}`} src={icon} alt="icon" className='col-span-3 w-full md:w-11/12 my-auto hidden md:block' />
+                <img src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto md:hidden' />
+                <div className='col-span-12 md:col-span-8 flex flex-col justify-center gap-y-5 md:gap-y-16'>
+                    <p className='my-auto font-normal text-2xl md:text-5xl'>{heading}</p>
+                    <div className='py-2 px-5 md:py-3 md:px-8 rounded-[78px] bg-[#1A1A1A] mr-auto'>
+                        <p className='text-sm md:text-lg'>{date}</p>
+                    </div>
+                </div>
+                <div className=' md:col-span-1 w-full hidden md:block'>
+                    <img src={icon2} alt="icon" className={` w-9 ml-auto }`} />
                 </div>
             </div>
         </motion.div>

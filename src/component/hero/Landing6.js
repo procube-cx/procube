@@ -62,7 +62,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
             onClick={() => onCardClick(id)}
         >
             <div className='grid grid-cols-6 flex-1'>
-                <p className={`col-span-1 font-normal text-2xl md:text-5xl ${isOpen ? '':'italic'}`}>0{id}</p>
+                <p className={`col-span-1 font-normal text-2xl md:text-5xl ${isOpen ? '' : 'italic'}`}>0{id}</p>
                 <p className='col-span-5 font-normal text-2xl md:text-5xl'>{title}</p>
             </div>
             {isOpen &&
@@ -127,7 +127,7 @@ const Landing6 = () => {
                     ))}
                 </div>
                 <div className='flex md:flex-1 h-full flex-col justify-center'>
-                    <img src={data[activeCard-1].icon} alt="process" className='w-full mx-auto' />
+                    <img src={data[activeCard - 1].icon} alt="process" className='w-full mx-auto' />
                 </div>
             </div>
         </div>
