@@ -136,7 +136,7 @@ const Navbar = () => {
                 <div className=" top-0 absolute w-full">
                     <div className='grid grid-cols-5'>
                         <div className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
-                            <div></div>
+                            <div className='hidden md:block'></div>
                             <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
                                 <div className='flex flex-col col-span-2 gap-5 md:gap-8'>
                                     {data.option1.map((item, index) => (
