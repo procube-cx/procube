@@ -10,11 +10,13 @@ import Landing8 from './component/hero/Landing8';
 import Landing9 from './component/hero/Landing9';
 import Footer from './component/hero/Footer';
 import Marquee from './component/hero/Marquee';
+import  Navbar  from './component/hero/Navbar';
 
 function App() {
   return (
     <div className=' text-white bg-[#121212]' >
       <div className='relative  z-50 '>
+        <Navbar />
         <Landing1 />
         <Landing2 />
         <Landing3 />
