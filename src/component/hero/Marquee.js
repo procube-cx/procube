@@ -18,14 +18,14 @@ const marqueeVariants = {
 
 const Marquee = () => {
   return (
-    <div className="py-16 md:py-48 overflow-x-hidden my-auto overflow-y-hidden -mt-24 md:-mt-32 ">
+    <div className="pb-16 md:pb-72 overflow-x-hidden my-auto overflow-y-hidden">
       <div className="relative w-full">
         <motion.div
           className="track hover-effect" // Add hover-effect class
           variants={marqueeVariants}
           animate="animate"
         >
-          <div className="font-normal text-4xl md:text-8xl py-5 md:py-14">
+          <div className="font-normal text-4xl md:text-8xl py-5 md:py-6 hover:-translate-x-96">
             ImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImage
           </div>
         </motion.div>

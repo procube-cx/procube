@@ -42,7 +42,7 @@ const Landing1 = () => {
           <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-52" />
         </div> */}
         <div className="md:ml-auto md:mt-auto hidden md:flex">
-          <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-52" />
+          <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-52  cursor-pointer" />
         </div>  
       </div>
     </div>

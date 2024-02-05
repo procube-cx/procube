@@ -72,7 +72,7 @@ const Landing10 = () => {
           </motion.div>
         ))}
       </div>
-      <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-10 hover:opacity-55' />
+      <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-10 hover:opacity-55 cursor-pointer' />
     </div>
   );
 };

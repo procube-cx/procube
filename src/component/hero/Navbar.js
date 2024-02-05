@@ -98,7 +98,7 @@ const Navbar = () => {
             {/* Hamburger menu */}
             <div className="flex items-center justify-between px-6 md:px-24 py-6 md:py-12">
                 {/* Contact Us button */}
-                <div className="items-center hidden md:flex">
+                <div className="items-center hidden md:flex cursor-pointer">
                     <div className="px-5 py-2 rounded-full border border-1 border-white flex flex-row items-center gap-[2px]">
                         <GoDotFill className="text-white w-7 h-7" />
                         <p className="font-medium text-xl">Contact Us</p>
