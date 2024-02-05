@@ -5,6 +5,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import logo from '../../assets/images/Procube-white.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
+import { useMediaQuery } from 'react-responsive';
+
 
 
 const data = {
@@ -85,6 +87,8 @@ const data = {
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [activeLink, setActiveLink] = React.useState('/');
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -143,9 +147,9 @@ const Navbar = () => {
                 <div className=" top-0 absolute w-full">
                     <div className='grid grid-cols-5'>
                         <motion.div
-                            initial={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
-                            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
-                            transition={isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
+                            initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }: isMenuOpen ? {opacity: 0 ,y:-100} : { opacity: 1, y: "-150vh" }}
+                            animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? {opacity: 1 ,y:0} : { opacity: 1, y: "-150vh"}}
+                            transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } :{ duration:0.5} : isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
                             className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
                             <div className='hidden md:block'></div>
                             <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
@@ -172,9 +176,9 @@ const Navbar = () => {
                             </div>
                         </motion.div>
                         <motion.div
-                            initial={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
-                            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
-                            transition={{ duration: 0.5, delay: 0 }}
+                            initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }: isMenuOpen ? {opacity: 0 ,y:-100} : { opacity: 1, y: "-100vh" }}
+                            animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? {opacity: 1 ,y:0} : { opacity: 1, y: "-150vh"}}
+                            transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } :{ duration:0.5} : isMenuOpen ? { duration: 0.5, delay: 0 } : { duration: 0.5, delay: 0 }}
                             className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
                             <div className='flex flex-col gap-y-[10px]'>
                                 <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
