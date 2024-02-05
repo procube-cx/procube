@@ -52,13 +52,13 @@ const Landing10 = () => {
   };
 
   return (
-    <div className='px-6 md:px-24 py-16 md:py-48'>
+    <div className='px-6 md:px-24 py-16 md:py-28'>
       <p className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</p>
       <div className='grid grid-cols-2 w-full gap-x-8'>
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-24'
+            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16'
             whileHover="expanded"
             whileTap="contracted"
             variants={cardVariants}
@@ -72,7 +72,7 @@ const Landing10 = () => {
           </motion.div>
         ))}
       </div>
-      <img src={arrowIcon} alt="arrow" className='w-24 md:w-48 mx-auto my-10 md:my-24 hover:opacity-55' />
+      <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-10 hover:opacity-55' />
     </div>
   );
 };

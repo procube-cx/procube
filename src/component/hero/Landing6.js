@@ -109,10 +109,10 @@ const Landing6 = () => {
     }, [activeCard, timerPaused]);
 
     return (
-        <div className='w-full px-6 md:px-24 py-6 md:py-10  min-h-screen max-h-[900px]'>
-            <p className='w-full md:w-1/2 font-normal text-4xl md:text-8xl !leading-tight uppercase text-center md:text-left'>Process & Approach</p>
-            <div className='w-full flex flex-col md:flex-row overflow-hidden gap-x-28'>
-                <div className='flex md:flex-1 h-full flex-col my-auto'>
+        <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px]'>
+            <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Process & Approach</p>
+            <div className='w-full flex flex-col md:flex-row overflow-hidden gap-x-16 md:pt-16'>
+                <div className='flex md:w-[54%] h-full flex-col my-auto'>
                     {data.map((cardDetail) => (
                         <Card
                             key={cardDetail.id} // added key prop

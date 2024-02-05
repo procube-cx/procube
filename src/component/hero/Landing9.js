@@ -73,9 +73,9 @@ const Card = (heading, icon, date, key) => {
 const Landing9 = () => {
     return (
         <div className='px-6 md:px-24 py-14'>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:py-24'>OUR INSIGHTS</p>
+            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:py-20'>BLOGS</p>
             {data.map((cardDetail, index) => (Card(cardDetail.heading, cardDetail.icon, cardDetail.date, index)))}
-            <img src={arrowIcon} alt="arrow" className='w-24 md:w-48 mx-auto my-10 md:my-24 hover:opacity-55' />
+            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55' />
         </div>
     );
 };
