@@ -26,13 +26,7 @@ const Marquee = () => {
           animate="animate"
         >
           <div className="font-normal text-4xl md:text-8xl py-5 md:py-14">
-            JUST GREAT WORK
-            JUST GREAT WORK
-            JUST GREAT WORK
-            JUST GREAT WORK
-            JUST GREAT WORK
-            JUST GREAT WORK
-            JUST GREAT WORK
+            JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK
           </div>
         </motion.div>
       </div>

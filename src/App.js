@@ -16,7 +16,6 @@ import Landing10 from './component/hero/Landing10';
 function App() {
   return (
     <div className=' text-white bg-[#121212]' >
-      <div className='relative  z-50 '>
         <Navbar />
         <Landing1 />
         <Landing2 />
@@ -29,10 +28,7 @@ function App() {
         <Landing6 />
         <Landing8 />
         <Landing9 />
-      </div>
-      <div className='min-h-screen relative '>
         <Footer />
-      </div>
     </div>
   );
 }
