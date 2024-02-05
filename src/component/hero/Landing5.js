@@ -43,16 +43,44 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     const { heading, icon, description, isOpen } = cardDetail;
 
     useEffect(() => {
-        gsap.set(`.line #img-${index}`, { x: 0, y: 100, skewY: -90, opacity: 0, transformOrigin: "right bottom" });
+        gsap.set(`.line #img-${index}`, { x: 0, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom" });
     }, [index]);
 
     const handleHover = () => {
-        gsap.to(`.line #img-${index}`, { x: 0, y: 0, skewY: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" });
+        gsap.to(`.line #img-${index}`, { 
+            x: 0, 
+            y: 0, 
+            skewY: 10, // Skew to -47 degrees
+            duration: 0.1, 
+            opacity: 1, 
+            transformOrigin: "right top",
+            onComplete: () => {
+                gsap.to(`.line #img-${index}`, { 
+                    skewY: 0, // Skew back to -45 degrees
+                    duration: 0.1
+                });
+            }
+        });
     };
+    
 
     const handleHoverExit = () => {
-        gsap.to(`.line #img-${index}`, { x: 0, y: 100, skewY: -90, duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
+        gsap.to(`.line #img-${index}`, { 
+            x: 0, 
+            y: 100, 
+            skewY: -47, // Skew to -47 degrees
+            duration: 0.1, 
+            opacity: 0, 
+            transformOrigin: "right bottom",
+            onComplete: () => {
+                gsap.to(`.line #img-${index}`, { 
+                    skewY: -45, // Skew back to -45 degrees
+                    duration: 0.1
+                });
+            }
+        });
     };
+    
 
     const handleClick = () => {
         toggleCard(index);
