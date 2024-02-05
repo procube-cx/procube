@@ -3,6 +3,9 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { GoDotFill } from 'react-icons/go';
 import { AiOutlineClose } from "react-icons/ai";
 import logo from '../../assets/images/Procube-white.png';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
+
 
 const data = {
     option1: [
@@ -83,6 +86,11 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [activeLink, setActiveLink] = React.useState('/');
 
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
+
     React.useEffect(() => {
         const pathName = window.location.pathname;
         setActiveLink(pathName);
@@ -132,10 +140,13 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile view menu */}
-            {isMenuOpen && (
                 <div className=" top-0 absolute w-full">
                     <div className='grid grid-cols-5'>
-                        <div className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
+                        <motion.div
+                            initial={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
+                            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
+                            transition={isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
+                            className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
                             <div className='hidden md:block'></div>
                             <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
                                 <div className='flex flex-col col-span-2 gap-5 md:gap-8'>
@@ -159,17 +170,20 @@ const Navbar = () => {
                                     <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
                                 ))}
                             </div>
-                        </div>
-                        <div className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
+                        </motion.div>
+                        <motion.div
+                            initial={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
+                            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }}
+                            transition={{ duration: 0.5, delay: 0 }}
+                            className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
                             <div className='flex flex-col gap-y-[10px]'>
                                 <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
                                 <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
                                 <div className='bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full'>Get in Touch</div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            )}
         </div>
     );
 };
