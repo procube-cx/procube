@@ -25,7 +25,7 @@ const Marquee = () => {
           variants={marqueeVariants}
           animate="animate"
         >
-          <div className="font-normal text-4xl md:text-8xl pb-5 md:py-6  hover:-translate-x-28">
+          <div className="font-normal text-4xl md:text-8xl py-3 md:py-6  hover:-translate-x-28">
             JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK
           </div>
         </motion.div>

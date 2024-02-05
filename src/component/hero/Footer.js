@@ -82,7 +82,7 @@ const Footer = () => {
     return (
         <div className='flex flex-col w-full  px-6 md:px-24 pt-12 md:pt-32 bg-black rounded-t-[30px] md:rounded-t-[60px]'>
             <div className='flex flex-col w-full items-center gap-5 md:gap-14 mb-16 md:mb-36'>
-                <div className='font-normal text-4xl md:text-8xl !leading-[120px] max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
+                <div className='font-normal text-4xl md:text-8xl !leading-[45px] md:!leading-[120px] max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
                 <div className='bg-[#7605C1] px-12 md:px-16 py-3 md:py-4 text-base md:text-4xl rounded-full'>Get Started</div>
             </div>
             <div className='flex flex-col md:flex-row mb-10  md:mb-20'>

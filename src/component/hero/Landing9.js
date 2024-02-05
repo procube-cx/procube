@@ -49,7 +49,7 @@ const Card = (heading, icon, date, key) => {
     };
 
     return (
-        <motion.div className='flex w-full even:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={key}
+        <motion.div className='flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={key}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >
@@ -74,7 +74,10 @@ const Landing9 = () => {
     return (
         <div className='px-6 md:px-24 py-10 md:py-20 flex flex-col gap-y-6 md:gap-y-16'>
             <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto '>BLOGS</p>
+                
+            <div>
             {data.map((cardDetail, index) => (Card(cardDetail.heading, cardDetail.icon, cardDetail.date, index)))}
+            </div>
             <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' />
         </div>
     );
