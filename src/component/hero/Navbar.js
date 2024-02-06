@@ -7,8 +7,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive';
 
-
-
 const data = {
     option1: [
         {
@@ -88,7 +86,9 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [activeLink, setActiveLink] = React.useState('/');
     const isMobile = useMediaQuery({ maxWidth: 768 });
-
+    const [activeCard, setActiveCard] = React.useState(1);
+    const [isHovered, setIsHovered] = React.useState(false);
+    const [hoveredId, setHoveredId] = React.useState(null);
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -103,6 +103,16 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const handleHover = (id) => {
+        setIsHovered(true);
+        setHoveredId(id);
+    }
+
+    const handleHoverExit = () => {
+        setIsHovered(false);
+        setHoveredId(hoveredId);
+    }
 
     return (
         <div className="absolute w-full z-40">
@@ -144,50 +154,64 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile view menu */}
-                <div className=" top-0 absolute w-full">
-                    <div className='grid grid-cols-5'>
-                        <motion.div
-                            initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }: isMenuOpen ? {opacity: 1 ,y:-100} : { opacity: 1, y: "-150vh" }}
-                            animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? {opacity: 1 ,y:0} : { opacity: 1, y: "-150vh"}}
-                            transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } :{ duration:0.5} : isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
-                            className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
-                            <div className='hidden md:block'></div>
-                            <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
-                                <div className='flex flex-col col-span-2 gap-5 md:gap-8'>
-                                    {data.option1.map((item, index) => (
-                                        <a key={index} href={item.links} className='text-2xl md:text-4xl'>{item.title}</a>
-                                    ))}
-                                </div>
-                                <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
-                                    {data.option2.map((item, index) => (
-                                        <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
-                                    ))}
-                                </div>
-                                <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
-                                    {data.option3.map((item, index) => (
-                                        <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className='flex flex-wrap justify-between '>
-                                {data.option4.map((item, index) => (
-                                    <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
+            <div className=" top-0 absolute w-full">
+                <div className='grid grid-cols-5'>
+                    <motion.div
+                        initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: -100 } : { opacity: 1, y: "-150vh" }}
+                        animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
+                        transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
+                        className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
+                        <div className='hidden md:block'></div>
+                        <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
+                            <div className='flex flex-col col-span-2 gap-5 md:gap-8'>
+                                {data.option1.map((item, index) => (
+                                    <a key={index} href={item.links} className='text-2xl md:text-4xl'
+                                        onMouseEnter={() => handleHover(index)}
+                                        onMouseLeave={handleHoverExit}
+                                    >{item.title}
+                                        <motion.div
+                                            style={{ scaleX: 0, transformOrigin: "left" }}
+                                            className='w-4/5 h-0.5 bg-white mt-2'
+                                            initial={{ scaleX: 0 }}
+                                            animate={hoveredId === index && { scaleX: isHovered ? 1 : 0 }}
+                                            exit={hoveredId === index ? { scaleX: 0, transformOrigin: "right" } : { scaleX: 0, transformOrigin: "left" }}
+                                            transition={{ duration: 0.3 }}
+                                        />
+
+
+                                    </a>
                                 ))}
                             </div>
-                        </motion.div>
-                        <motion.div
-                            initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" }: isMenuOpen ? {opacity: 1 ,y:"-100vh"} : { opacity: 1, y: "-100vh" }}
-                            animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? {opacity: 1 ,y:0} : { opacity: 1, y: "-150vh"}}
-                            transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } :{ duration:0.5} : isMenuOpen ? { duration: 0.5, delay: 0 } : { duration: 0.5, delay: 0 }}
-                            className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
-                            <div className='flex flex-col gap-y-[10px]'>
-                                <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
-                                <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
-                                <div className='bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full'>Get in Touch</div>
+                            <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
+                                {data.option2.map((item, index) => (
+                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                ))}
                             </div>
-                        </motion.div>
-                    </div>
+                            <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
+                                {data.option3.map((item, index) => (
+                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className='flex flex-wrap justify-between '>
+                            {data.option4.map((item, index) => (
+                                <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
+                            ))}
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: "-100vh" } : { opacity: 1, y: "-100vh" }}
+                        animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
+                        transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 0.5, delay: 0 } : { duration: 0.5, delay: 0 }}
+                        className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
+                        <div className='flex flex-col gap-y-[10px]'>
+                            <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
+                            <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
+                            <div className='bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full'>Get in Touch</div>
+                        </div>
+                    </motion.div>
                 </div>
+            </div>
         </div>
     );
 };
