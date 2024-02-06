@@ -1,0 +1,10 @@
+
+    .text {
+        color: rgba(242, 240, 240, 0.2);
+        background: linear-gradient(to right, #b6b6b6, #ffffff) no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    }
+    
+  
