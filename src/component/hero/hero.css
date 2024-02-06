@@ -41,3 +41,16 @@
     transform: translateX(-75%);
   }
 }
+
+
+.react-multiple-carousel__arrow--left
+ {
+    left: 0px !important;
+    padding-left: 45px;
+}
+
+.react-multiple-carousel__arrow--right
+ {
+    right: 0px !important;
+    padding-right: 45px;
+}
