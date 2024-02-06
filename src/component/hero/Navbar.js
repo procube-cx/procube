@@ -86,7 +86,6 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [activeLink, setActiveLink] = React.useState('/');
     const isMobile = useMediaQuery({ maxWidth: 768 });
-    const [activeCard, setActiveCard] = React.useState(1);
     const [isHovered, setIsHovered] = React.useState(false);
     const [hoveredId, setHoveredId] = React.useState(null);
 
@@ -115,7 +114,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="absolute w-full z-40">
+        <div className="absolute w-full z-40" >
             {/* Header section */}
             {/* Hamburger menu */}
             <div className="flex items-center justify-between px-6 md:px-24 py-6 md:py-12">
@@ -132,19 +131,19 @@ const Navbar = () => {
                 </div>
                 {/* Navigation links */}
                 <div className="hidden md:flex gap-16 font-medium text-xl">
-                    <a href="/" className={`nav-link ${activeLink === '/' ? 'font-semibold' : ''}`}>
+                    <a href="/" >
                         Productlab
                     </a>
-                    <a href="#features" className={`nav-link ${activeLink === '/#features' ? 'font-semibold' : ''}`}>
+                    <a href="#features" >
                         ScaleX
                     </a>
                     <a
                         href="#testimonial"
-                        className={`nav-link ${activeLink === '/#testimonial' ? 'font-semibold' : ''}`}
+                        
                     >
                         Launchpad
                     </a>
-                    <a href="/contact" className={`nav-link ${activeLink === '/contact' ? 'font-semibold' : ''}`}>
+                    <a href="/contact" >
                         EnterpriseTech
                     </a>
                 </div>
@@ -154,7 +153,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile view menu */}
-            <div className=" top-0 absolute w-full">
+            <div className={`absolute w-full ${isMenuOpen && 'top-0'}`} >
                 <div className='grid grid-cols-5'>
                     <motion.div
                         initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: -100 } : { opacity: 1, y: "-150vh" }}
@@ -203,7 +202,9 @@ const Navbar = () => {
                         initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: "-100vh" } : { opacity: 1, y: "-100vh" }}
                         animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
                         transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 0.5, delay: 0 } : { duration: 0.5, delay: 0 }}
-                        className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'>
+                        className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'
+                        ref={ref}
+                        >
                         <div className='flex flex-col gap-y-[10px]'>
                             <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
                             <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
