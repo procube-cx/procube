@@ -6,6 +6,8 @@ import logo from '../../assets/images/Procube-white.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive';
+import SplitType from 'split-type';
+import { gsap } from 'gsap';
 
 const data = {
     option1: [
@@ -79,8 +81,27 @@ const data = {
             title: 'Linkedin',
             links: 'google.com'
         }
+    ],
+    option5: [
+        {
+            title: 'EnterpriseTech',
+            link: 'google.com'
+        },
+        {
+            title: 'ScaleX',
+            link: 'google.com'
+        },
+        {
+            title: 'Launchpad',
+            link: 'google.com'
+        },
+        {
+            title: 'EnterpriseTech',
+            link: 'google.com'
+        }
     ]
 };
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -88,11 +109,29 @@ const Navbar = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const [isHovered, setIsHovered] = React.useState(false);
     const [hoveredId, setHoveredId] = React.useState(null);
+    const [id, setId] = React.useState(null);
 
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1
     });
+
+    React.useEffect(() => {
+        const myText = new SplitType(`#my-text-${id}`);
+        gsap.from(myText.chars, {
+            y: 50,
+            stagger: 0.02,
+            // delay: 0.2,
+            duration: .05
+        })
+        gsap.to('.char', {
+            y: 0,
+            stagger: 0.02,
+            // delay: 0.2,
+            duration: .05
+        })
+
+    }, [id]);
 
     React.useEffect(() => {
         const pathName = window.location.pathname;
@@ -113,6 +152,13 @@ const Navbar = () => {
         setHoveredId(hoveredId);
     }
 
+    const handleHoverlink = (id) => () => {
+        setId(id);
+        
+    }
+
+
+
     return (
         <div className="absolute w-full z-40" >
             {/* Header section */}
@@ -131,21 +177,12 @@ const Navbar = () => {
                 </div>
                 {/* Navigation links */}
                 <div className="hidden md:flex gap-16 font-medium text-xl">
-                    <a href="/" >
-                        Productlab
-                    </a>
-                    <a href="#features" >
-                        ScaleX
-                    </a>
-                    <a
-                        href="#testimonial"
-                        
-                    >
-                        Launchpad
-                    </a>
-                    <a href="/contact" >
-                        EnterpriseTech
-                    </a>
+                    {data.option5.map((item, index) => (
+                        <motion.a href={item.link} id={`flex flex-col my-text-${index}`} className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
+                            onMouseEnter={handleHoverlink(index)}
+                        ><div>{item.title}</div><div>{item.title}</div></motion.a>
+                    ))
+                    }
                 </div>
                 {/* Hamburger menu icon */}
                 <div className={`text-white font-medium text-3xl flex cursor-pointer z-30 `} onClick={toggleMenu}>
@@ -204,7 +241,7 @@ const Navbar = () => {
                         transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 0.5, delay: 0 } : { duration: 0.5, delay: 0 }}
                         className='col-span-5 md:col-span-2 h-full flex items-center justify-center bg-black py-14 px-6 md:px-24'
                         ref={ref}
-                        >
+                    >
                         <div className='flex flex-col gap-y-[10px]'>
                             <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
                             <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>

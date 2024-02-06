@@ -16,7 +16,7 @@ tl.from(".image-wrapper #img", {
   x: "20%", // Move 20% to the right
   y: -halfScreenHeight, // Move up by half of the screen height
   scale: 0.15, // Scale down to 15%
-  transformOrigin: "center center", // Set the transformation origin to the top center
+  transformOrigin: "  center center", // Set the transformation origin to the top center
   ease: "power4.out", // Easing function
 });
 
@@ -25,7 +25,7 @@ tl.to(".image-wrapper #img", {
   x: 0, // Reset x position
   y: 0, // Reset y position
   scale: 1, // Reset scale
-  transformOrigin: "center center", // Change transformation origin
+  transformOrigin: "  center center", // Change transformation origin
   ease: "power4.out", // Easing function
 });
 
@@ -34,7 +34,7 @@ tl.to(".image-wrapper #img", {
   x: 0,
   y: 0,
   scale: 1,
-  transformOrigin: "center center",
+  transformOrigin: "  center center",
   ease: "power4.out",
 });
 
@@ -45,7 +45,7 @@ ScrollTrigger.create({
   end: "bottom center", // When to end the animation
   animation: tl, // Animation to be triggered
   scrub: true, // Whether to smoothly animate through the scroll
-  markers: true // Whether to display markers for debugging
+  markers: false // Whether to display markers for debugging
 });
 
 
