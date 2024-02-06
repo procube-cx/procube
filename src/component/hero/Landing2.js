@@ -9,40 +9,45 @@ const Landing2 = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const tl = gsap.timeline();
-    const halfScreenHeight = 2 * window.innerHeight / 5;
+    const halfScreenHeight =  window.innerHeight ;
 
-    tl.from(".image-wrapper #img", {
-      x: 60,
-      y: -halfScreenHeight,
-      scale: 0.15,
-      transformOrigin: "top center",
-      ease: "power4.out",
-    });
+    // Initial animation settings to move the image
+tl.from(".image-wrapper #img", {
+  x: "20%", // Move 20% to the right
+  y: -halfScreenHeight, // Move up by half of the screen height
+  scale: 0.15, // Scale down to 15%
+  transformOrigin: "center center", // Set the transformation origin to the top center
+  ease: "power4.out", // Easing function
+});
 
-    tl.to(".image-wrapper #img", {
-      x: 0,
-      y: 0,
-      scale: 1,
-      transformOrigin: "top center",
-      ease: "power4.out",
-    });
+// Resetting the image position and scale
+tl.to(".image-wrapper #img", {
+  x: 0, // Reset x position
+  y: 0, // Reset y position
+  scale: 1, // Reset scale
+  transformOrigin: "center center", // Change transformation origin
+  ease: "power4.out", // Easing function
+});
 
-    tl.to(".image-wrapper #img", {
-      x: 0,
-      y: 0,
-      scale: 1,
-      transformOrigin: "top center",
-      ease: "power4.out",
-    });
+// Another animation setting, which seems redundant
+tl.to(".image-wrapper #img", {
+  x: 0,
+  y: 0,
+  scale: 1,
+  transformOrigin: "center center",
+  ease: "power4.out",
+});
 
-    ScrollTrigger.create({
-      trigger: ".cont",
-      start: "top bottom",
-      end: "bottom bottom",
-      animation: tl,
-      scrub: true,
-      markers: false
-    });
+// Creating ScrollTrigger to control the animation
+ScrollTrigger.create({
+  trigger: ".cont", // The trigger element
+  start: "top center", // When to start the animation
+  end: "bottom center", // When to end the animation
+  animation: tl, // Animation to be triggered
+  scrub: true, // Whether to smoothly animate through the scroll
+  markers: true // Whether to display markers for debugging
+});
+
 
     return () => {
       // Clean up function if needed
