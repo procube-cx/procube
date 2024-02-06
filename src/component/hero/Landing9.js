@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import icon from '../../assets/images/expertise.png';
-import arrowIcon from '../../assets/images/exploreMore.png';
+import icon2 from '../../assets/images/icons/icon2.png';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import './hero.css';
-import icon2 from '../../assets/images/icons/icon2.png'
+import icon from '../../assets/images/expertise.png';
+import arrowIcon from '../../assets/images/exploreMore.png';
 
 const data = [
     {
@@ -34,32 +34,46 @@ const data = [
     }
 ];
 
-const Card = (heading, icon, date, key) => {
-
+const Card = ({ heading, icon, date, index }) => {
     useEffect(() => {
-        gsap.set(`.landing #img-${key}`, { x: "-100%",  duration: 0.3,  opacity: 0, transformOrigin: "right bottom" });
-        gsap.set(`.landing #text-${key}`, { x: "-25%",  duration: 0.3, width:"137%",  opacity: 1, transformOrigin: "right bottom" });
-    }, [key]);
+        // Check if it's a mobile device
+        const isMobile = window.innerWidth < 768;
 
-    const handleHover = (e) => {
-        gsap.to(`.landing #img-${key}`, { x: 0,  duration: 0.3, opacity: 1, transformOrigin: "right bottom" });
-        gsap.to(`.landing #text-${key}`, { x: 0,  duration: 0.3,width:"100%", opacity: 1, transformOrigin: "right bottom" });
+        // Apply animation only if it's not a mobile device
+        if (!isMobile) {
+            gsap.set(`.landing #img-${index}`, { x: "-100%", duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
+            gsap.set(`.landing #text-${index}`, { x: "-25%", duration: 0.3, width: "137%", opacity: 1, transformOrigin: "right bottom" });
+        }
+    }, [index]);
+
+    const handleHover = () => {
+        const isMobile = window.innerWidth < 768;
+
+        // Apply animation only if it's not a mobile device
+        if (!isMobile) {
+            gsap.to(`.landing #img-${index}`, { x: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" });
+            gsap.to(`.landing #text-${index}`, { x: 0, duration: 0.3, width: "100%", opacity: 1, transformOrigin: "right bottom" });
+        }
     };
 
-    const handleHoverExit = (e) => {
-        gsap.to(`.landing #img-${key}`, { x: "-100%",  duration: 0.3, opacity: 0, transformOrigin: "right bottom" }); 
-        gsap.to(`.landing #text-${key}`, { x: "-25%",  duration: 0.3, width:"137%",  opacity: 1, transformOrigin: "right bottom" }); 
+    const handleHoverExit = () => {
+        const isMobile = window.innerWidth < 768;
+
+        // Apply animation only if it's not a mobile device
+        if (!isMobile) {
+            gsap.to(`.landing #img-${index}`, { x: "-100%", duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
+            gsap.to(`.landing #text-${index}`, { x: "-25%", duration: 0.3, width: "137%", opacity: 1, transformOrigin: "right bottom" });
+        }
     };
 
     return (
-        <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={key}
+        <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >
             <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
-                <img id={`img-${key}`} src={icon} alt="icon" className='col-span-3 w-full md:w-11/12 my-auto hidden md:block' />
-                <img src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto md:hidden' />
-                <div id={`text-${key}`} className='col-span-12 md:col-span-8 flex flex-col justify-center gap-y-5 md:gap-y-16'>
+                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block' />
+                <div id={`text-${index}`} className='col-span-12 md:col-span-8 flex flex-col justify-center gap-y-5 md:gap-y-16'>
                     <p className='my-auto font-normal text-2xl md:text-5xl'>{heading}</p>
                     <div className='py-2 px-5 md:py-3 md:px-8 rounded-[78px] bg-[#1A1A1A] mr-auto'>
                         <p className='text-sm md:text-lg'>{date}</p>
@@ -79,7 +93,15 @@ const Landing9 = () => {
             <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto '>BLOGS</p>
                 
             <div>
-            {data.map((cardDetail, index) => (Card(cardDetail.heading, cardDetail.icon, cardDetail.date, index)))}
+            {data.map((cardDetail, index) => (
+                <Card
+                    heading={cardDetail.heading}
+                    icon={cardDetail.icon}
+                    date={cardDetail.date}
+                    index={index}
+                    key={index}
+                />
+            ))}
             </div>
             <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' />
         </div>
