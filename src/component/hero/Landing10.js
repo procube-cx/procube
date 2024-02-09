@@ -32,21 +32,39 @@ const data = [
 const Landing10 = () => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
   const [even, setEven] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
-  const cardVariants = {
-    expanded: {
-      scale: 1.1,
-      transition: {
-        layout: true,
+
+  const cardVariants = isMobile
+  ? {
+      expanded: {
+        scale: 1,
+        transition: {
+          layout: true,
+        },
       },
-    },
-    contracted: {
-      scale: 0.7,
-      transition: {
-        layout: true,
+      contracted: {
+        scale: 1,
+        transition: {
+          layout: true,
+        },
       },
-    },
-  };
+    }
+  : {
+      expanded: {
+        scale: 1.1,
+        transition: {
+          layout: true,
+        },
+      },
+      contracted: {
+        scale: 0.7,
+        transition: {
+          layout: true,
+        },
+      },
+    };
+
 
   const handleCardClick = (index) => {
       setExpandedIndex(index)
@@ -55,7 +73,6 @@ const Landing10 = () => {
       } else {  
         setEven(false)
       }
-      console.log(expandedIndex,even)
   };
 
   return (
