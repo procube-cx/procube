@@ -54,6 +54,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             duration: 0.1, 
             opacity: 1, 
             transformOrigin: "right top",
+            ease: "power1.out",
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
                     skewY: 0, // Skew back to -45 degrees
@@ -72,6 +73,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             duration: 0.1, 
             opacity: 0, 
             transformOrigin: "right bottom",
+            ease: "power1.out",
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
                     skewY: -45, // Skew back to -45 degrees
@@ -92,7 +94,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             onMouseLeave={handleHoverExit}
             onClick={handleClick}
         >
-            <div className='grid grid-cols-3 flex-1 line py-5 md:py-12'>
+            <div className='grid grid-cols-3 flex-1 line py-5 md:py-12 overflow-hidden'>
                 <div className='col-span-3 md:col-span-1 md:my-auto flex flex-row '>
                     <p className='font-normal text-2xl md:text-5xl flex-1'>{heading}</p>
                     <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${isOpen && 'rotate-180 '}`} />

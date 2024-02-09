@@ -15,7 +15,7 @@ const Landing3 = () => {
         delay: 1.5,
         scrollTrigger: {
           trigger: text,
-          start: 'center center',
+          start: 'top center',
           end: '+=1000px center',
           scrub: true,
         },
