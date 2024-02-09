@@ -117,23 +117,6 @@ const Navbar = () => {
     });
 
     React.useEffect(() => {
-        const myText = new SplitType(`#my-text-${id}`);
-        gsap.from(myText.chars, {
-            y: 50,
-            stagger: 0.02,
-            // delay: 0.2,
-            duration: .05
-        })
-        gsap.to('.char', {
-            y: 0,
-            stagger: 0.02,
-            // delay: 0.2,
-            duration: .05
-        })
-
-    }, [id]);
-
-    React.useEffect(() => {
         const pathName = window.location.pathname;
         setActiveLink(pathName);
     }, []);
@@ -152,10 +135,7 @@ const Navbar = () => {
         setHoveredId(hoveredId);
     }
 
-    const handleHoverlink = (id) => () => {
-        setId(id);
-        
-    }
+
 
 
 
@@ -178,9 +158,11 @@ const Navbar = () => {
                 {/* Navigation links */}
                 <div className="hidden md:flex gap-16 font-medium text-xl">
                     {data.option5.map((item, index) => (
-                        <motion.a href={item.link} id={`flex flex-col my-text-${index}`} className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
-                            onMouseEnter={handleHoverlink(index)}
-                        ><div>{item.title}</div><div>{item.title}</div></motion.a>
+                        <motion.a href={item.link}
+                         className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
+                        >
+                            <div>{item.title}</div>
+                        </motion.a>
                     ))
                     }
                 </div>
