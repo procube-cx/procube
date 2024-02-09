@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 import Landing1 from './component/hero/Landing1';
 import Landing2 from './component/hero/Landing2';
 import Landing3 from './component/hero/Landing3';
@@ -12,23 +13,38 @@ import Footer from './component/hero/Footer';
 import Marquee from './component/hero/Marquee';
 import Navbar from './component/hero/Navbar';
 import Landing10 from './component/hero/Landing10';
+import Preloader from './component/proloader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
   return (
     <div className=' text-white bg-[#121212]' >
-        <Navbar />
-        <Landing1 />
-        <Landing2 />
-        <Landing3 />
-        <Landing4 />
-        <Landing5 />
-        <Marquee />
-        <Lanidng7 />
-        <Landing10 />
-        <Landing6 />
-        <Landing8 />
-        <Landing9 />
-        <Footer />
+      {loading ? 
+      (
+        <Preloader />
+      ) : (
+        <div>
+          <Navbar />
+          <Landing1 />
+          <Landing2 />
+          <Landing3 />
+          <Landing4 />
+          <Landing5 />
+          <Marquee />
+          <Lanidng7 />
+          <Landing10 />
+          <Landing6 />
+          <Landing8 />
+          <Landing9 />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
