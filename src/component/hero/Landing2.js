@@ -7,24 +7,23 @@ import large from '../../assets/images/large.png';
 const Landing2 = () => {
 
   useEffect(() => {
-
     const screenheight = window.innerHeight;
     const screenwidth = window.innerWidth;
     gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#img',
-        start: '-40% center',
+    const tl = gsap.timeline()
+    ScrollTrigger.create({
+        trigger: '.cont',
+        start: '-50% center',
         end: 'bottom center',
+        animation: tl,
         scrub: 1,
-      },
     });
-    tl.set('.image-wrapper #img', {
+    tl.from('.image-wrapper #img', {
       scale: 0.2,
       x: screenwidth/8,
       y: -screenheight/2,
       duration: 2,
-      ease: 'power4.out',
+      ease: 'power1.out',
       transformOrigin: 'center top',
 
     });
@@ -33,7 +32,7 @@ const Landing2 = () => {
       x: 0,
       y: 0,
       duration: 2,
-      ease: 'power4.out',
+      ease: 'power1.out',
     });
   }, []);
 
