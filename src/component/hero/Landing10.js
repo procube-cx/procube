@@ -31,16 +31,17 @@ const data = [
 
 const Landing10 = () => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
+  const [even, setEven] = useState(false);
 
   const cardVariants = {
     expanded: {
-      scale: 1,
+      scale: 1.1,
       transition: {
         layout: true,
       },
     },
     contracted: {
-      scale: 1,
+      scale: 0.7,
       transition: {
         layout: true,
       },
@@ -48,7 +49,13 @@ const Landing10 = () => {
   };
 
   const handleCardClick = (index) => {
-    setExpandedIndex(expandedIndex === index ? -1 : index);
+      setExpandedIndex(index)
+      if(index % 2 === 0){
+        setEven(true)
+      } else {  
+        setEven(false)
+      }
+      console.log(expandedIndex,even)
   };
 
   return (
@@ -59,13 +66,13 @@ const Landing10 = () => {
           <motion.div
             key={index}
             className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16'
-            whileHover="expanded"
-            whileTap="contracted"
             variants={cardVariants}
-            initial={expandedIndex === index ? "expanded" : "contracted"}
-            animate={expandedIndex === index ? "expanded" : "contracted"}
-            onClick={() => handleCardClick(index)}
-          >
+            initial={((index % 4 === 0) || ((index + 1) % 4 === 0)) ? "expanded" : "contracted"}
+            animate={
+               (even ? (expandedIndex +1 === index && "contracted") : (expandedIndex -1 === index && "contracted")) || (expandedIndex === index && "expanded")
+            }            
+                        onMouseEnter={() => handleCardClick(index)}
+            >
             <img src={item.icon} alt={item.name} className='w-full mb-7' />
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
             <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>

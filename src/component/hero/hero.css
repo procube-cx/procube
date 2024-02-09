@@ -46,11 +46,11 @@
 .react-multiple-carousel__arrow--left
  {
     left: 0px !important;
-    padding-left: 45px;
+    margin-left: 25px;
 }
 
 .react-multiple-carousel__arrow--right
  {
     right: 0px !important;
-    padding-right: 45px;
+    margin-right: 25px;
 }
