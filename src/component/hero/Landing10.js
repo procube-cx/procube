@@ -38,16 +38,18 @@ const Landing10 = () => {
     const handleMouseMove = (event) => {
       const newCardScales = data.map((_, index) => {
         const card = document.getElementById(`card-${index}`);
+        const card1 = document.getElementById(`card-${index + 2}`);
         if (!card) return cardScales[index];
         const rect = card.getBoundingClientRect();        
-        const thresholdDistance = rect.width * 5; 
+        const thresholdDistance = rect.width * 4.5; 
+        const height = rect.height;
         if (index % 2 !== 0) {
           const centerX = rect.right;
           const centerY = rect.top;
           const distanceX = 1-(event.clientX - centerX);
           const distanceY = event.clientY - centerY;
-          if (distanceX < thresholdDistance && distanceY < rect.height && distanceY > 0) {
-            return Math.max(0.7, 0.8 - ((2.8 * distanceX - thresholdDistance)/100) / 100);
+          if (distanceX < thresholdDistance && distanceY < (height * 1.1)  && distanceY > 0) {
+            return Math.max(0.7, 0.8 - ((1.6 * distanceX - thresholdDistance)/100) / 100);
           }
           else {
             return cardScales[index];
@@ -57,8 +59,8 @@ const Landing10 = () => {
           const centerY = rect.top ;
           const distanceX = event.clientX - centerX;
           const distanceY = event.clientY - centerY
-          if (distanceX < thresholdDistance && distanceY < rect.height && distanceY > 0) {
-            return Math.max(0.7, 0.8 - ((2.8 * distanceX - thresholdDistance)/100) / 100);
+          if (distanceX < thresholdDistance && distanceY < (height * 1.1) && distanceY > 0) {
+            return Math.max(0.7, 0.8 - ((1.6 * distanceX - thresholdDistance)/100) / 100);
           }
           else {
             return cardScales[index];
@@ -83,13 +85,13 @@ const Landing10 = () => {
   return (
     <div className='px-6 md:px-24 py-16 md:py-28'>
       <p className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</p>
-      <div className='grid grid-cols-2 w-full gap-x-8'>
+      <div className='grid grid-cols-2 w-full gap-x-8 md:gap-x-16 gap-y-5 md:gap-y-36' >
         {data.map((item, index) => (
           <motion.div
             key={index}
             id={`card-${index}`}
-            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16 cursor-pointer'
-            style={{ scale: cardScales[index] }}
+            className='col-span-2 md:col-span-1 flex flex-col justify-center  cursor-pointer'
+            style={index % 2 ? { scale: cardScales[index] , transformOrigin: 'top right'} : { scale: cardScales[index], transformOrigin: 'top left' }}
           >
             <img src={item.icon} alt={item.name} className='w-full mb-7' />
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
