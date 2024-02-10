@@ -1,6 +1,6 @@
 import React from 'react';
-import Landing10 from '../components/hero/Landing10';
-
+import Landing10 from '../component/hero/Landing10';
+import Footer from '../component/hero/Footer';
 
 function Portfolio() {
 
