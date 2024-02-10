@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import image1 from '../../assets/images/project-image/image1.png';
@@ -31,54 +31,55 @@ const data = [
 
 const Landing10 = () => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
-  const [even, setEven] = useState(false);
+  const [cardScales, setCardScales] = useState(Array(data.length).fill(1));
   const isMobile = window.innerWidth < 768;
 
-
-  const cardVariants = isMobile
-  ? {
-      expanded: {
-        scale: 1,
-        transition: {
-          layout: true,
-        },
-      },
-      contracted: {
-        scale: 1,
-        transition: {
-          layout: true,
-        },
-      },
-    }
-  : {
-      expanded: {
-        scale: 1.1,
-        transition: {
-          layout: true,
-        },
-      },
-      contracted: {
-        scale: 0.7,
-        transition: {
-          layout: true,
-        },
-      },
-      none: {
-        scale: 1,
-        transition: {
-          layout: true,
-        },
-      },
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const newCardScales = data.map((_, index) => {
+        const card = document.getElementById(`card-${index}`);
+        if (!card) return cardScales[index];
+        const rect = card.getBoundingClientRect();        
+        const thresholdDistance = rect.width * 5; 
+        if (index % 2 !== 0) {
+          const centerX = rect.right;
+          const centerY = rect.top;
+          const distanceX = 1-(event.clientX - centerX);
+          const distanceY = event.clientY - centerY;
+          if (distanceX < thresholdDistance && distanceY < rect.height && distanceY > 0) {
+            return Math.max(0.7, 0.8 - ((2.8 * distanceX - thresholdDistance)/100) / 100);
+          }
+          else {
+            return cardScales[index];
+          }
+        } else {
+          const centerX = rect.left;
+          const centerY = rect.top ;
+          const distanceX = event.clientX - centerX;
+          const distanceY = event.clientY - centerY
+          if (distanceX < thresholdDistance && distanceY < rect.height && distanceY > 0) {
+            return Math.max(0.7, 0.8 - ((2.8 * distanceX - thresholdDistance)/100) / 100);
+          }
+          else {
+            return cardScales[index];
+          }
+        }
+      });
+      setCardScales(newCardScales);
     };
-
+  
+    document.addEventListener('mousemove', handleMouseMove);
+  
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [cardScales, data]);
+  
+  
+  
 
   const handleCardClick = (index) => {
-      setExpandedIndex(index)
-      if(index % 2 === 0){
-        setEven(true)
-      } else {  
-        setEven(false)
-      }
+    setExpandedIndex(index);
   };
 
   return (
@@ -88,14 +89,11 @@ const Landing10 = () => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16 cursor-pointer '
-            variants={cardVariants}
-            initial={((index % 4 === 0) || ((index + 1) % 4 === 0)) ? "expanded" : "contracted"}
-            animate={
-               (even ? (expandedIndex +1 === index && "contracted") : (expandedIndex -1 === index && "contracted")) || (expandedIndex === index && "expanded")
-            }            
-                        onMouseEnter={() => handleCardClick(index)}
-            >
+            id={`card-${index}`}
+            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16 cursor-pointer'
+            style={{ scale: cardScales[index] }}
+            onClick={() => handleCardClick(index)}
+          >
             <img src={item.icon} alt={item.name} className='w-full mb-7' />
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
             <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>
