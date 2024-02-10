@@ -38,7 +38,7 @@ const data = [
 
 ]
 
-const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer,ref }) => {
+const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer }) => {
     const [isOpen, setIsOpen] = useState(activeCard === id);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -80,7 +80,6 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: isHovered ? 0 : activeCard ? 1 : 0 }}
                         transition={{ duration: 6 }}
-                        ref={ref}
                     />
                     <div className='w-full h-[1px] bg-white opacity-30 mb-0.5' />
                 </div>
@@ -96,12 +95,18 @@ const Landing6 = () => {
     const [ref, inView] = useInView(
         isMobile ? {
             triggerOnce: true,
-            threshold: 1
+            threshold: 0.1,
         } : {
             triggerOnce: true,
-            threshold: 1
+            threshold: 0.1,
         }
     );
+
+    React.useEffect(() => {
+        if (inView) {
+            setActiveCard(1);
+        }
+    }, [inView]);
 
     const handleCardClick = (id) => {
         setActiveCard(id);
@@ -125,7 +130,7 @@ const Landing6 = () => {
     }, [activeCard, timerPaused]);
 
     return (
-        <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px] pb-0 md:pb-16'>
+        <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px] pb-0 md:pb-16' ref={ref}>
             <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Process & Approach</p>
             <div className='w-full flex flex-col md:flex-row overflow-hidden gap-x-16 md:pt-16'>
                 <div className='flex md:w-[54%] h-full flex-col my-auto'>
@@ -139,7 +144,6 @@ const Landing6 = () => {
                             onCardClick={handleCardClick}
                             pauseTimer={pauseTimer}
                             resumeTimer={resumeTimer}
-                            ref={ref}
                         />
                     ))}
                 </div>
