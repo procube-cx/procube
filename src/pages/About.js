@@ -19,7 +19,6 @@ function About() {
   return (
     <div className=' text-white bg-[#121212]' >
           <Navbar />
-          {/* <Landing1 /> */}
           <Landing2 />
           <Landing3 />
           <Landing5 />

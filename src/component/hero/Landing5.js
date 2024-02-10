@@ -54,7 +54,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             duration: 0.1, 
             opacity: 1, 
             transformOrigin: "right top",
-            ease: "power1.out",
+            ease: "back.out",
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
                     skewY: 0, // Skew back to -45 degrees
@@ -73,7 +73,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             duration: 0.1, 
             opacity: 0, 
             transformOrigin: "right bottom",
-            ease: "power1.out",
+            ease: "back.out",
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
                     skewY: -45, // Skew back to -45 degrees
