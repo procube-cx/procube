@@ -33,7 +33,6 @@ const Landing10 = () => {
   const [cardScales, setCardScales] = useState(
     data.map((_, index) => ((index % 4 === 0) || ((index + 1) % 4 === 0) ? 1.15 : 0.7))
   );
-    const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     const handleMouseMove = (event) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import icon from '../../assets/images/icons/icon3.png'
 
 
 const marqueeVariants = {
@@ -25,8 +26,8 @@ const Marquee = () => {
           variants={marqueeVariants}
           animate="animate"
         >
-          <div className="font-normal text-4xl md:text-8xl py-3 md:py-6  hover:-translate-x-28">
-            JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK JUST GREAT WORK
+          <div className="font-normal text-4xl md:text-8xl py-3 md:py-6  hover:-translate-x-28 flex">
+            <img src={icon} className="h-3/4 my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-3/4 my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-3/4 my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-3/4 my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-3/4 my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-3/4 my-auto" />&nbsp;DELIVER&nbsp;
           </div>
         </motion.div>
       </div>

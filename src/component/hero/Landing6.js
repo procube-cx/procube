@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import process from '../../assets/images/approach.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import process1 from '../../assets/images/process/process1.png'
+import process2 from '../../assets/images/process/process2.png'
+import process3 from '../../assets/images/process/process3.png'
+import process4 from '../../assets/images/process/process4.png'
+import process5 from '../../assets/images/process/process5.png'
 
 
 const data = [
@@ -9,31 +13,31 @@ const data = [
         id: 1,
         title: "Statergy",
         description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
-        icon: process
+        icon: process1
     },
     {
         id: 2,
         title: "Design",
         description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
-        icon: process
+        icon: process2
     },
     {
         id: 3,
         title: "Visualization",
         description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
-        icon: process
+        icon: process3
     },
     {
         id: 4,
         title: "Development",
         description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
-        icon: process
+        icon: process4
     },
     {
         id: 5,
         title: "Improve",
         description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
-        icon: process
+        icon: process5
     }
 
 ]
