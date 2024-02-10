@@ -67,7 +67,7 @@ const Card = ({ heading, icon, date, index }) => {
     };
 
     return (
-        <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8' key={index}
+        <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 cursor-pointer' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >

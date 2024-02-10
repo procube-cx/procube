@@ -63,6 +63,12 @@ const Landing10 = () => {
           layout: true,
         },
       },
+      none: {
+        scale: 1,
+        transition: {
+          layout: true,
+        },
+      },
     };
 
 
@@ -82,7 +88,7 @@ const Landing10 = () => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16'
+            className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16 cursor-pointer '
             variants={cardVariants}
             initial={((index % 4 === 0) || ((index + 1) % 4 === 0)) ? "expanded" : "contracted"}
             animate={

@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import process from '../../assets/images/approach.png';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 const data = [
     {
@@ -36,7 +38,7 @@ const data = [
 
 ]
 
-const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer }) => {
+const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer,ref }) => {
     const [isOpen, setIsOpen] = useState(activeCard === id);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -56,7 +58,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 
     return (
         <div
-            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 ${!isOpen && 'opacity-40  border-b-2'}`}
+            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 cursor-pointer ${!isOpen && 'opacity-40  border-b-2'}`}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={() => onCardClick(id)}
@@ -71,13 +73,17 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
                 </div>
             }
             {isOpen &&
-                <motion.div
-                    style={{ scaleX: activeCard ? 1 : 0, transformOrigin: "left" }}
-                    className='w-full h-0.5 bg-white'
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: isHovered ? 0 : activeCard ? 1 : 0 }}
-                    transition={{ duration: 6 }}
-                />
+                <div>
+                    <motion.div
+                        style={{ scaleX: activeCard ? 1 : 0, transformOrigin: "left" }}
+                        className='w-full h-0.5 bg-white'
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: isHovered ? 0 : activeCard ? 1 : 0 }}
+                        transition={{ duration: 6 }}
+                        ref={ref}
+                    />
+                    <div className='w-full h-[1px] bg-white opacity-30 mb-0.5' />
+                </div>
             }
         </div>
     );
@@ -86,6 +92,16 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 const Landing6 = () => {
     const [activeCard, setActiveCard] = useState(1);
     const [timerPaused, setTimerPaused] = useState(false);
+    const isMobile = window.innerWidth < 768;
+    const [ref, inView] = useInView(
+        isMobile ? {
+            triggerOnce: true,
+            threshold: 1
+        } : {
+            triggerOnce: true,
+            threshold: 1
+        }
+    );
 
     const handleCardClick = (id) => {
         setActiveCard(id);
@@ -123,6 +139,7 @@ const Landing6 = () => {
                             onCardClick={handleCardClick}
                             pauseTimer={pauseTimer}
                             resumeTimer={resumeTimer}
+                            ref={ref}
                         />
                     ))}
                 </div>

@@ -140,7 +140,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="absolute w-full z-40" >
+        <div className={`absolute w-full z-40 ${isMenuOpen && 'md:fixed'}`} >
             {/* Header section */}
             {/* Hamburger menu */}
             <div className="flex items-center justify-between px-6 md:px-24 py-6 md:py-12">
@@ -173,7 +173,7 @@ const Navbar = () => {
             </div>
             {/* Mobile view menu */}
             <div className={`absolute w-full ${isMenuOpen && 'top-0'}`} >
-                <div className='grid grid-cols-5'>
+                <div className='grid grid-cols-5 md:fixed'>
                     <motion.div
                         initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: -100 } : { opacity: 1, y: "-150vh" }}
                         animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
