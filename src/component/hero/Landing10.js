@@ -30,9 +30,10 @@ const data = [
 ];
 
 const Landing10 = () => {
-  const [expandedIndex, setExpandedIndex] = useState(-1);
-  const [cardScales, setCardScales] = useState(Array(data.length).fill(1));
-  const isMobile = window.innerWidth < 768;
+  const [cardScales, setCardScales] = useState(
+    data.map((_, index) => ((index % 4 === 0) || ((index + 1) % 4 === 0) ? 1.15 : 0.7))
+  );
+    const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -78,9 +79,7 @@ const Landing10 = () => {
   
   
 
-  const handleCardClick = (index) => {
-    setExpandedIndex(index);
-  };
+
 
   return (
     <div className='px-6 md:px-24 py-16 md:py-28'>
@@ -92,7 +91,6 @@ const Landing10 = () => {
             id={`card-${index}`}
             className='col-span-2 md:col-span-1 flex flex-col justify-center py-5 md:py-16 cursor-pointer'
             style={{ scale: cardScales[index] }}
-            onClick={() => handleCardClick(index)}
           >
             <img src={item.icon} alt={item.name} className='w-full mb-7' />
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
