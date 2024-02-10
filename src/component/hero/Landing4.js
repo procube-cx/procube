@@ -8,10 +8,10 @@ const Landing4 = () => {
     const [ref, inView] = useInView(
         isMobile ? {
         triggerOnce: true,
-        threshold: 0.7
+        threshold: 0.1
     } : {
         triggerOnce: true,
-        threshold: 0.1
+        threshold: 0.7
     }    
     );
 
