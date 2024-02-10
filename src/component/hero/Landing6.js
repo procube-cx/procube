@@ -38,7 +38,7 @@ const data = [
 
 ]
 
-const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer }) => {
+const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer,time }) => {
     const [isOpen, setIsOpen] = useState(activeCard === id);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -78,7 +78,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
                         style={{ scaleX: activeCard ? 1 : 0, transformOrigin: "left" }}
                         className='w-full h-0.5 bg-white'
                         initial={{ scaleX: 0 }}
-                        animate={{ scaleX: isHovered ? 0 : activeCard ? 1 : 0 }}
+                        animate={{ scaleX: isHovered ? time/240 : activeCard ? 1 : 0 }}
                         transition={{ duration: 6 }}
                     />
                     <div className='w-full h-[1px] bg-white opacity-30 mb-0.5' />
@@ -89,6 +89,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 };
 
 const Landing6 = () => {
+    const [time , setTime] = useState(0);
     const [activeCard, setActiveCard] = useState(1);
     const [timerPaused, setTimerPaused] = useState(false);
     const isMobile = window.innerWidth < 768;
@@ -110,6 +111,7 @@ const Landing6 = () => {
 
     const handleCardClick = (id) => {
         setActiveCard(id);
+        setTime(0);
     };
 
     const pauseTimer = () => {
@@ -124,10 +126,21 @@ const Landing6 = () => {
         const timer = setTimeout(() => {
             if (!timerPaused) {
                 setActiveCard((prevActiveCard) => (prevActiveCard === 5 ? 1 : prevActiveCard + 1));
+                setTime(0);
             }
-        }, 5000)
-        return () => clearTimeout(timer);
-    }, [activeCard, timerPaused]);
+        }, 4000);
+    
+        const interval = setInterval(() => {
+            if (!timerPaused && time < 240) {
+                setTime((prevTime) => prevTime + 1);
+            }
+        }, 1000 / 60);
+    
+        return () => {
+            clearTimeout(timer);
+            clearInterval(interval);
+        };
+    }, [activeCard, timerPaused, time]);    
 
     return (
         <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px] pb-0 md:pb-16' ref={ref}>
@@ -144,6 +157,7 @@ const Landing6 = () => {
                             onCardClick={handleCardClick}
                             pauseTimer={pauseTimer}
                             resumeTimer={resumeTimer}
+                            time={time}
                         />
                     ))}
                 </div>
