@@ -180,7 +180,7 @@ const Navbar = () => {
                         transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
                         className='col-span-5 md:col-span-3 h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
                         <div className='hidden md:block'></div>
-                        <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 '>
+                        <div className=' grid grid-cols-2 md:grid-cols-4 font-normal py-8 gap-y-10 items-center'>
                             <div className='flex flex-col col-span-2 gap-5 md:gap-8'>
                                 {data.option1.map((item, index) => (
                                     <a key={index} href={item.links} className='text-2xl md:text-4xl'

@@ -71,10 +71,10 @@ const Card = ({ heading, icon, date, index }) => {
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
         >
-            <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
+            <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing gap-y-5'>
                 <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block' />
-                <div id={`text-${index}`} className='col-span-12 md:col-span-8 flex flex-col justify-center gap-y-5 md:gap-y-16'>
-                    <p className='my-auto font-normal text-2xl md:text-5xl'>{heading}</p>
+                <div id={`text-${index}`} className='col-span-12 md:col-span-8 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
+                    <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
                     <div className='py-2 px-5 md:py-3 md:px-8 rounded-[78px] bg-[#1A1A1A] mr-auto'>
                         <p className='text-sm md:text-lg'>{date}</p>
                     </div>

@@ -56,7 +56,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 
     return (
         <div
-            className={`flex flex-col w-full border-opacity-40 border-white py-3 gap-2 ${!isOpen && 'opacity-40  border-b-2'}`}
+            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 ${!isOpen && 'opacity-40  border-b-2'}`}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={() => onCardClick(id)}

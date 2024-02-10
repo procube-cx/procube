@@ -15,9 +15,10 @@ const Landing3 = () => {
         delay: 1.5,
         scrollTrigger: {
           trigger: text,
-          start: 'top center',
+          start: 'top top',
           end: '+=1000px center',
           scrub: true,
+          markers: false,
         },
       });
     });

@@ -4,10 +4,16 @@ import { useInView } from 'react-intersection-observer'
 import that from '../../assets/images/that.png'
 
 const Landing4 = () => {
-    const [ref, inView] = useInView({
+    const isMobile = window.innerWidth < 768;
+    const [ref, inView] = useInView(
+        isMobile ? {
+        triggerOnce: true,
+        threshold: 0.7
+    } : {
         triggerOnce: true,
         threshold: 0.1
-    });
+    }    
+    );
 
     return (
         <div className='grid grid-cols-3 md:grid-cols-11 w-full px-6 md:px-24 py-6 md:py-0 gap-x-28 md:min-h-screen max-h-[900px] overflow-y-hidden overflow-x-hidden'>
