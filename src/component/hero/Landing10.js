@@ -33,12 +33,12 @@ const Landing10 = () => {
   const [cardScales, setCardScales] = useState(
     data.map((_, index) => ((index % 4 === 0) || ((index + 1) % 4 === 0) ? 1.15 : 0.7))
   );
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     const handleMouseMove = (event) => {
       const newCardScales = data.map((_, index) => {
         const card = document.getElementById(`card-${index}`);
-        const card1 = document.getElementById(`card-${index + 2}`);
         if (!card) return cardScales[index];
         const rect = card.getBoundingClientRect();        
         const thresholdDistance = rect.width * 4.5; 
@@ -91,7 +91,7 @@ const Landing10 = () => {
             key={index}
             id={`card-${index}`}
             className='col-span-2 md:col-span-1 flex flex-col justify-center  cursor-pointer'
-            style={index % 2 ? { scale: cardScales[index] , transformOrigin: 'top right'} : { scale: cardScales[index], transformOrigin: 'top left' }}
+            style={isMobile ? ({scale:1}) : (index % 2 ? { scale: cardScales[index] , transformOrigin: 'top right'} : { scale: cardScales[index], transformOrigin: 'top left' })}
           >
             <img src={item.icon} alt={item.name} className='w-full mb-7' />
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>

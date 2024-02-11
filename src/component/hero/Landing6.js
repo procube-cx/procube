@@ -166,7 +166,7 @@ const Landing6 = () => {
                     ))}
                 </div>
                 <div className='flex md:flex-1 h-full flex-col justify-center'>
-                    <img src={data[activeCard - 1].icon} alt="process" className='w-full mx-auto' />
+                    <img src={data[activeCard - 1].icon} alt="process" className='w-full mx-auto rounded-2xl' />
                 </div>
             </div>
         </div>
