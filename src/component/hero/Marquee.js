@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image from '../../assets/images/marquee.png';
 
 
 const marqueeVariants = {
@@ -25,8 +26,8 @@ const Marquee = () => {
           variants={marqueeVariants}
           animate="animate"
         >
-          <div className="font-normal text-4xl md:text-8xl py-5 md:py-6 hover:-translate-x-96">
-            ImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImageImage
+          <div className="font-normal  py-5 md:py-6 hover:-translate-x-96 flex flex-row ">
+            <img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/>
           </div>
         </motion.div>
       </div>
