@@ -6,6 +6,7 @@ import About1 from '../component/about/About1';
 import About2 from '../component/about/About2';
 import About4 from '../component/about/About4';
 import About3 from '../component/about/About3';
+import NextUp from '../component/NextUp';
 
 function About() {
 
@@ -17,6 +18,7 @@ function About() {
       <About2 />
       <About3 />
       <About4 />
+      <NextUp Heading={'Services'} />
       <Footer />
     </div>
   );
