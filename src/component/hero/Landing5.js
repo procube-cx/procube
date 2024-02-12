@@ -43,22 +43,25 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     const { heading, icon, description, isOpen } = cardDetail;
 
     useEffect(() => {
-        gsap.set(`.line #img-${index}`, { x: 0, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom" });
+        gsap.set(`.line #img-${index}`, { x: 10, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom" });
     }, [index]);
 
     const handleHover = () => {
         gsap.to(`.line #img-${index}`, { 
             x: 0, 
-            y: 0, 
-            skewY: 10, // Skew to -47 degrees
-            duration: 0.1, 
+            y: 6, 
+            skewY: 2, 
+            // skewX: -2,
+            duration: 0.325, 
             opacity: 1, 
             transformOrigin: "right top",
             ease: "back.out",
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
-                    skewY: 0, // Skew back to -45 degrees
-                    duration: 0.1
+                    skewY: 0, 
+                    skewX: 0,
+                    y: 0,
+                    duration: 0.05
                 });
             }
         });
@@ -67,19 +70,13 @@ const Card = ({ cardDetail, index, toggleCard }) => {
 
     const handleHoverExit = () => {
         gsap.to(`.line #img-${index}`, { 
-            x: 0, 
-            y: 100, 
-            skewY: -47, // Skew to -47 degrees
+            x: 10, 
+            y: 200, 
+            skewY: -10,
             duration: 0.1, 
             opacity: 0, 
             transformOrigin: "right bottom",
             ease: "back.out",
-            onComplete: () => {
-                gsap.to(`.line #img-${index}`, { 
-                    skewY: -45, // Skew back to -45 degrees
-                    duration: 0.1
-                });
-            }
         });
     };
     
@@ -94,12 +91,12 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             onMouseLeave={handleHoverExit}
             onClick={handleClick}
         >
-            <div className='grid grid-cols-3 flex-1 line py-5 md:py-12 overflow-hidden'>
+            <div className='grid grid-cols-3 flex-1 line my-5 md:my-12 overflow-hidden'>
                 <div className='col-span-3 md:col-span-1 md:my-auto flex flex-row '>
                     <p className='font-normal text-2xl md:text-5xl flex-1'>{heading}</p>
                     <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${isOpen && 'rotate-180 '}`} />
                 </div>
-                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 h-full mx-auto my-auto hidden md:flex' />
+                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 h-full mx-auto my-auto hidden md:flex overflow-hidden' />
                 <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex' : "hidden"} `} />
                 <div className='col-span-3 md:col-span-1 grid grid-cols-2 gap-y-2'>
                     <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto`}>{description}</p>
