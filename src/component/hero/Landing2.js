@@ -32,7 +32,7 @@ const Landing2 = () => {
       x: 0,
       y: 0,
       duration: 2,
-      ease: 'power1.out',
+      ease: 'power4.out',
     });
   }, []);
 
