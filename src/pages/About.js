@@ -5,6 +5,7 @@ import Landing3 from '../component/hero/Landing3';
 import Landing5 from '../component/hero/Landing5';
 import Landing9 from '../component/hero/Landing9';
 import Footer from '../component/hero/Footer';
+import About2 from '../component/about/About2';
 
 function About() {
 
@@ -13,7 +14,8 @@ function About() {
           <Navbar />
           <Landing2 />
           <Landing3 />
-          <Landing5 />
+          <About2/>
+          {/* <Landing5 /> */}
           <Landing9 />
           <Footer />
     </div>
