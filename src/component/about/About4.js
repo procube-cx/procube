@@ -7,24 +7,24 @@ import arrowIcon from '../../assets/images/exploreMore.png';
 
 const data = [
     {
+        heading: "Innovation",
+        icon: icon,
+        details: "We believe in the power of innovation as the driving force behind progress. We're dedicated to staying at the forefront of technological advancements and leveraging them to create groundbreaking solutions for our clients. Innovation isn't just a buzzword; it's the foundation of everything we do",
+    },
+    {
+        heading: "Partnership",
+        icon: icon,
+        details: "We see ourselves as more than just service providers; we're your dedicated partners on the journey to success. Collaboration is in our DNA, and we work closely with our clients, valuing their insights and perspectives as we co-create solutions that make a real impact.",
+    },
+    {
+        heading: "Empathy",
+        icon: icon,
+        details: "Our clients' success is at the heart of our mission. We're committed to understanding their unique needs, challenges, and aspirations, and tailoring our solutions accordingly. We put ourselves in our clients' shoes, ensuring every project is designed to exceed expectations.",
+    },
+    {
         heading: "Excellence",
         icon: icon,
-        details: "Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Lorem ipsum dolor sit amet consectetur Commodo etiam vestibulum quam tristique non venenatis sed. Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt  Commodo etiam vestibulum quam tristique non venenatis sed.",
-    },
-    {
-        heading: "Team Work",
-        icon: icon,
-        details: "Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Lorem ipsum dolor sit amet consectetur Commodo etiam vestibulum quam tristique non venenatis sed. Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt  Commodo etiam vestibulum quam tristique non venenatis sed.",
-    },
-    {
-        heading: "Excellence",
-        icon: icon,
-        details: "Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Lorem ipsum dolor sit amet consectetur Commodo etiam vestibulum quam tristique non venenatis sed. Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt  Commodo etiam vestibulum quam tristique non venenatis sed.",
-    },
-    {
-        heading: "Competence",
-        icon: icon,
-        details: "Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Lorem ipsum dolor sit amet consectetur Commodo etiam vestibulum quam tristique non venenatis sed. Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt  Commodo etiam vestibulum quam tristique non venenatis sed.",
+        details: "We don't just aim for the ordinary; we strive for excellence in every project we undertake. Our meticulous attention to detail, commitment to quality, and unwavering pursuit of excellence are the cornerstones of our work. We don't consider a project complete until it exceeds the highest standards.     ",
     },
 ];
 
@@ -50,7 +50,7 @@ const Card = ({ heading, icon, details, index }) => {
 
 const About4 = () => {
     return (
-        <div className='px-6 md:px-24 py-10 md:py-20 flex flex-col  '>
+        <div className='px-6 md:px-24 py-10 md:py-48 flex flex-col  '>
             <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-16'>Our Values</p>
                 {data.map((cardDetail, index) => (
                     <Card

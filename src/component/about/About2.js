@@ -8,11 +8,11 @@ import icon3 from '../../assets/images/icons/icon3_purple.png'
 const data = [
     {
         heading: "Who we are",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. ",
+        description: "At Procube, we are a passionate team of creators, strategists, and innovators. We're more than just professionals; we're dreamers, thinkers, and doers. Our diverse backgrounds and experiences enrich our approach, allowing us to see challenges from multiple perspectives and find creative solutions. We thrive on collaboration, pushing the boundaries of what's possible, and, most importantly, making a positive impact on the digital landscape",
     },
     {
         heading:"What we Do",
-        description:"Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. Vel aliquam feugiat proin tincidunt feugiat viverra. Commodo etiam vestibulum quam tristique non venenatis sed.Lorem ipsum dolor sit amet consectetur. "
+        description:"At Procube, we specialize in crafting exceptional digital experiences with three core pillars: technology, design, and strategy. We empower businesses with cutting-edge technology, create lasting brand impressions through captivating design, and ensure every project becomes a transformative journey. We work closely with clients, diving into brainstorming, design, and strategic development, delivering remarkable results that redefine user engagement."
     }
 ];
 
