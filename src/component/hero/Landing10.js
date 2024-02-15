@@ -48,7 +48,7 @@ const Landing10 = () => {
           const centerY = rect.top;
           const distanceX = 1-(event.clientX - centerX);
           const distanceY = event.clientY - centerY;
-          if (distanceX < thresholdDistance && distanceY < (height * 1.1)  && distanceY > 0) {
+          if (distanceX < thresholdDistance && distanceY < 630 &&  distanceY > 0) {
             return Math.max(0.7, 0.8 - ((1.6 * distanceX - thresholdDistance)/100) / 100);
           }
           else {
@@ -59,7 +59,7 @@ const Landing10 = () => {
           const centerY = rect.top ;
           const distanceX = event.clientX - centerX;
           const distanceY = event.clientY - centerY
-          if (distanceX < thresholdDistance && distanceY < (height * 1.1) && distanceY > 0) {
+          if (distanceX < thresholdDistance && distanceY < 630  && distanceY > 0) {
             return Math.max(0.7, 0.8 - ((1.6 * distanceX - thresholdDistance)/100) / 100);
           }
           else {
