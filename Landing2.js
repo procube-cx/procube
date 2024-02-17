@@ -35,10 +35,7 @@ const Landing2 = () => {
       duration: 2,
       ease: 'linear',
     });
-    return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    }
-  }, [ScrollTrigger]);
+  }, []);
 
 
   return (

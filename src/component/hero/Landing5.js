@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import './hero.css';
 import icon2 from '../../assets/images/icons/icon2.png'
+import CustomEase from 'gsap/CustomEase';
 
 const data = [
     {
@@ -50,12 +51,12 @@ const Card = ({ cardDetail, index, toggleCard }) => {
         gsap.to(`.line #img-${index}`, { 
             x: 0, 
             y: 6, 
-            skewY: 2, 
+            skewY: 0, 
             // skewX: -2,
             duration: 0.325, 
             opacity: 1, 
             transformOrigin: "right top",
-            ease: "back.out",
+            ease: CustomEase.create("custom", "0.15,0.45,0.15,1.35"),
             onComplete: () => {
                 gsap.to(`.line #img-${index}`, { 
                     skewY: 0, 
@@ -69,15 +70,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     
 
     const handleHoverExit = () => {
-        gsap.to(`.line #img-${index}`, { 
-            x: 10, 
-            y: 200, 
-            skewY: -10,
-            duration: 0.1, 
-            opacity: 0, 
-            transformOrigin: "right bottom",
-            ease: "back.out",
-        });
+        gsap.to(`.line #img-${index}`, { x: 10, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom", duration: 0.325, ease: CustomEase.create("custom", "0.15,0.45,0.15,1.35") });
     };
     
 
