@@ -34,14 +34,14 @@ const Card = ({ heading, icon, details, index }) => {
 
     return (
         <div
-            className={`overflow-hidden flex w-full border-t-[1px] border-opacity-40 border-white ${isLastCard ? 'border-b-[2px]' : ''} gap-2 md:gap-4 py-5 md:py-8 cursor-pointer`}
+            className={`overflow-hidden flex w-full border-t-[2px] border-opacity-40 border-white ${isLastCard ? 'border-b-[2px]' : ''} gap-2 md:gap-4 py-5 md:py-12 cursor-pointer`}
             key={index}
         >
-            <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing md:gap-y-5'>
+            <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing'>
                 <img src={icon} alt="icon" className='col-span-12 md:col-span-3 w-4/12 md:w-6/12 my-auto block md:mx-auto' />
-                <div className='col-span-12 md:col-span-8 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
+                <div className='col-span-12 md:col-span-8 flex flex-col justify-center gap-y-5 md:gap-y-10'>
                     <p className=' font-normal text-2xl md:text-4xl'>{heading}</p>
-                    <p className='text-sm md:text-lg opacity-60'>{details}</p>
+                    <p className='text-sm md:text-lg opacity-40'>{details}</p>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@ const Card = ({ heading, icon, details, index }) => {
 const About4 = () => {
     return (
         <div className='px-6 md:px-24 pt-10 md:pt-48 flex flex-col  '>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-16'>Our Values</p>
+            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[70px]'>Our Values</p>
                 {data.map((cardDetail, index) => (
                     <Card
                         heading={cardDetail.heading}
