@@ -10,7 +10,6 @@ const marqueeVariants = {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 5,
         ease: "linear",
       },
     },
@@ -18,15 +17,20 @@ const marqueeVariants = {
 };
 
 const Marquee = () => {
+
+  const [hover, setHover] = React.useState(false);
   return (
     <div className="py-16 md:py-10 md:pb-48 overflow-x-hidden my-auto overflow-y-hidden">
       <div className="relative w-full">
         <motion.div
-          className="track bg-[#7605C1] hover-effect" // Add hover-effect class
+          className="track bg-[#7605C1] hover-effect" 
           variants={marqueeVariants}
+          style={hover?{ animationDuration: "30s"}:{ animationDuration: "15s"}}
           animate="animate"
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
-          <div className="font-normal text-4xl md:text-8xl py-3 md:py-6  hover:-translate-x-28 flex">
+          <div className="font-normal text-4xl md:text-8xl py-3 md:py-6 flex">
             <img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DELIVER&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DESIGN&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto"/>&nbsp;DEVELOP&nbsp;<img src={icon} className="h-[40px] md:h-3/4 md:my-auto" />&nbsp;DELIVER&nbsp;
           </div>
         </motion.div>

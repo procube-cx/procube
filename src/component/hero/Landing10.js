@@ -83,7 +83,7 @@ const Landing10 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 py-16 md:py-28'>
+    <div className='px-6 md:px-24 py-16 md:py-28 md:gap-16 flex flex-col'>
       <p className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</p>
       <div className='grid grid-cols-2 w-full gap-x-8 md:gap-x-16 gap-y-5 md:gap-y-36' >
         {data.map((item, index) => (
@@ -99,7 +99,10 @@ const Landing10 = () => {
           </motion.div>
         ))}
       </div>
+      <div>
+
       <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-10 hover:opacity-55 cursor-pointer' />
+      </div>
     </div>
   );
 };
