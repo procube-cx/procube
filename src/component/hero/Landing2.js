@@ -20,9 +20,9 @@ const Landing2 = () => {
         markers:false
     });
     tl.from('.image-wrapper #img', {
-      scale: 0.2,
+      scale: 0.14,
       x: screenwidth/8,
-      y: -screenheight/2,
+      y: -screenheight/2 + 30,
       duration: 2,
       ease: 'linear',
       transformOrigin: 'center top',

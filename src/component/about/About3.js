@@ -17,18 +17,9 @@ const About3 = () => {
 
      scroll_instance = ScrollTrigger.create({
         trigger: containerRef.current,
-        start: "top top",
+        start: "top center",
         end: "bottom top",
-        onToggle: (self) => console.log("toggled, isActive:", self.isActive),
         onUpdate: (self) => {
-          console.log(
-            "progress:",
-            self.progress.toFixed(3),
-            "direction:",
-            self.direction,
-            "velocity",
-            self.getVelocity()
-          );
           setProgress(self.progress.toFixed(3))
         },
       });
@@ -42,11 +33,11 @@ const About3 = () => {
   }, [containerRef.current,ScrollTrigger ]);
   return (
     <div className="cont mycontainer" ref={containerRef}>
-      <div className="image-wrapper bg-slate-300 md:pt-36">
+      <div className="image-wrapper md:pt-36">
 
-        <div className='flex my-auto w-4/5 h-[60vh] mx-auto  bg-red-600 overflow-hidden rounded-2xl relative' >
-
-          <img style={{ transform: `translate(-50%,-${progress*40}%) scale(1.4)` }} src={large} alt="large" className='flex absolute h-full left-1/2 top-0 ' />
+        <div className='flex my-auto w-4/5 h-[60vh] mx-auto overflow-hidden rounded-2xl relative' >
+          <img style={{ transform: `translate(-50%,-${progress*60}%) scale(1.8)` }} src={large} alt="large" className='flex absolute h-full left-1/2 top-0 ' />
+          <p className='flex z-20 justify-center items-center mx-auto text-4xl md:text-8xl font-normal uppercase'>Our Journey</p>
         </div>
       </div>
     </div>
