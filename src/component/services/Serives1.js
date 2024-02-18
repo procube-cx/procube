@@ -40,13 +40,13 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
     return (
         <div
-            className={`flex w-full py-5 md:py-10 px-4 md:px-24 cursor-pointer border-t-2 border-white border-opacity-40  ${lastcard ? "border-b-2" : "border-b-0"}`}
+            className={`flex w-full py-5 md:py-10 md:px-24 cursor-pointer border-t-2 border-white border-opacity-40  ${lastcard ? "border-b-2" : "border-b-0"}`}
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>
-                <img src={icon} alt={heading} className='w-full md:w-full rounded-3xl mb-2 md:mb-4' />
+                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4' />
                 <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
-                <p className='text-sm md:text-lg opacity-40'>{details}</p>
+                <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{details}</p>
                 <div className='flex flex-wrap gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4'>
                     {tags.map((tag, index) => (
                         <p key={index} className='text-sm md:text-base bg-[#870FF3] px-2 md:px-4 py-1 md:py-2 rounded-full'>{tag}</p>
@@ -59,7 +59,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
 const Services1 = () => {
     return (
-        <div className='px-6 md:px-24 py-10 md:py-32 md:pt-52 flex flex-col'>
+        <div className='px-6 py-24 md:py-32 md:pt-52 flex flex-col'>
             <p className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-16 !leading-tight'>Crafting Exceptional Digital Products</p>
             {data.map((cardDetail, index) => (
                 <Card
