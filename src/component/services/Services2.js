@@ -49,7 +49,7 @@ const Card = ({ heading, index, tags }) => {
 
 const Services2 = () => {
     return (
-        <div className='px-6 md:px-24  md:pt-52 flex flex-col'>
+        <div className='px-6 md:px-24 pt-16 md:pt-52 flex flex-col'>
             <p className='font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-12 !leading-tight'>THE TECH WE USE</p>
             {data.map((cardDetail, index) => (
                 <Card

@@ -44,7 +44,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>
-                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4' />
+                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[40px] md:h-[70vh] object-cover' />
                 <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
                 <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{details}</p>
                 <div className='flex flex-wrap gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4'>
@@ -59,7 +59,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
 const Services1 = () => {
     return (
-        <div className='px-6 py-24 md:py-32 md:pt-52 flex flex-col'>
+        <div className='px-6 md:px-24 py-24 md:py-32 md:pt-52 flex flex-col'>
             <p className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-16 !leading-tight'>Crafting Exceptional Digital Products</p>
             {data.map((cardDetail, index) => (
                 <Card
