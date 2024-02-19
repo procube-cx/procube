@@ -33,7 +33,7 @@ const Marquee = () => {
           animate="animate"
         >
           <div className="font-normal  py-5 md:py-6  flex flex-row ">
-            <img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/><img src={image} alt="image" className="h-full px-4"/>
+            <img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/><img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/><img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/><img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/><img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/><img src={image} alt="image" className="h-10 md:h-[80px] px-4 min-w-min"/>
           </div>
         </motion.div>
       </div>

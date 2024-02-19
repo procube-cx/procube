@@ -35,7 +35,11 @@ const Landing2 = () => {
       duration: 2,
       ease: 'linear',
     });
-  }, []);
+
+    return () => {
+      tl.kill();
+    };
+  }, [ScrollTrigger]);
 
 
   return (

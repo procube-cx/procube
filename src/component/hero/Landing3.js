@@ -22,7 +22,13 @@ const Landing3 = () => {
         },
       });
     });
-  }, []); // Close the useEffect dependencies array
+
+    return () => {
+      textElements.forEach(text => {
+        text?.scrollTrigger?.kill();
+      });
+    };
+  }, [ScrollTrigger]); // Close the useEffect dependencies array
 
   return (
     <div className='px-6 md:px-24 py-10 md:py-24 '>
