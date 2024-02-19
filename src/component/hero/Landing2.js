@@ -43,8 +43,8 @@ const Landing2 = () => {
 
   return (
     <div className="cont">
-      <div className="image-wrapper ">
-        <img src={large} alt="large" id="img" className='hidden md:flex my-auto w-4/5 mx-auto md:pt-36' />
+      <div className="image-wrapper px-6 md:px-24">
+        <img src={large} alt="large" id="img" className='hidden md:flex my-auto w-full mx-auto md:pt-36' />
       </div>
       <img src={large} alt="large" className='md:hidden py-9 px-6' />
     </div>
