@@ -24,7 +24,7 @@ const Landing4 = () => {
                 transition={{ duration: 1 }}
                 className='flex md:flex-1 h-full flex-col w-1/2 md:w-full justify-center col-span-3 md:col-span-5'
             >
-                <p className='font-normal text-5xl md:text-[120px] md:!leading-tight uppercase'>we build brands</p>
+                <p className='font-normal text-5xl md:text-[90px] lg:text-[93px] xl:text-[98px] 2xl:text-[120px] md:!leading-tight uppercase'>we build brands</p>
                 <p className='font-normal md:text-lg !leading-8 opacity-40 hidden md:flex'>At Procube, we are more than a technology and branding firm; we are catalysts of change. Collaborating closely with our valued clients, we craft brands that redefine the digital landscape. Our journey immerses us in an intricate process of ideation, design, and strategic development, allowing us to reshape how users interact with products and services. Our dedication to innovation ensures the delivery of exceptional outcomes, creating brands that drive transformative change</p>
             </motion.div>
             <div className='col-span-3 md:col-span-1 md:-mt:0 md:-mb:0 -mt-4 -mb-24 md:-mr-72 md:-ml-28 flex items-center'>
@@ -37,7 +37,7 @@ const Landing4 = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 className='flex md:flex-1 h-full w-1/2 md:w-full flex-col ml-auto items-end md:justify-end col-span-3 md:col-span-5'
             >
-                <p className='font-normal text-5xl md:text-[120px] !leading-tight uppercase italic'>Drive Change</p>
+                <p className='font-normal text-5xl md:text-[90px] lg:text-[93px] xl:text-[98px] 2xl:text-[120px] !leading-tight uppercase italic'>Drive Change</p>
             </motion.div>
 
         </div>
