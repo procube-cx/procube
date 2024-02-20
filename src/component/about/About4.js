@@ -50,7 +50,7 @@ const Card = ({ heading, icon, details, index }) => {
 
 const About4 = () => {
     return (
-        <div className='px-6 md:px-24 pt-10 md:pt-48 flex flex-col  '>
+        <div className='px-6 md:px-24 pt-10 md:pt-36 flex flex-col  '>
             <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[70px]'>Our Values</p>
                 {data.map((cardDetail, index) => (
                     <Card
