@@ -1,9 +1,10 @@
 import React from 'react';
 import '../hero/hero.css';
 import { Design } from '../../assets/images/Tech Logo/Logo';
-import { Mobile } from '../../assets/images/Tech Logo/Logo';
+import { Ecommerce } from '../../assets/images/Tech Logo/Logo';
 import { Front } from '../../assets/images/Tech Logo/Logo';
 import { Back } from '../../assets/images/Tech Logo/Logo';
+import { Db } from '../../assets/images/Tech Logo/Logo';
 
 const data = [
     {
@@ -20,11 +21,11 @@ const data = [
     },
     {
         heading: "DB & Cloud",
-        tags: Mobile
+        tags: Db
     },
     {
         heading: "Ecommerce",
-        tags: Mobile
+        tags: Ecommerce
     }
 ];
 
