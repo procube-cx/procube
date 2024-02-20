@@ -95,7 +95,7 @@ const Footer = () => {
                         <div className='flex flex-wrap justify-between w-full md:w-3/4'>
                             {data.option4.map((item, index) => {
                                 return (
-                                    <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
+                                    <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-40'>{item.title}</a>
                                 )
                             }
                             )}
@@ -108,7 +108,7 @@ const Footer = () => {
                     <div className='flex flex-col col-span-1 gap-8'>
                         {data.option1.map((item, index) => {
                             return (
-                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-40'>{item.title}</a>
                             )
                         }
                         )}
@@ -116,7 +116,7 @@ const Footer = () => {
                     <div className='flex flex-col col-span-1 gap-8'>
                         {data.option2.map((item, index) => {
                             return (
-                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-40'>{item.title}</a>
                             )
                         }
                         )}
@@ -124,7 +124,7 @@ const Footer = () => {
                     <div className='flex flex-col col-span-1 gap-8'>
                         {data.option3.map((item, index) => {
                             return (
-                                <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-40'>{item.title}</a>
                             )
                         }
                         )}

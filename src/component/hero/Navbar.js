@@ -172,7 +172,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile view menu */}
-            <div className={`absolute w-full ${isMenuOpen && 'top-0'}`} >
+            <div className={`absolute w-full ${isMenuOpen ? 'top-0' : 'hidden'}`} >
                 <div className='grid grid-cols-5'>
                     <motion.div
                         initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: -100 } : { opacity: 1, y: "-150vh" }}
