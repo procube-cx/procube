@@ -92,13 +92,13 @@ const Card = ({ heading, icon, date, index }) => {
     );
 };
 
-const Insight1 = () => {
+const Insight1 = ({Heading , filterShow}) => {
     const [id, setId] = React.useState('All');
     return (
         <div className='px-6 md:px-24  flex flex-col gap-y-6 md:gap-y-16 relative pt-24 md:pt-44'>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto'>INSIGHTS</p>
+            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto'>{Heading}</p>
             <div className='flex flex-row gap-4 md:gap-8 overflow-x-auto lg:justify-center'>
-                {filter.map((item, index) => (
+                {filterShow && filter.map((item, index) => (
                     <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => setId(item)}  style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
                         <p className='text-sm md:text-lg'>{item}</p>
                     </div>
