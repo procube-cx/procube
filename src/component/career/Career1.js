@@ -6,24 +6,24 @@ import icon2 from '../../assets/images/icons/icon2.svg';
 const filter = ["All", "Marketing", "Production", "Development", "Branding"]
 const data = [
   {
-      heading: "Trainee Software Engineer",
-      
+    heading: "Trainee Software Engineer",
+
   },
   {
-      heading: "UIUX Designer - Module Lead",
-      
+    heading: "UIUX Designer - Module Lead",
+
   },
   {
-      heading: "Illustrator & Animator",
-      
+    heading: "Illustrator & Animator",
+
   },
   {
-      heading: "Flutter Developer",
-      
+    heading: "Flutter Developer",
+
   },
   {
-      heading: "Lead Web Developer",
-      
+    heading: "Lead Web Developer",
+
   },
   {
     heading: "Front End Developer",
@@ -48,13 +48,22 @@ const Card = ({ heading, index, open, onClick }) => {
     >
       <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
         <div className='col-span-12 md:col-span-11 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
-          <p className='font-normal text-base md:text-2xl'>{heading}</p>
+          <p className='font-normal text-base md:text-2xl my-auto'>{heading}</p>
         </div>
         <div className={`md:col-span-1 w-full ${isOpen && 'rotate-180'}`}>
           <img src={icon2} alt="icon" className={`w-auto ${isOpen && 'ml-auto'}`} />
         </div>
       </div>
-      
+      {isOpen && (
+        <>
+          <p className='font-normal text-xs md:text-xl '>Key Responsibilities (What you will be doing?)</p>
+          <p className='font-normal text-xs md:text-xl '>Technical skills (What is required?)</p>
+          <div className={`flex mr-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1]`} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+            <p className='text-sm md:text-lg'>Apply Now</p>
+          </div>
+        </>
+
+      )}
     </div>
   );
 };
