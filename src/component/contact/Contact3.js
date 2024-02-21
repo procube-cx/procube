@@ -23,10 +23,10 @@ const cardDetails = [{
 
 const card = (title, description, icon,key) => {
   return (
-    <div className='flex flex-col max-w-xl text-center gap-4' key={key}>
-      <img src={icon} alt="icon" className='font-normal md:h-80 object-cover rounded-2xl' />
+    <div className='flex flex-col max-w-xl text-center gap-2 md:gap-4' key={key}>
+      <img src={icon} alt="icon" className='font-normal h-44 md:h-80 object-cover rounded-lg md:rounded-2xl' />
       <p className={`uppercase text-base md:text-2xl`}>{title}</p>
-      <p className={`capitalize text-xs md:text-lg mx-auto max-w-[78%]`}>{description}</p>
+      <p className={`capitalize text-xs md:text-lg mx-auto md:max-w-[78%]`}>{description}</p>
     </div>
   )
 }
