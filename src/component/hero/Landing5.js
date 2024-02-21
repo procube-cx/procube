@@ -4,7 +4,7 @@ import arrowIcon from '../../assets/images/exploreMore.png';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import './hero.css';
-import icon2 from '../../assets/images/icons/icon2.png'
+import icon2 from '../../assets/images/icons/icon2.svg'
 import CustomEase from 'gsap/CustomEase';
 
 const data = [
