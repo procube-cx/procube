@@ -161,7 +161,7 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
       onClick={onClick}
     >
       <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
-        <div className='col-span-12 md:col-span-11 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
+        <div className='col-span-11 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
           <p className='font-normal text-base md:text-2xl my-auto capitalize'>{heading}</p>
         </div>
         <div className={`md:col-span-1 w-full ${isOpen && 'rotate-180'}`}>
@@ -172,20 +172,20 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
         <>
           <p className='font-normal text-xs md:text-xl '>Key Responsibilities (What you will be doing?)</p>
           <div>
-            <ul style={{ padding: '0' }}>
+            <ul style={{ paddingLeft: '16px' }}>
               {description1.map((item, index) => (
-                <li key={index} style={{ paddingBottom: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' }}>
-                  <p className='font-normal text-xs md:text-xl text-gray-400'>{item}</p>
+                <li key={index} style={{ paddingBottom: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' , opacity:'60%'}}>
+                  <p className='font-normal text-xs md:text-xl'>{item}</p>
                 </li>
               ))}
             </ul>
           </div>
           <p className='font-normal text-xs md:text-xl '>Technical skills (What is required?)</p>
           <div>
-            <ul style={{ padding: '0' }}>
+            <ul style={{ paddingLeft: '16px' }}>
               {description2.map((item, index) => (
-                <li key={index} style={{ paddingBottom: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' }}>
-                  <p className='font-normal text-xs md:text-xl text-gray-400'>{item}</p>
+                <li key={index} style={{ paddingBottom: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' , opacity:'60%' }}>
+                  <p className='font-normal text-xs md:text-xl'>{item}</p>
                 </li>
               ))}
             </ul>

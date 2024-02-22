@@ -25,37 +25,37 @@ const data = {
     option2: [
         {
             title: 'Home',
-            links: 'google.com'
+            links: '.'
         },
         {
             title: 'About Us',
-            links: 'google.com'
+            links: 'about'
         },
         {
             title: 'Services',
-            links: 'google.com'
+            links: 'services'
         },
         {
             title: 'Projects',
-            links: 'google.com'
+            links: 'projects'
         }
     ],
     option3: [
         {
             title: 'Partners',
-            links: 'google.com'
+            links: 'partners'
         },
         {
             title: 'Insights',
-            links: 'google.com'
+            links: 'insight'
         },
         {
             title: 'Careers',
-            links: 'google.com'
+            links: 'careers'
         },
         {
             title: 'Contact Us',
-            links: 'google.com'
+            links: 'contact'
         }
     ],
     option4: [

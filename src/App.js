@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Career from './pages/Career';
 import InsightSlug from './pages/Insight-slug';
+import Partner from './pages/Partner';
 
 
 
@@ -25,7 +26,8 @@ function App() {
           <Route path='/insight/:id' element={<InsightSlug />} />
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/career' element={<Career />} />
+          <Route path='/careers' element={<Career />} />
+          <Route path='/partner' element={<Partner />} />
         </Routes>
       </BrowserRouter>
     </div>
