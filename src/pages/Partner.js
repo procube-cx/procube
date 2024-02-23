@@ -12,6 +12,7 @@ import Partner2 from '../component/Partner/Partner2';
 import Partner4 from '../component/Partner/Partner4';
 import Partner6 from '../component/Partner/Partner6';
 import Partner3 from '../component/Partner/Partner3';
+import Partner5 from '../component/Partner/Partner5';
 
 function Partner() {
 
@@ -24,6 +25,7 @@ function Partner() {
       <Partner2 />
       <Partner3 />
       <Partner4 />
+      <Partner5 />
       <Partner6 />
       <NextUp Heading={'Services'} />
       <Footer />
