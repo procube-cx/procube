@@ -19,16 +19,13 @@ const marqueeVariants = {
 
 const Marquee = () => {
 
-  const [hover, setHover] = React.useState(false);
 
   return (
     <div className="pb-16 md:pb-72 overflow-x-hidden my-auto overflow-y-hidden">
       <div className="relative w-full">
         <motion.div
           className="track"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          style={hover?{ animationDuration: "30s"}:{ animationDuration: "5s"}}
+          style={{ animationDuration: "30s"}}
           variants={marqueeVariants}
           animate="animate"
         >
