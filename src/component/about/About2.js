@@ -3,7 +3,7 @@ import icon from '../../assets/images/expertise.png';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import '../hero/hero.css';
 import icon2 from '../../assets/images/icons/icon2.png'
-import icon3 from '../../assets/images/icons/icon3_purple.png'
+import icon3 from '../../assets/images/icons/icon3_purple.svg'
 
 const data = [
     {

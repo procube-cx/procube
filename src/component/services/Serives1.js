@@ -3,7 +3,6 @@ import Service1 from '../../assets/images/Services/services1.webp'
 import Service2 from '../../assets/images/Services/services2.webp'
 import Service3 from '../../assets/images/Services/services3.webp'
 import Service4 from '../../assets/images/Services/services4.webp'
-import icon from '../../assets/images/icons/icon3.png'
 import '../hero/hero.css';
 
 const data = [

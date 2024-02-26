@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import icon from '../../assets/images/icons/icon3.png'
+import icon from '../../assets/images/icons/icon3.svg'
 
 
 const marqueeVariants = {
