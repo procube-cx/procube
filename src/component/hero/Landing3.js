@@ -15,20 +15,22 @@ const Landing3 = () => {
         delay: 1.5,
         scrollTrigger: {
           trigger: text,
-          start: 'top top',
-          end: '+=1000px center',
+          start: 'top bottom',
+          end: 'bottom center',
           scrub: true,
-          markers: false,
+          markers: true,
         },
       });
     });
 
     return () => {
       textElements.forEach(text => {
-        text?.scrollTrigger?.kill();
+        if (text.scrollTrigger) {
+          text.scrollTrigger.kill(); // Kill the ScrollTrigger instance associated with the text element
+        }
       });
     };
-  }, [ScrollTrigger]); // Close the useEffect dependencies array
+  }, []); // Close the useEffect dependencies array
 
   return (
     <div className='px-6 md:px-24 py-10 md:py-24 '>

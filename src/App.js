@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Career from './pages/Career';
 import InsightSlug from './pages/Insight-slug';
 import Partner from './pages/Partner';
+import Casestudy from './pages/Casestudy';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/careers' element={<Career />} />
           <Route path='/partners' element={<Partner />} />
+          <Route path='/casestudy' element={<Casestudy />} />
         </Routes>
       </BrowserRouter>
     </div>
