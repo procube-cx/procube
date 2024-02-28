@@ -1,10 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import './test.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Landing3 = () => {
+  const [isrendered, setIsrendered] = useState(true);
   useEffect(() => {
+    if(isrendered){
+      setIsrendered(false);
+      return;
+    }
     gsap.registerPlugin(ScrollTrigger);
     const textElements = gsap.utils.toArray('.text');
 
@@ -18,19 +23,20 @@ const Landing3 = () => {
           start: 'top bottom',
           end: 'bottom center',
           scrub: true,
-          markers: true,
+          markers: false,
         },
       });
     });
+    console.log("useref running")
 
-    return () => {
-      textElements.forEach(text => {
-        if (text.scrollTrigger) {
-          text.scrollTrigger.kill(); // Kill the ScrollTrigger instance associated with the text element
-        }
-      });
-    };
-  }, []); // Close the useEffect dependencies array
+    // return () => {
+    //   textElements.forEach(text => {
+    //     if (text.scrollTrigger) {
+    //       text.scrollTrigger.kill(); 
+    //     }
+    //   });
+    // };
+  }, [isrendered]); 
 
   return (
     <div className='px-6 md:px-24 py-10 md:py-24 '>
