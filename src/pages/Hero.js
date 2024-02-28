@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../component/hero/Navbar';
+import Navbar from '../component/hero/Navbar2';
 import Landing1 from '../component/hero/Landing1';
 import Landing2 from '../component/hero/Landing2';
 import Landing3 from '../component/hero/Landing3';
