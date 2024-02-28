@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../component/hero/Navbar';
 import Lanidng7 from '../component/hero/Landing7';
 import Footer from '../component/hero/Footer';
+import Casestudy1 from '../component/casestudy/Casestudy1';
 
 function Casestudy() {
 
@@ -11,7 +12,7 @@ function Casestudy() {
 
             <div>
                 <Navbar />
-
+                <Casestudy1 />
                 <Lanidng7 />
 
                 <Footer />

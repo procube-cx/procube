@@ -73,7 +73,7 @@ const Landing7 = () => {
         // customRightArrow={}        
         >
             {data.map((item, index) => (
-                <div className='bg-vector bg-no-repeat px-6 md:px-24  h-screen relative overflow-hidden' >
+                <div className='bg-vector bg-no-repeat bg-cover px-6 md:px-24  h-screen relative overflow-hidden' >
                     <div className='flex flex-col h-full justify-center'>
 
                         <div className='flex flex-col gap-12'>
