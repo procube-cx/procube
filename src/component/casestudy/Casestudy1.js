@@ -49,7 +49,7 @@ const Casestudy1 = () => {
     return (
         <div className='px-6 md:px-24 py-24 md:py-32 md:pt-52 flex flex-col font-normal'>
             <p className='flex text-4xl md:text-7xl uppercase pb-5 md:pb-16 !leading-tight max-w-4xl'>{data.title}</p>
-            <div className='grid md:grid-cols-4 grid-cols-2 pb-5 md:pb-8 my-4 md:my-12 border-b-2 border-white'>
+            <div className='grid md:grid-cols-4 grid-cols-2 pb-5 md:pb-8 my-4 md:my-12 border-b-2 border-white border-opacity-55'>
                 {data.shortdesc.map((desc, index) => (
                     <div className='flex flex-col col-span-1 gap-y-2 md:gap-y-4'>
                         <p className='text-xl md:text-[32px]'>{desc.title}</p>
@@ -59,8 +59,8 @@ const Casestudy1 = () => {
             </div>
             {data.details?.map((desc, index) => (
                 <div className={`flex flex-col col-span-1 gap-y-2 md:gap-y-4  py-4 md:py-12 `}>
-                    <p className='text-xl md:text-5xl uppercase px-6 md:px-24 '>{desc.title}</p>
-                    <div className='flex flex-col gap-y-5 md:gap-y-10 px-6 md:px-24 '>
+                    <p className='text-xl md:text-5xl uppercase md:px-24 '>{desc.title}</p>
+                    <div className='flex flex-col gap-y-5 md:gap-y-10 md:px-24 '>
                     {desc.description?.map((details, index) => (
                         <p className='text-xs md:text-lg opacity-60'>{details}</p>
                     ))}

@@ -143,28 +143,10 @@ const Navbar = () => {
         <div className={`absolute w-full z-40 ${isMenuOpen && 'md:fixed'}`} >
             {/* Header section */}
             {/* Hamburger menu */}
-            <div className="flex items-center justify-between px-6 md:px-24 py-6 md:py-12">
-                {/* Contact Us button */}
-                <div className="items-center hidden md:flex cursor-pointer">
-                    <div className="px-5 py-2 rounded-full border border-1 border-white flex flex-row items-center gap-[2px]">
-                        <GoDotFill className="text-white w-7 h-7" />
-                        <p className="font-medium text-xl">Contact Us</p>
-                    </div>
-                </div>
+            <div className="flex items-center justify-between md:mx-6 px-6 md:px-12 md:my-6 py-4 rounded-b-xl md:rounded-2xl md:py-4 purplegradient">
                 {/* Logo */}
-                <div className="items-center md:hidden flex">
+                <div className="items-center  flex">
                     <img src={logo} alt='logo' className=' w-32' />
-                </div>
-                {/* Navigation links */}
-                <div className="hidden md:flex gap-16 font-medium text-xl">
-                    {data.option5.map((item, index) => (
-                        <motion.a href={item.link}
-                         className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
-                        >
-                            <div>{item.title}</div>
-                        </motion.a>
-                    ))
-                    }
                 </div>
                 {/* Hamburger menu icon */}
                 <div className={`text-white font-medium text-3xl flex cursor-pointer z-30 `} onClick={toggleMenu}>
