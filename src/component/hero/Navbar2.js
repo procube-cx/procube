@@ -6,8 +6,7 @@ import logo from '../../assets/images/Procube-white.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive';
-import SplitType from 'split-type';
-import { gsap } from 'gsap';
+import './test.css'
 
 const data = {
     option1: [
