@@ -6,6 +6,7 @@ import process2 from '../../assets/images/process/process2.png'
 import process3 from '../../assets/images/process/process3.png'
 import process4 from '../../assets/images/process/process4.png'
 import process5 from '../../assets/images/process/process5.png'
+import AnimatedParagraph from '../AnimatedPara';
 
 
 const data = [
@@ -148,7 +149,7 @@ const Landing6 = () => {
 
     return (
         <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px] pb-0 md:pb-16' ref={ref}>
-            <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-0'>Process & Approach</p>
+            <AnimatedParagraph className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-0'>Process & Approach</AnimatedParagraph>
             <div className='w-full flex flex-col-reverse md:flex-row overflow-hidden gap-x-16 md:pt-16 gap-y-6'>
                 <div className='flex md:w-[54%] h-full flex-col my-auto'>
                     {data.map((cardDetail) => (

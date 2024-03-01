@@ -4,6 +4,7 @@ import Service2 from '../../assets/images/Services/services2.webp'
 import Service3 from '../../assets/images/Services/services3.webp'
 import Service4 from '../../assets/images/Services/services4.webp'
 import '../hero/hero.css';
+import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
     {
@@ -59,7 +60,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 const Services1 = () => {
     return (
         <div className='px-6 md:px-24 py-24 md:py-32 md:pt-52 flex flex-col'>
-            <p className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-16 !leading-tight'>Crafting Exceptional Digital Products</p>
+            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-16 !leading-tight'>Crafting Exceptional Digital Products</AnimatedParagraph>
             {data.map((cardDetail, index) => (
                 <Card
                     heading={cardDetail.heading}

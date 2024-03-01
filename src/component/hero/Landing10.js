@@ -6,6 +6,7 @@ import image2 from '../../assets/images/project-image/image2.png';
 import image3 from '../../assets/images/project-image/image3.png';
 import image4 from '../../assets/images/project-image/image4.png';
 import gsap from 'gsap';
+import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
   {
@@ -38,7 +39,7 @@ const Landing10 = () => {
 
   return (
     <div className='px-6 md:px-24 py-16 md:py-28 md:gap-16 flex flex-col'>
-      <p className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</p>
+      <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</AnimatedParagraph>
       <div className='flex flex-row w-full gap-x-8 md:gap-x-16 overflow-x-auto' >
         {data.map((item, index) => (
           <div

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import './hero.css';
 import icon2 from '../../assets/images/icons/icon2.svg'
 import CustomEase from 'gsap/CustomEase';
+import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
     {
@@ -115,7 +116,7 @@ const Landing5 = () => {
 
     return (
         <div className='px-6 md:px-24'>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:pt-28 md:pb-20'>OUR EXPERTISE</p>
+            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:pt-28 md:pb-20'>OUR EXPERTISE</AnimatedParagraph>
             {cardData.map((cardDetail, index) => (
                 <Card
                     key={index}

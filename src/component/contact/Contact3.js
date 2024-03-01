@@ -1,5 +1,6 @@
 import React from 'react'
 import icon from '../../assets/images/large-1.png'
+import AnimatedParagraph from '../AnimatedPara'
 
 const cardDetails = [{
   title: 'UAE',
@@ -36,7 +37,7 @@ const Contact3 = () => {
     <div className='pt-20 px-6 md:px-24'>
       <div className='flex flex-col w-full h-full items-center gap-6 md:gap-20'>
         <div className='flex flex-col md:max-w-4xl text-center gap-2 md:gap-6'>
-          <p className='font-normal text-4xl md:text-8xl'>GLOBAL PRESENCE</p>
+          <AnimatedParagraph className='font-normal text-4xl md:text-8xl'>GLOBAL PRESENCE</AnimatedParagraph>
         </div>
         <div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-8'>

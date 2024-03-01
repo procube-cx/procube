@@ -4,6 +4,7 @@ import icon1 from '../../assets/images/About/icon1.svg';
 import icon2 from '../../assets/images/About/icon2.svg';
 import icon3 from '../../assets/images/About/icon3.svg';
 import icon4 from '../../assets/images/About/icon4.svg';
+import AnimatedParagraph from '../AnimatedPara';
 
 
 const data = [
@@ -52,7 +53,7 @@ const Card = ({ heading, icon, details, index }) => {
 const About4 = () => {
     return (
         <div className='px-6 md:px-24 pt-10 md:pt-36 flex flex-col  '>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[70px]'>Our Values</p>
+            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[70px]'>Our Values</AnimatedParagraph>
                 {data.map((cardDetail, index) => (
                     <Card
                         heading={cardDetail.heading}

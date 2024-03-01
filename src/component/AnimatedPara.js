@@ -21,7 +21,7 @@ const AnimatedParagraph = ({ children, initial, animate, transition, className }
             initial={initial}
             animate={inView ? animate : { opacity: 0 }}
             transition={transition}
-            className={`font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight ${className}`}
+            className={`${className}`}
         >
             {children}
         </motion.p>

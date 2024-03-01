@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import './hero.css';
 import icon from '../../assets/images/expertise.png';
 import arrowIcon from '../../assets/images/exploreMore.png';
+import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
     {
@@ -80,7 +81,7 @@ const Card = ({ heading, icon, date, index }) => {
 const Landing9 = () => {
     return (
         <div className='px-6 md:px-24 py-10 md:py-20 flex flex-col gap-y-6 md:gap-y-16'>
-            <p className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto '>BLOGS</p>
+            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto '>BLOGS</AnimatedParagraph>
                 
             <div>
             {data.map((cardDetail, index) => (

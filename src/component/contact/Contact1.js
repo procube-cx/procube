@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../hero/hero.css'
+import AnimatedParagraph from '../AnimatedPara';
 
 const filter = ["Development", "User Experience", "Digital  Strategy", "Branding"]
 
@@ -31,7 +32,7 @@ const Contact1 = () => {
 
   return (
     <div className='px-6 md:px-24 pb-5 md:pb-20 pt-24 md:pt-32'>
-      <p className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>Got Ideas? Let’s team up</p>
+      <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>Got Ideas? Let’s team up</AnimatedParagraph>
       <form onSubmit={handleFormSubmit} className='flex flex-col items-start gap-y-8 md:gap-y-10 w-full'>
         <p className='font-normal text-2xl md:text-4xl max-w-xs text-left'>You need to do</p>
         <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto'>
