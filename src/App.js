@@ -11,6 +11,7 @@ import Career from './pages/Career';
 import InsightSlug from './pages/Insight-slug';
 import Partner from './pages/Partner';
 import Casestudy from './pages/Casestudy';
+import Projects from './pages/Projects';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/careers' element={<Career />} />
           <Route path='/partners' element={<Partner />} />
           <Route path='/casestudy' element={<Casestudy />} />
+          <Route path='/projects' element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </div>
