@@ -124,7 +124,7 @@ const Career1 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 pb-5 md:pb-20 pt-24 md:pt-32'>
+    <div className='px-6 md:px-24 pb-5 md:pb-10 pt-24 md:pt-32'>
       <p className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>Got Ideas? Let’s team up</p>
       <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto mb-4 md:mb-8'>
         {filter.map((item, index) => (
