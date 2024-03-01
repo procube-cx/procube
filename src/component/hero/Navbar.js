@@ -140,13 +140,15 @@ const Navbar = () => {
 
 
     return (
-        <div className={`absolute w-full z-40 ${isMenuOpen && 'md:fixed'}`} >
+        <div className={`fixed w-full z-40 ${isMenuOpen && ' md:fixed'}`} >
             {/* Header section */}
             {/* Hamburger menu */}
-            <div className="flex items-center justify-between md:mx-6 px-6 md:px-12 md:my-6 py-4 rounded-b-xl md:rounded-2xl md:py-4 purplegradient">
+            <div className="flex items-center justify-between md:mx-6 px-6 md:px-12 md:my-3 py-4 rounded-b-xl md:rounded-2xl md:py-4 purplegradient">
                 {/* Logo */}
-                <div className="items-center  flex">
+                <div className="items-center  flex cursor-pointer">
+                    <a href='/' className='text-white font-medium text-3xl'>
                     <img src={logo} alt='logo' className=' w-32' />
+                    </a>
                 </div>
                 {/* Hamburger menu icon */}
                 <div className={`text-white font-medium text-3xl flex cursor-pointer z-30 `} onClick={toggleMenu}>
