@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import '../hero/hero.css'
 
 const filter = ["Development", "User Experience", "Digital  Strategy", "Branding"]
 
 
 const Contact1 = () => {
 
-  const [id, setId] = React.useState('Development');
+  const [id, setId] = React.useState(['Development']);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -35,7 +36,7 @@ const Contact1 = () => {
         <p className='font-normal text-2xl md:text-4xl max-w-xs text-left'>You need to do</p>
         <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto'>
           {filter.map((item, index) => (
-            <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => setId(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+            <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${id.includes(item) ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => id.includes(item) ? setId(id.filter(i => i !== item)) : setId([...id,item])} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
               <p className='text-sm md:text-lg'>{item}</p>
             </div>
           ))}
@@ -69,7 +70,7 @@ const Contact1 = () => {
           onChange={(e) => setProject(e.target.value)}
         />
         <button
-          className='flex px-12 py-3 md:px-24 md:py-4 button ml-auto rounded-[78px] bg-[#7605C1] font-normal text-base md:text-3xl'
+          className='flex px-12 py-3 md:px-24 md:py-8 ml-auto rounded-full bg-[#7605C1] font-normal text-base md:text-3xl button'
           type='submit'
         >
           Submit

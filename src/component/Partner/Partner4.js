@@ -134,18 +134,10 @@ const Partner4 = () => {
                 setActiveCard((prevActiveCard) => (prevActiveCard === 5 ? 1 : prevActiveCard + 1));
                 setTime(0);
             }
-        }, 4000);
+        }, 6000);
+        
+        return () => clearTimeout(timer);
 
-        const interval = setInterval(() => {
-            if (!timerPaused && time < 240) {
-                setTime((prevTime) => prevTime + 1);
-            }
-        }, 1000 / 60);
-
-        return () => {
-            clearTimeout(timer);
-            clearInterval(interval);
-        };
     }, [activeCard, timerPaused, time]);
 
     return (

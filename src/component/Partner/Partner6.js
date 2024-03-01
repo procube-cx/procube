@@ -65,7 +65,7 @@ const Card = ({ id, title, description, activeCard, onCardClick }) => {
 
 const Partner6 = () => {
     const [time, setTime] = useState(0);
-    const [activeCard, setActiveCard] = useState(-1);
+    const [activeCard, setActiveCard] = useState(1);
     const isMobile = window.innerWidth < 768;
 
     const handleCardClick = (id) => {
