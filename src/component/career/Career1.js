@@ -6,143 +6,46 @@ import icon2 from '../../assets/images/icons/icon2.svg';
 const filter = ["All", "Marketing", "Production", "Development", "Branding"]
 const data = [
   {
-    heading: "Trainee Software Engineer",
+    filter: "Development",
+    heading: "MERN Stack Developer",
     description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
+      "Minimum of 2 years of professional experience in MERN stack development.",
+      "Proficiency in JavaScript, React.js, Node.js, and Express.js.",
+      "Strong knowledge of database management systems, particularly MongoDB.",
+      "Experience with RESTful API design and integration.",
+      "Familiarity with Git and version control systems.",
+      "Solid understanding of frontend technologies including HTML, CSS, and responsive design.",
+      "Fluent in English with excellent communication skills, both written and spoken.",
+      "Ability to work independently, manage time efficiently, and meet project deadlines.",
+      "Strong problem-solving skills and attention to detail.",
     ],
     description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
+      "Competitive salary and benefits package.",
+      "Opportunity to work on innovative projects with a dynamic and collaborative team.",
+      "Remote work flexibility with the ability to work from anywhere.",
+      "Ongoing professional development and training opportunities.",
+      "Exposure to a diverse range of projects and technologies.",
     ]
   },
   {
-    heading: "UIUX Designer - Module Lead",
+    filter: "Branding",
+    heading: "Graphic Designer",
     description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
+      "Conceptualize, design, and produce a wide range of visual materials, including posters, product packaging, marketing collateral, and digital assets.",
+      "Collaborate with cross-functional teams, including marketing, product development, and sales, to create compelling and on-brand visual content.",
+      "Develop innovative and eye-catching designs that align with project goals and client objectives.",
+      "Create engaging and informative posters for marketing campaigns, events, and promotions.",
+      "Design posters that effectively convey key messages and enhance brand awareness.",
+      "Ensure all posters meet design and quality standards and are ready for print or digital use.",
+      "Design product packaging that is not only aesthetically pleasing but also functional, ensuring product safety and protection.",
+      "Collaborate with the product development team to create packaging that aligns with product specifications and brand identity.",
     ],
     description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
-    ]
-  },
-  {
-    heading: "Illustrator & Animator",
-    description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
-    ],
-    description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
-    ]
-  },
-  {
-    heading: "Flutter Developer",
-    description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
-    ],
-    description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
-    ]
-  },
-  {
-    heading: "Lead Web Developer",
-    description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
-    ],
-    description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
-    ]
-  },
-  {
-    heading: "Front End Developer",
-    description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
-    ],
-    description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
-    ]
-  },
-  {
-    heading: "senior graphic designer",
-    description1: [
-      "Design, develop, modify, debug and/or maintain software code according to functional, non-functional, and technical design specifications.",
-      "Follow Techtic Solutions standards, applicable software development methodology, and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.",
-      "Investigate issues by reviewing/debugging code, provide fixes and workarounds, and review changes for operability to maintain existing software solutions.",
-      "Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, and work with cross-functional teams to achieve goals.",
-      "Assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.",
-      "You will be encouraged to actively look for innovation, continuous improvement, and efficiency in all assigned tasks."
-    ],
-    description2: [
-      "Writing well-designed, tested, and efficient code",
-      "Create and test website applications.",
-      "Excellent knowledge of Relational Databases, and SQL.",
-      "Knowledge of test-driven development.",
-      "Mastery of software engineering tools.",
-      "Ability to document requirements and specifications.",
-      "Familiarity with software development methodology and release processes."
+      "Competitive salary and benefits package.",
+      "Opportunity to work on innovative projects with a dynamic and collaborative team.",
+      "Remote work flexibility with the ability to work from anywhere.",
+      "Ongoing professional development and training opportunities.",
+      "Exposure to a diverse range of projects and technologies.",
     ]
   },
 ];
@@ -157,10 +60,10 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
 
   return (
     <div
-      className='overflow-hidden flex flex-col w-full border-[2px] rounded-xl md:rounded-3xl border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 cursor-pointer px-4 md:px-12'
+      className='overflow-hidden flex flex-col w-full border-[2px] rounded-xl md:rounded-3xl border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 px-4 md:px-12'
       onClick={onClick}
     >
-      <div className='grid grid-cols-12 flex-1 landing gap-y-5'>
+      <div className='grid grid-cols-12 flex-1 landing gap-y-5 cursor-pointer'>
         <div className='col-span-11 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
           <p className='font-normal text-base md:text-2xl my-auto capitalize'>{heading}</p>
         </div>
@@ -170,7 +73,7 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
       </div>
       {isOpen && (
         <>
-          <p className='font-normal text-xs md:text-xl '>Key Responsibilities (What you will be doing?)</p>
+          <p className='font-normal text-xs md:text-xl '>Requirements:</p>
           <div>
             <ul style={{ paddingLeft: '16px' }}>
               {description1.map((item, index) => (
@@ -180,7 +83,7 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
               ))}
             </ul>
           </div>
-          <p className='font-normal text-xs md:text-xl '>Technical skills (What is required?)</p>
+          <p className='font-normal text-xs md:text-xl '>What We Offer:</p>
           <div>
             <ul style={{ paddingLeft: '16px' }}>
               {description2.map((item, index) => (
@@ -190,7 +93,7 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
               ))}
             </ul>
           </div>
-          <div className={`flex mr-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1]`} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+          <div className={`button flex mr-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1]`} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
             <p className='text-sm md:text-lg'>Apply Now</p>
           </div>
         </>
@@ -206,6 +109,18 @@ const Career1 = () => {
 
   const [id, setId] = React.useState('All');
   const [activeId, setActiveId] = useState(-1);
+  const [filteredData, setFilteredData] = useState(data);
+
+  const handleFilter = (item) => {
+    setId(item);
+    if (item === 'All') {
+      setFilteredData(data);
+    } else {
+      const filtered = data.filter((card) => card.filter === item);
+      setFilteredData(filtered);
+    }
+  }
+
 
 
   return (
@@ -213,14 +128,14 @@ const Career1 = () => {
       <p className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>Got Ideas? Let’s team up</p>
       <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto mb-4 md:mb-8'>
         {filter.map((item, index) => (
-          <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => setId(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+          <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => handleFilter(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
             <p className='text-sm md:text-lg'>{item}</p>
           </div>
         ))}
       </div>
 
       <div className='flex flex-col gap-y-5 md:gap-y-8'>
-        {data.map((cardDetail, index) => (
+        {filteredData.map((cardDetail, index) => (
           <Card
             heading={cardDetail.heading}
             index={index}
