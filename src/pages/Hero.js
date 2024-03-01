@@ -15,7 +15,7 @@ import Footer from '../component/hero/Footer';
 import Preloader from '../component/proloader';
 
 function Hero() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
