@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         vector: "url('./assets/images/vector.png')",
+        vector2: "url('./assets/images/Partner/background.png')",
       }
     },
   },
