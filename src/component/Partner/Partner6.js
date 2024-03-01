@@ -47,7 +47,7 @@ const Card = ({ id, title, description, activeCard, onCardClick }) => {
 
     return (
         <div
-            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 cursor-pointer  border-b-2 ${isFirstCard && 'border-t-2'}`}
+            className={`flex flex-col w-full border-opacity-40 border-white py-4 gap-2 cursor-pointer  border-b-2 ${isFirstCard && 'border-t-2'}`}
             onClick={() => onCardClick(id)}
         >
             <div className='grid grid-cols-6 flex-1'>
@@ -73,9 +73,9 @@ const Partner6 = () => {
     };
 
     return (
-        <div className='w-full px-6 md:px-24 pt-6  min-h-screen max-h-[900px] md:pt-16' >
+        <div className='w-full px-6 md:px-24 pt-6  min-h-screen md:max-h-[900px] md:pt-16' >
             <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Frequently Asked Questions</p>
-            <div className='w-full flex flex-col md:flex-row-reverse overflow-hidden gap-x-16 md:pt-16'>
+            <div className='w-full flex flex-col md:flex-row-reverse overflow-hidden gap-x-16 pt-8 md:pt-16'>
                 <div className='flex md:w-full h-full flex-col my-auto'>
                     {data.map((cardDetail) => (
                         <Card

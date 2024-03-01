@@ -19,10 +19,10 @@ const marqueeVariants = {
 const Marquee = () => {
 
   return (
-    <div className="py-16 md:py-10 md:pb-48 overflow-x-hidden my-auto overflow-y-hidden">
-      <div className="relative w-full">
+    <div className="py-16 pt-0 md:py-4 md:pb-40 overflow-x-hidden overflow-y-hidden bg-[#7605C1] my-16">
+      <div className="relative w-full ">
         <motion.div
-          className="track bg-[#7605C1]" 
+          className="track " 
           variants={marqueeVariants}
           style={{ animationDuration: "30s"}}
           animate="animate"

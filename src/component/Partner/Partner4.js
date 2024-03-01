@@ -47,6 +47,7 @@ const data = [
 const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer, time }) => {
     const [isOpen, setIsOpen] = useState(activeCard === id);
     const [isHovered, setIsHovered] = useState(false);
+    const [isFirst , setIsFirst] = useState(id === 1);
 
     useEffect(() => {
         setIsOpen(activeCard === id);
@@ -64,7 +65,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 
     return (
         <div
-            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 cursor-pointer ${!isOpen && 'opacity-40  border-b-2'}`}
+            className={`flex flex-col w-full border-opacity-40 border-white py-3 md:py-4 gap-2 cursor-pointer ${isFirst && 'border-t-[1px]'} ${!isOpen && 'opacity-40  border-b-2'}`}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={() => onCardClick(id)}
@@ -141,10 +142,10 @@ const Partner4 = () => {
     }, [activeCard, timerPaused, time]);
 
     return (
-        <div className='w-full px-6 md:px-24 py-6  min-h-screen max-h-[900px] md:py-16' ref={ref}>
+        <div className='w-full px-6 md:px-24 py-6  min-h-screen  md:py-16' ref={ref}>
             <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>How do I get started?</p>
-            <div className='w-full flex flex-col md:flex-row-reverse overflow-hidden gap-x-16 md:pt-16'>
-                <div className='flex md:w-[54%] h-full flex-col my-auto'>
+            <div className='w-full flex flex-col-reverse md:flex-row-reverse overflow-hidden gap-x-16 pt-10 md:pt-16'>
+                <div className='flex md:w-[54%] h-full flex-col my-auto py-10'>
                     {data.map((cardDetail) => (
                         <Card
                             key={cardDetail.id} // added key prop
