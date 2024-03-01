@@ -9,27 +9,17 @@ const data = [
     {
         heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
         icon: icon,
-        date: "June 23, 2023",
+        date: "October 11, 2023",
     },
     {
         heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
         icon: icon,
-        date: "June 23, 2023",
+        date: "October 11, 2023",
     },
     {
         heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
         icon: icon,
-        date: "June 23, 2023",
-    },
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: icon,
-        date: "June 23, 2023",
-    },
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: icon,
-        date: "June 23, 2023",
+        date: "October 11, 2023",
     }
 ];
 

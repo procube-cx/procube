@@ -22,16 +22,6 @@ const data = [
         icon: icon,
         date: "June 23, 2023",
     },
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: icon,
-        date: "June 23, 2023",
-    },
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: icon,
-        date: "June 23, 2023",
-    }
 ];
 
 const Card = ({ heading, icon, date, index }) => {

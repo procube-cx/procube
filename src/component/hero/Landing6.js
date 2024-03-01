@@ -11,38 +11,38 @@ import process5 from '../../assets/images/process/process5.png'
 const data = [
     {
         id: 1,
-        title: "Statergy",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        title: "Strategic framework",
+        description: "Crafting a comprehensive strategy tailored to your goals and industry dynamics.",
         icon: process1
     },
     {
         id: 2,
-        title: "Design",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        title: "Design Philosophy",
+        description: "Creating captivating visuals that resonate with your audience and enhance user experiences.",
         icon: process2
     },
     {
         id: 3,
-        title: "Visualization",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        title: "Visualization Techniques",
+        description: "Utilizing cutting-edge techniques to bring your vision to life through vivid imagery.",
         icon: process3
     },
     {
         id: 4,
-        title: "Development",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        title: "Development Methodology",
+        description: "Expertly building functional, user-friendly digital solutions that meet your unique needs.",
         icon: process4
     },
     {
         id: 5,
-        title: "Improve",
-        description: "We're a full-service UX design and branding agency that rolls up our sleeves and works closely with our clients. ",
+        title: "Continuous Enhancements",
+        description: "A commitment to ongoing refinement, ensuring your digital presence stays ahead of the curve.",
         icon: process5
     }
 
 ]
 
-const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer,time }) => {
+const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, resumeTimer, time }) => {
     const [isOpen, setIsOpen] = useState(activeCard === id);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -82,7 +82,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
                         style={{ scaleX: activeCard ? 1 : 0, transformOrigin: "left" }}
                         className='w-full h-0.5 bg-white'
                         initial={{ scaleX: 0 }}
-                        animate={{ scaleX: isHovered ? time/240 : activeCard ? 1 : 0 }}
+                        animate={{ scaleX: isHovered ? time / 240 : activeCard ? 1 : 0 }}
                         transition={{ duration: 6 }}
                     />
                     <div className='w-full h-[1px] bg-white opacity-30 mb-0.5' />
@@ -93,7 +93,7 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
 };
 
 const Landing6 = () => {
-    const [time , setTime] = useState(0);
+    const [time, setTime] = useState(0);
     const [activeCard, setActiveCard] = useState(1);
     const [timerPaused, setTimerPaused] = useState(false);
     const isMobile = window.innerWidth < 768;
@@ -133,23 +133,23 @@ const Landing6 = () => {
                 setTime(0);
             }
         }, 4000);
-    
+
         const interval = setInterval(() => {
             if (!timerPaused && time < 240) {
                 setTime((prevTime) => prevTime + 1);
             }
         }, 1000 / 60);
-    
+
         return () => {
             clearTimeout(timer);
             clearInterval(interval);
         };
-    }, [activeCard, timerPaused, time]);    
+    }, [activeCard, timerPaused, time]);
 
     return (
         <div className='w-full px-6 md:px-24 py-6 md:py-0 min-h-screen max-h-[900px] pb-0 md:pb-16' ref={ref}>
-            <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Process & Approach</p>
-            <div className='w-full flex flex-col md:flex-row overflow-hidden gap-x-16 md:pt-16'>
+            <p className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-0'>Process & Approach</p>
+            <div className='w-full flex flex-col-reverse md:flex-row overflow-hidden gap-x-16 md:pt-16 gap-y-6'>
                 <div className='flex md:w-[54%] h-full flex-col my-auto'>
                     {data.map((cardDetail) => (
                         <Card

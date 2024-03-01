@@ -43,7 +43,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>
-                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[40px] md:h-[70vh] object-cover' />
+                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover' />
                 <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
                 <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{details}</p>
                 <div className='flex flex-wrap gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4'>
