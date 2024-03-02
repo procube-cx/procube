@@ -11,7 +11,7 @@ const Button = ({ children }) => {
             letters.forEach((letter, i) => {
                 const spanLetter = document.createElement('span');
                 spanLetter.textContent = letter;
-                spanLetter.style.transition = 'all 0.3s ease';
+                spanLetter.style.transition = 'all 0.2s cubic-bezier(0,.53,.47,1)';
                 spanLetter.style.transitionDelay = `${i * 0.03}s`;
                 span.appendChild(spanLetter);
             });
@@ -22,7 +22,7 @@ const Button = ({ children }) => {
             letters.forEach((letter, i) => {
                 const spanLetter = document.createElement('span');
                 spanLetter.textContent = letter;
-                spanLetter.style.transition = 'all 0.3s ease';
+                spanLetter.style.transition = 'all 0.2s cubic-bezier(0,.53,.47,1)';
                 spanLetter.style.transitionDelay = `${i * 0.03}s`;
                 span.appendChild(spanLetter);
             });

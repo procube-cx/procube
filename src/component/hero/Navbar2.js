@@ -157,7 +157,7 @@ const Navbar = () => {
                 </div>
                 {/* Navigation links */}
                 <div className="hidden md:flex gap-16 font-medium text-xl">
-                    {data.option5.map((item, index) => (
+                    {data.option1.map((item, index) => (
                         <motion.a href={item.link}
                             className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
                         >
