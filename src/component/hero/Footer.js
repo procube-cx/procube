@@ -7,19 +7,19 @@ const data = {
     option1: [
         {
             title: 'Productlab',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'ScaleX',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Launchpad',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Enterprise Tech',
-            links: 'google.com'
+            links: ''
         }
     ],
     option2: [
@@ -61,19 +61,19 @@ const data = {
     option4: [
         {
             title: 'Twitter',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Instagram',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Dribbble',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Linkedin',
-            links: 'google.com'
+            links: ''
         }
     ]
 };
@@ -84,7 +84,7 @@ const Footer = () => {
         <div className='flex flex-col w-full  px-6 md:px-24 pt-12 md:pt-32 bg-black rounded-t-[30px] md:rounded-t-[60px]'>
             <div className='flex flex-col w-full items-center gap-5 md:gap-14 mb-16 md:mb-36'>
                 <div className='font-normal text-4xl md:text-8xl !leading-[45px] md:!leading-[120px] max-w-4xl text-center uppercase'>Let’s turn your idea into reality</div>
-                <div className='button bg-[#7605C1] px-12 md:px-16 py-3 md:py-4 text-base md:text-4xl rounded-full cursor-pointer'>Get Started</div>
+                <div className='button-hover bg-[#7605C1] px-12 md:px-16 py-3 md:py-4 text-base md:text-4xl rounded-full cursor-pointer'>Get Started</div>
             </div>
             <div className='flex flex-col md:flex-row mb-10  md:mb-20'>
                 <div className=' border px-5 py-10 md:px-7 md:py-16 rounded-full h-auto md:h-44 w-16 md:w-auto my-8 md:my-0 mr-16 md:mr-10 cursor-pointer' onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>

@@ -8,24 +8,25 @@ import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive';
 import SplitType from 'split-type';
 import { gsap } from 'gsap';
+import Button from './Button';
 
 const data = {
     option1: [
         {
             title: 'Productlab',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'ScaleX',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Launchpad',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Enterprise Tech',
-            links: 'google.com'
+            links: ''
         }
     ],
     option2: [
@@ -67,37 +68,37 @@ const data = {
     option4: [
         {
             title: 'Twitter',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Instagram',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Dribbble',
-            links: 'google.com'
+            links: ''
         },
         {
             title: 'Linkedin',
-            links: 'google.com'
+            links: ''
         }
     ],
     option5: [
         {
             title: 'EnterpriseTech',
-            link: 'google.com'
+            link: ''
         },
         {
             title: 'ScaleX',
-            link: 'google.com'
+            link: ''
         },
         {
             title: 'Launchpad',
-            link: 'google.com'
+            link: ''
         },
         {
             title: 'EnterpriseTech',
-            link: 'google.com'
+            link: ''
         }
     ]
 };
@@ -147,7 +148,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="items-center  flex cursor-pointer">
                     <a href='/' className='text-white font-medium text-3xl'>
-                    <img src={logo} alt='logo' className=' w-32' />
+                        <img src={logo} alt='logo' className=' w-32' />
                     </a>
                 </div>
                 {/* Hamburger menu icon */}
@@ -186,18 +187,26 @@ const Navbar = () => {
                             </div>
                             <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
                                 {data.option2.map((item, index) => (
-                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                    <a key={index} href={item.links} className='text-sm md:text-xl'>
+                                        <Button>
+                                            {item.title}
+                                        </Button>
+                                    </a>
                                 ))}
                             </div>
                             <div className='flex flex-col col-span-1 gap-5 md:gap-8'>
                                 {data.option3.map((item, index) => (
-                                    <a key={index} href={item.links} className='text-sm md:text-xl'>{item.title}</a>
+                                    <a key={index} href={item.links} className='text-sm md:text-xl'>
+                                        <Button>
+                                            {item.title}
+                                        </Button>
+                                    </a>
                                 ))}
                             </div>
                         </div>
                         <div className='flex flex-wrap justify-between '>
                             {data.option4.map((item, index) => (
-                                <a key={index} href={item.links} className='  text-sm md:text-xl'>{item.title}</a>
+                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-60'>{item.title}</a>
                             ))}
                         </div>
                     </motion.div>
@@ -211,7 +220,7 @@ const Navbar = () => {
                         <div className='flex flex-col gap-y-[10px]'>
                             <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
                             <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
-                            <div className='button bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full cursor-pointer'>Get in Touch</div>
+                            <div className='button-hover bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full cursor-pointer'>Get in Touch</div>
                         </div>
                     </motion.div>
                 </div>

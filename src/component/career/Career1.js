@@ -94,7 +94,7 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
               ))}
             </ul>
           </div>
-          <div className={`button flex mr-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1]`} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+          <div className={`button-hover flex mr-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1]`} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
             <p className='text-sm md:text-lg'>Apply Now</p>
           </div>
         </>
