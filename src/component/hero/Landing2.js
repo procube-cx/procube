@@ -11,18 +11,18 @@ const Landing2 = () => {
     const screenwidth = window.innerWidth;
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline()
-    ScrollTrigger.create({
-        trigger: '.cont',
-        start: '-150% center',
-        end: 'bottom center',
-        animation: tl,
-        scrub: 1,
-        markers:false
+    const scroll2 = ScrollTrigger.create({
+      trigger: '.cont',
+      start: '-150% center',
+      end: 'bottom center',
+      animation: tl,
+      scrub: 1,
+      markers: false
     });
     tl.from('.image-wrapper #img', {
       scale: 0.14,
-      x: screenwidth/8,
-      y: -screenheight/2 + 30,
+      x: screenwidth / 8,
+      y: -screenheight / 2 + 30,
       duration: 2,
       ease: 'linear',
       transformOrigin: 'center top',
@@ -36,7 +36,9 @@ const Landing2 = () => {
       ease: 'linear',
     });
     return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      if (scroll2) {
+        scroll2.kill();
+      }
     }
   }, [ScrollTrigger]);
 
