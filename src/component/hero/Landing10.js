@@ -34,26 +34,29 @@ const data = [
 
 const Landing10 = () => {
   const mobile = window.innerWidth < 768;
+  const [isRendered, setIsRendered] = useState(true);
 
   useEffect(() => {
     if (mobile) return;
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.utils.toArray('.panel')
-    gsap.to(tl, {
-      xPercent: -100 * (tl.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.horizontal-scroll-wrapper',
-        pin: true,
-        scrub: 1,
-        end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-        markers : true
-      }
-    });
+    if (isRendered) {
+      setIsRendered(false);
+    }
+    else {
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.utils.toArray('.panel')
+      gsap.to(tl, {
+        xPercent: -100 * (tl.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.horizontal-scroll-wrapper',
+          pin: true,
+          scrub: 1,
+          end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+          markers: true
+        }
+      });
+    }
     return () => {
-      // gsap.killTweensOf('.panel');
-      // gsap.killTweensOf('.horizontal-scroll-wrapper');
-      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 

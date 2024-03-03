@@ -8,26 +8,27 @@ const Landing3 = () => {
   useEffect(() => {
     if(isrendered){
       setIsrendered(false);
-      return;
     }
-    gsap.registerPlugin(ScrollTrigger);
-    const textElements = gsap.utils.toArray('.text');
+    else{
+      gsap.registerPlugin(ScrollTrigger);
+      const textElements = gsap.utils.toArray('.text');
 
-    textElements.forEach(text => {
-      gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
-        delay: 1.5,
-        scrollTrigger: {
-          trigger: text,
-          start: 'top bottom',
-          end: 'bottom center',
-          scrub: true,
-          markers: false,
-        },
+      textElements.forEach(text => {
+        gsap.to(text, {
+          backgroundSize: '100%',
+          ease: 'none',
+          delay: 1.5,
+          scrollTrigger: {
+            trigger: text,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true,
+            markers: false,
+          },
+        });
       });
-    });
-    console.log("useref running")
+      console.log("useref running")
+    }
 
     // return () => {
     //   textElements.forEach(text => {
