@@ -47,12 +47,13 @@ const Landing10 = () => {
         pin: true,
         scrub: 1,
         end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-        markers : false
+        markers : true
       }
     });
     return () => {
       // gsap.killTweensOf('.panel');
       // gsap.killTweensOf('.horizontal-scroll-wrapper');
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
