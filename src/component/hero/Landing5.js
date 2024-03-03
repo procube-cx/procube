@@ -113,8 +113,8 @@ const Landing5 = () => {
     };
 
     return (
-        <div className='px-6 md:px-24'>
-            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto py-5 md:pt-28 md:pb-20'>OUR EXPERTISE</AnimatedParagraph>
+        <div className='px-6 md:px-24 py-10 md:py-0'>
+            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-10 md:pt-28 md:pb-20'>OUR EXPERTISE</AnimatedParagraph>
             {cardData.map((cardDetail, index) => (
                 <Card
                     key={index}
@@ -123,7 +123,7 @@ const Landing5 = () => {
                     toggleCard={toggleCard}
                 />
             ))}
-            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-24 hover:opacity-55 cursor-pointer' />
+            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-24 hover:opacity-55 cursor-pointer' />
 
         </div>
     );

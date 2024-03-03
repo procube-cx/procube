@@ -21,7 +21,7 @@ const Marquee = () => {
 
 
   return (
-    <div className="pb-16 md:pb-72 overflow-x-hidden my-auto overflow-y-hidden">
+    <div className="pb-28 md:pb-72 overflow-x-hidden my-auto overflow-y-hidden">
       <div className="relative w-full">
         <motion.div
           className="track"

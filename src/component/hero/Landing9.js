@@ -82,7 +82,7 @@ const Card = ({ heading, icon, date, index }) => {
 
 const Landing9 = () => {
     return (
-        <div className='px-6 md:px-24 py-10 md:py-20 flex flex-col gap-y-6 md:gap-y-16'>
+        <div className='px-6 md:px-24 pb-12 md:pb-24 flex flex-col gap-y-10 md:gap-y-16'>
             <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto '>BLOGS</AnimatedParagraph>
                 
             <div>

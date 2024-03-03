@@ -61,7 +61,7 @@ const Landing10 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 my-16 md:my-28 gap-10 md:gap-16 flex flex-col horizontal-scroll-wrapper'>
+    <div className='px-6 md:px-24 my-12 md:my-28 gap-10 md:gap-16 flex flex-col horizontal-scroll-wrapper'>
       <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</AnimatedParagraph>
       <div className='flex flex-col md:flex-row  overflow-x-hidden'>
         <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16' >
@@ -74,7 +74,7 @@ const Landing10 = () => {
           ))}
         </div>
         <div>
-          <img src={arrowIcon} alt="arrow" className='w-24 md:w-[600px] mx-auto my-10 md:my-10 hover:opacity-55 cursor-pointer panel' />
+          <img src={arrowIcon} alt="arrow" className='w-24 md:w-[600px] mx-auto mt-10 hover:opacity-55 cursor-pointer panel' />
         </div>
       </div>
     </div>
