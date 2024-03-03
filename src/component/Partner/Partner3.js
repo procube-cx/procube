@@ -41,7 +41,7 @@ const data = [
 const Partner3 = () => {
 
   return (
-    <div className='px-6 md:px-24 pb-20 pt-24 md:pt-32'>
+    <div className='px-6 md:px-24 py-6 md:py-12'>
       <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-5xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>Who might find our services appealing?</AnimatedParagraph>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12 md:gap-y-20'>
         {data.map((item, index) => (

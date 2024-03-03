@@ -3,7 +3,7 @@ import partner from '../../assets/images/Partner1.png'
 
 const Partner2 = () => {
   return (
-    <div className='flex flex-col-reverse md:flex-row w-full h-full pt-14 md:pt-20 md:py-20 px-6 md:px-36 gap-y-12 overflow-hidden md: gap-x-14'>
+    <div className='flex flex-col-reverse md:flex-row w-full h-full py-6 md:py-12 px-6 md:px-36 gap-y-12 overflow-hidden md: gap-x-14'>
             <div className='flex md:flex-1 h-full justify-center my-auto'>
                 <img src={partner} alt='family' className='w-full'/>
             </div>

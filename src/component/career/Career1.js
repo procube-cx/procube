@@ -129,10 +129,10 @@ const Career1 = () => {
   return (
     <div className='px-6 md:px-24 pb-0 pt-24 md:pt-32'>
       <AnimatedParagraph
-        className='font-normal text-4xl md:text-8xl max-w-7xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>
+        className='font-normal text-4xl md:text-8xl max-w-7xl text-center mx-auto pb-6 md:pb-[40px] uppercase !leading-tight'>
         DISCOVER YOUR FUTURE AT PROCUBE
       </AnimatedParagraph>
-      <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto mb-4 md:mb-8'>
+      <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto pb-4 md:pb-[30px]'>
         {filter.map((item, index) => (
           <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => handleFilter(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
             <p className='text-sm md:text-lg'>{item}</p>

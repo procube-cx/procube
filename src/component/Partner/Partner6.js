@@ -74,7 +74,7 @@ const Partner6 = () => {
     };
 
     return (
-        <div className='w-full px-6 md:px-24 pt-6  min-h-screen md:max-h-[900px] md:pt-16' >
+        <div className='w-full px-6 md:px-24 pt-6 md:max-h-[900px] md:pt-12' >
             <AnimatedParagraph className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Frequently Asked Questions</AnimatedParagraph>
             <div className='w-full flex flex-col md:flex-row-reverse overflow-hidden gap-x-16'>
                 <div className='flex md:w-full h-full flex-col my-auto'>

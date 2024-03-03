@@ -45,7 +45,7 @@ const Partner1 = () => {
       <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-5xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>Why Join our Partner Program?</AnimatedParagraph>
       <div className='grid grid-cols-1 md:grid-cols-3 md:gap-10'>
         {data.map((item, index) => (
-          <div key={index} className='border-b-[1px] border-opacity-40 border-white py-5 md:py-8'>
+          <div key={index} className='border-b-[1px] border-opacity-40 border-white pb-5 md:pb-8'>
             <img src={item.icon} alt='icon' className='w-12 h-12 md:w-16 md:h-16 mb-5 md:mb-8' />
             <p className='font-bold text-xl md:text-3xl md:pb-4'>{item.title}</p>
             <p className='text-sm md:text-lg opacity-60'>{item.description}</p>
