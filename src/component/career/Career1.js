@@ -127,7 +127,7 @@ const Career1 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 pb-0 pt-24 md:pt-32'>
+    <div className='px-6 md:px-24 pb-0 pt-24 md:pt-48'>
       <AnimatedParagraph
         className='font-normal text-4xl md:text-8xl max-w-7xl text-center mx-auto pb-6 md:pb-[40px] uppercase !leading-tight'>
         DISCOVER YOUR FUTURE AT PROCUBE

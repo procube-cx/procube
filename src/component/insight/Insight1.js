@@ -89,7 +89,7 @@ const Card = ({ heading, icon, date, index }) => {
 const Insight1 = ({Heading , filterShow}) => {
     const [id, setId] = React.useState('All');
     return (
-        <div className='px-6 md:px-24  flex flex-col relative pt-24 md:pt-44'>
+        <div className={`px-6 md:px-24  flex flex-col relative  ${filterShow ? 'pt-24 md:pt-48' : 'pt-12 md:pt-24'}`}>
             <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[40px]'>{Heading}</AnimatedParagraph>
             <div className='flex flex-row gap-4 md:gap-8 overflow-x-auto lg:justify-center pb-4 md:pb-[30px]'>
                 {filterShow && filter.map((item, index) => (

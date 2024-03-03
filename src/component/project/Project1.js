@@ -48,7 +48,7 @@ const Project1 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 pt-16 md:pt-28 flex flex-col'>
+    <div className='px-6 md:px-24 pt-24 md:pt-48 flex flex-col'>
       <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Our projects</AnimatedParagraph>
       <div className='grid grid-cols-2 w-full gap-x-8 md:gap-x-16 overflow-x-auto gap-y-5 md:gap-y-14' >
         {data.map((item, index) => (

@@ -59,7 +59,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
 const Services1 = () => {
     return (
-        <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-52 flex flex-col'>
+        <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-48 flex flex-col'>
             <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products</AnimatedParagraph>
             {data.map((cardDetail, index) => (
                 <Card
