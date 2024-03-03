@@ -40,7 +40,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
     return (
         <div
-            className={`flex w-full py-5 md:py-10 md:px-24 cursor-pointer border-t-2 border-white border-opacity-40  ${lastcard ? "border-b-2" : "border-b-0"}`}
+            className={`flex w-full py-7 md:py-10 md:px-24 cursor-pointer border-t-2 border-white border-opacity-40  ${lastcard ? "border-b-2" : "border-b-0"}`}
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>
@@ -59,8 +59,8 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
 const Services1 = () => {
     return (
-        <div className='px-6 md:px-24 py-24 md:py-32 md:pt-52 flex flex-col'>
-            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-5 md:pb-16 !leading-tight'>Crafting Exceptional Digital Products</AnimatedParagraph>
+        <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-52 flex flex-col'>
+            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products</AnimatedParagraph>
             {data.map((cardDetail, index) => (
                 <Card
                     heading={cardDetail.heading}

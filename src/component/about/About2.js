@@ -25,7 +25,7 @@ const Card = ({ cardDetail, index }) => {
     return (
         <div className='flex w-full even:border-y-[2px] odd:border-t-[2px] border-opacity-40 border-white gap-2 md:gap-4 ' key={index}>
             <div className='grid grid-cols-8 flex-1 line py-5 md:py-[70px] overflow-hidden gap-y-5'>
-                <div className='col-span-8 md:col-span-4 md:my-auto flex flex-row justify-between md:justify-start md:gap-x-8 md:px-4'>
+                <div className='col-span-8 md:col-span-4 md:my-auto flex flex-row justify-start gap-x-4 md:gap-x-8 md:px-4'>
                     <p className='md:col-span-3 font-normal text-4xl md:text-7xl  uppercase'>{heading}</p>
                     <img src={icon3} alt="icon" className={`w-10 md:w-20 my-auto flex col-span-1 `} />
                 </div>

@@ -144,7 +144,7 @@ const Partner4 = () => {
 
     return (
         <div className='w-full px-6 md:px-24 py-6  min-h-screen  md:py-16' ref={ref}>
-            <AnimatedParagraph className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>How do I get started?</AnimatedParagraph>
+            <AnimatedParagraph className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>How do I get started?</AnimatedParagraph>
             <div className='w-full flex flex-col-reverse md:flex-row-reverse overflow-hidden gap-x-16 pt-10 md:pt-16 gap-y-10'>
                 <div className='flex md:w-[54%] h-full flex-col my-auto '>
                     {data.map((cardDetail) => (

@@ -38,10 +38,10 @@ const card = (title, description, icon,key) => {
 
 const Contact3 = () => {
   return (
-    <div className='pt-20 px-6 md:px-24'>
+    <div className=' px-6 md:px-24'>
       <div className='flex flex-col w-full h-full items-center gap-6 md:gap-20'>
         <div className='flex flex-col md:max-w-4xl text-center gap-2 md:gap-6'>
-          <AnimatedParagraph className='font-normal text-4xl md:text-8xl'>GLOBAL PRESENCE</AnimatedParagraph>
+          <AnimatedParagraph className='font-normal text-4xl md:text-8xl '>GLOBAL PRESENCE</AnimatedParagraph>
         </div>
         <div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-8'>

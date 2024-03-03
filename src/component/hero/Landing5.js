@@ -113,8 +113,8 @@ const Landing5 = () => {
     };
 
     return (
-        <div className='px-6 md:px-24 py-10 md:py-0'>
-            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-10 md:pt-28 md:pb-20'>OUR EXPERTISE</AnimatedParagraph>
+        <div className='px-6 md:px-24 py-10 md:py-24'>
+            <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-10 md:pb-[70px]'>OUR EXPERTISE</AnimatedParagraph>
             {cardData.map((cardDetail, index) => (
                 <Card
                     key={index}

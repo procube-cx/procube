@@ -61,8 +61,8 @@ const Landing10 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 my-12 md:my-28 gap-10 md:gap-16 flex flex-col horizontal-scroll-wrapper'>
-      <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center'>Our projects</AnimatedParagraph>
+    <div className='px-6 md:px-24 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper'>
+      <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Our projects</AnimatedParagraph>
       <div className='flex flex-col md:flex-row  overflow-x-hidden'>
         <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16' >
           {data.map((item, index) => (
