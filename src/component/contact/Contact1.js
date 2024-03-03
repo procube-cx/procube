@@ -71,8 +71,7 @@ const Contact1 = () => {
           onChange={(e) => setProject(e.target.value)}
         />
         <button
-          className='flex px-12 py-3 md:px-24 md:py-8 ml-auto rounded-full bg-[#7605C1] font-normal text-base md:text-3xl button'
-          type='Submit'
+          className='button-hover flex ml-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1] md:text-3xl '
         >
           Submit
         </button>

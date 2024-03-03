@@ -9,8 +9,7 @@ const Contact2 = () => {
                 <div className='flex flex-col '>
                     <p className='opacity-40 text-sm md:text-2xl uppercase'>Phone</p>
                     <div className='flex flex-col md:flex-row gap-2 text-2xl md:text-4xl py-2'>
-                        <p>+91 8589972200,</p>
-                        <p>+91 8589973300</p>
+                        <p>+971 503533460</p>
                     </div>
                 </div>
                 <img src={phone} alt="phone" className='w-12 md:w-20 md:mr-8' />
@@ -19,7 +18,7 @@ const Contact2 = () => {
                 <div className='flex flex-col '>
                     <p className='opacity-40 text-sm md:text-2xl uppercase'>Email</p>
                     <div className='flex flex-col md:flex-row gap-2 text-2xl md:text-4xl py-2'>
-                        <p>procube@gmail.com</p>
+                        <p>info@procube.cx</p>
                     </div>
                 </div>
                 <img src={email} alt="phone" className='w-12 md:w-20 md:mr-8' />

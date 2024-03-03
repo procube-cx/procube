@@ -1,23 +1,27 @@
 import React from 'react'
-import icon from '../../assets/images/large-1.png'
 import AnimatedParagraph from '../AnimatedPara'
+import img1 from '../../assets/images/Contact/img1.webp'
+import img2 from '../../assets/images/Contact/img2.webp'
+import img3 from '../../assets/images/Contact/img3.webp'
+import img4 from '../../assets/images/Contact/img4.webp'
+
 
 const cardDetails = [{
   title: 'UAE',
   description: 'Near Al Qiyadha Metro, Dubai , United Arab Emirates',
-  icon: icon
+  icon: img1
 }, {
   title: 'INDIA',
   description: 'Hlite Business Park, Calicut, Kerala, India',
-  icon: icon
+  icon: img2
 }, {
   title: 'CANADA',
   description: 'North York, Toronto, Ontario M9L1N2',
-  icon: icon
+  icon: img3
 }, {
   title: 'saudi arabia',
-  description: 'Hlite Business Park, Calicut, Kerala, India',
-  icon: icon
+  description: 'Le Cygne Commercial Center 2, Al-Olaya, Riyadh',
+  icon: img4
 }]
 
 
