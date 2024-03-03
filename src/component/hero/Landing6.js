@@ -148,7 +148,7 @@ const Landing6 = () => {
     }, [activeCard, timerPaused, time]);
 
     return (
-        <div className='w-full px-6 md:px-24 md:min-h-screen max-h-[900px] pb-0 md:pb-16' ref={ref}>
+        <div className='w-full px-6 md:px-24 pb-0 md:pb-16' ref={ref}>
             <AnimatedParagraph className='w-full md:w-full font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Process & Approach</AnimatedParagraph>
             <div className='w-full flex flex-col-reverse md:flex-row overflow-hidden gap-x-16 gap-y-6'>
                 <div className='flex md:w-[54%] h-full flex-col my-auto'>
