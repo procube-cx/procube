@@ -34,32 +34,52 @@ const data = [
 
 const Landing10 = () => {
   const mobile = window.innerWidth < 768;
-  const [runEffect, setRunEffect] = useState(true);
+
+
+  // useEffect(() => {
+  //   if (mobile) return;
+
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const tl = gsap.utils.toArray('.panel')
+  //   gsap.to(tl, {
+  //     xPercent: -100 * (tl.length - 1),
+  //     ease: 'none',
+  //     scrollTrigger: {
+  //       trigger: '.horizontal-scroll-wrapper',
+  //       pin: true,
+  //       scrub: 1,
+  //       end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+  //       markers: false
+  //     }
+  //   });
+
+  // }, []);
 
 
   useEffect(() => {
-    if (!runEffect) return; // If runEffect is false, return early
-  
     if (mobile) return;
-    
+
     gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.utils.toArray('.panel')
-    gsap.to(tl, {
-      xPercent: -100 * (tl.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.horizontal-scroll-wrapper',
-        pin: true,
-        scrub: 1,
-        end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-        markers: false
-      }
+    const tl = gsap.utils.toArray('.panel');
+
+    const scroll1 = ScrollTrigger.create({
+      trigger: '.horizontal-scroll-wrapper',
+      pin: true,
+      scrub: 1,
+      end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+      markers: false,
+      animation: gsap.to(tl, {
+        xPercent: -100 * (tl.length - 1),
+        ease: 'none',
+      }),
     });
 
-    // Set runEffect to false to prevent the effect from running again
-    setRunEffect(false);
-  }, [runEffect]);
-
+    return () => {
+      if (scroll1) {
+        scroll1.kill();
+      }
+    }
+  }, [ScrollTrigger]);
 
 
 

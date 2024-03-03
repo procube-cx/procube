@@ -4,47 +4,52 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Landing3 = () => {
-  useEffect(() => {
-
-    gsap.registerPlugin(ScrollTrigger);
-    const textElements = gsap.utils.toArray('.text');
-
-    textElements.forEach(text => {
-      gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
-        delay: 1.5,
-        scrollTrigger: {
-          trigger: text,
-          start: 'top bottom',
-          end: 'bottom center',
-          scrub: true,
-          markers: false,
-        },
-      });
-    });
-
-  }, []);
-
-
   // useEffect(() => {
+
   //   gsap.registerPlugin(ScrollTrigger);
   //   const textElements = gsap.utils.toArray('.text');
 
-  //   ScrollTrigger.create({
-  //     start: 'top 80%',
-  //     end: 'bottom 40%',
-  //     markers: false,
-  //     scrub: true,
-  //     trigger: '.text',
-  //     animation: gsap.to(textElements, {
+  //   textElements.forEach(text => {
+  //     gsap.to(text, {
   //       backgroundSize: '100%',
   //       ease: 'none',
   //       delay: 1.5,
-  //     }),
+  //       scrollTrigger: {
+  //         trigger: text,
+  //         start: 'top bottom',
+  //         end: 'bottom center',
+  //         scrub: true,
+  //         markers: false,
+  //       },
+  //     });
   //   });
 
-  // }, [ScrollTrigger]);
+  // }, []);
+
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const textElements = gsap.utils.toArray('.text');
+
+    const scroll = ScrollTrigger.create({
+      start: 'top 80%',
+      end: 'bottom 40%',
+      markers: false,
+      scrub: true,
+      trigger: '.text',
+      animation: gsap.to(textElements, {
+        backgroundSize: '100%',
+        ease: 'none',
+        delay: 1.5,
+      }),
+    });
+
+    return () => {
+      if(scroll) {
+        scroll.kill();
+      }
+    }
+  }, [ScrollTrigger]);
 
 
   return (
