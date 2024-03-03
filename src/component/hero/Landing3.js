@@ -4,40 +4,32 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Landing3 = () => {
-  const [isrendered, setIsrendered] = useState(true);
+  const [runEffect, setRunEffect] = useState(true);
   useEffect(() => {
-    if(isrendered){
-      setIsrendered(false);
-    }
-    else{
-      gsap.registerPlugin(ScrollTrigger);
-      const textElements = gsap.utils.toArray('.text');
+    if (!runEffect) return; // If runEffect is false, return early
+    
+    gsap.registerPlugin(ScrollTrigger);
+    const textElements = gsap.utils.toArray('.text');
 
-      textElements.forEach(text => {
-        gsap.to(text, {
-          backgroundSize: '100%',
-          ease: 'none',
-          delay: 1.5,
-          scrollTrigger: {
-            trigger: text,
-            start: 'top bottom',
-            end: 'bottom center',
-            scrub: true,
-            markers: false,
-          },
-        });
+    textElements.forEach(text => {
+      gsap.to(text, {
+        backgroundSize: '100%',
+        ease: 'none',
+        delay: 1.5,
+        scrollTrigger: {
+          trigger: text,
+          start: 'top bottom',
+          end: 'bottom center',
+          scrub: true,
+          markers: false,
+        },
       });
-      console.log("useref running")
-    }
+    });
 
-    // return () => {
-    //   textElements.forEach(text => {
-    //     if (text.scrollTrigger) {
-    //       text.scrollTrigger.kill(); 
-    //     }
-    //   });
-    // };
-  }, [isrendered]); 
+    // Set runEffect to false to prevent the effect from running again
+    setRunEffect(false);
+  }, [runEffect]);
+
 
   return (
     <div className='px-6 md:px-24 py-12 md:py-24 '>

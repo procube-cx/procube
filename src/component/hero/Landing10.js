@@ -34,31 +34,31 @@ const data = [
 
 const Landing10 = () => {
   const mobile = window.innerWidth < 768;
-  const [isRendered, setIsRendered] = useState(true);
+  const [runEffect, setRunEffect] = useState(true);
+
 
   useEffect(() => {
+    if (!runEffect) return; // If runEffect is false, return early
+  
     if (mobile) return;
-    if (isRendered) {
-      setIsRendered(false);
-    }
-    else {
-      gsap.registerPlugin(ScrollTrigger);
-      const tl = gsap.utils.toArray('.panel')
-      gsap.to(tl, {
-        xPercent: -100 * (tl.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.horizontal-scroll-wrapper',
-          pin: true,
-          scrub: 1,
-          end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-          markers: true
-        }
-      });
-    }
-    return () => {
-    };
-  }, []);
+    
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.utils.toArray('.panel')
+    gsap.to(tl, {
+      xPercent: -100 * (tl.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.horizontal-scroll-wrapper',
+        pin: true,
+        scrub: 1,
+        end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+        markers: true
+      }
+    });
+
+    // Set runEffect to false to prevent the effect from running again
+    setRunEffect(false);
+  }, [runEffect]);
 
 
 
