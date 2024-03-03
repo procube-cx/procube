@@ -62,9 +62,11 @@ const Card = ({ heading, index, open, onClick, description1, description2 }) => 
   return (
     <div
       className='overflow-hidden flex flex-col w-full border-[2px] rounded-xl md:rounded-3xl border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 px-4 md:px-12'
-      onClick={onClick}
     >
-      <div className='grid grid-cols-12 flex-1 landing gap-y-5 cursor-pointer'>
+      <div
+        className='grid grid-cols-12 flex-1 landing gap-y-5 cursor-pointer'
+        onClick={onClick}
+      >
         <div className='col-span-11 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
           <p className='font-normal text-base md:text-2xl my-auto capitalize'>{heading}</p>
         </div>
@@ -127,8 +129,8 @@ const Career1 = () => {
   return (
     <div className='px-6 md:px-24 pb-5 md:pb-10 pt-24 md:pt-32'>
       <AnimatedParagraph
-        className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>
-        Got Ideas? Let’s team up
+        className='font-normal text-4xl md:text-8xl max-w-7xl text-center mx-auto py-5 md:pb-20 uppercase !leading-tight'>
+        DISCOVER YOUR FUTURE AT PROCUBE
       </AnimatedParagraph>
       <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto mb-4 md:mb-8'>
         {filter.map((item, index) => (

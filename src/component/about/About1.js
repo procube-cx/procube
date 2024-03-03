@@ -6,8 +6,8 @@ const About1 = () => {
 
   return (
     <div className="cont">
-      <div className="image-wrapper ">
-        <img src={large} alt="large" className='hidden md:flex my-auto w-4/5 mx-auto md:pt-36' />
+      <div className="image-wrapper md:pt-36">
+        <img src={large} alt="large" className='hidden md:flex my-auto w-4/5 mx-auto  rounded-3xl' />
       </div>
       <img src={larges} alt="large" className='md:hidden py-32 px-6' />
     </div>
