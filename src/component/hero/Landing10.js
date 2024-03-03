@@ -70,7 +70,7 @@ const Landing10 = () => {
       <div className='flex flex-col md:flex-row  overflow-x-hidden'>
         <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16' >
           {data.map((item, index) => (
-            <div className='md:w-[50vw] w-full flex flex-col cursor-pointer  panel'>
+            <div className='md:w-[50vw] w-full flex flex-col cursor-pointer  panel' key={index}>
               <img src={item.icon} alt={item.name} className='md:w-[600px] mb-3 md:mb-7' />
               <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
               <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>

@@ -85,19 +85,19 @@ const data = {
     option5: [
         {
             title: 'EnterpriseTech',
-            link: 'googe.com'
+            links: 'googe.com'
         },
         {
             title: 'ScaleX',
-            link: ''
+            links: ''
         },
         {
             title: 'Launchpad',
-            link: ''
+            links: ''
         },
         {
             title: 'EnterpriseTech',
-            link: ''
+            links: ''
         }
     ]
 };
@@ -158,8 +158,9 @@ const Navbar = () => {
                 {/* Navigation links */}
                 <div className="hidden md:flex gap-16 font-medium text-xl">
                     {data.option1.map((item, index) => (
-                        <motion.a href={item.link}
-                            className={activeLink === item.link ? 'text-[#7605C1]' : 'text-white'}
+                        <motion.a href={item.links}
+                            className={'text-white'}
+                            key={index}
                         >
                             <Button>
                                 {item.title}
