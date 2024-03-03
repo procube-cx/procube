@@ -3,24 +3,26 @@ import icon2 from '../../assets/images/icons/icon2.svg';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import './hero.css';
-import icon from '../../assets/images/expertise.png';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import AnimatedParagraph from '../AnimatedPara';
+import img1 from '../../assets/images/Blogs/img1.webp';
+import img2 from '../../assets/images/Blogs/img2.webp';
+import img3 from '../../assets/images/Blogs/img3.webp';
 
 const data = [
     {
         heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: icon,
+        icon: img1,
         date: "June 23, 2023",
     },
     {
         heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
-        icon: icon,
+        icon: img2,
         date: "June 23, 2023",
     },
     {
         heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
-        icon: icon,
+        icon: img3,
         date: "June 23, 2023",
     },
 ];
@@ -63,8 +65,8 @@ const Card = ({ heading, icon, date, index }) => {
             onMouseLeave={handleHoverExit}
         >
             <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing gap-y-5'>
-                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block' />
-                <div id={`text-${index}`} className='col-span-12 md:col-span-8 flex flex-col justify-center md:justify-between gap-y-5 md:gap-y-3'>
+                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block rounded-2xl' />
+                <div id={`text-${index}`} className='col-span-12 md:col-span-8 flex flex-col justify-center md:justify-around gap-y-5 md:gap-y-3'>
                     <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
                     <div className='py-2 px-5 md:py-3 md:px-8 rounded-[78px] bg-[#1A1A1A] mr-auto'>
                         <p className='text-sm md:text-lg'>{date}</p>

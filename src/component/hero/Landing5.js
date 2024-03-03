@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import icon from '../../assets/images/expertise.png';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
@@ -7,35 +6,33 @@ import './hero.css';
 import icon2 from '../../assets/images/icons/icon2.svg'
 import CustomEase from 'gsap/CustomEase';
 import AnimatedParagraph from '../AnimatedPara';
+import img1 from '../../assets/images/OurExpertise/img1.webp';
+import img2 from '../../assets/images/OurExpertise/img2.webp';
+import img3 from '../../assets/images/OurExpertise/img3.webp';
+import img4 from '../../assets/images/OurExpertise/img4.webp';
 
 const data = [
     {
         heading: "DIGITAL STRATEGY",
-        icon: icon,
+        icon: img1,
         description: " Accelerate Your Business with Our Technology-Driven Strategic Approach. We conduct market research and customize online initiatives to align with your goals. Engaging audiences, boosting brand visibility, and driving conversions are our key strategies, ensuring resounding success in the digital landscape.",
         title: ["Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping", "Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping"]
     },
     {
-        heading: "BRANDING",
-        icon: icon,
+        heading: "DESIGNING",
+        icon: img2,
         description: "We specialize in creating visually stunning designs that enhance brand recognition, leaving an unforgettable impact on your audience. Whether it's brand kits, graphic posters, motion graphics, or UI/UX designs, we guarantee a lasting impression that sets your brand apart.",
-        title: ["Brand Strategy", "Brand Identity", "Brand Naming", "Brand Guidelines", "Brand Strategy", "Brand Identity", "Brand Naming", "Brand Guidelines"]
-    },
-    {
-        heading: "UI/UX DESIGN",
-        icon: icon,
-        description: " We excel in developing user-friendly websites, applications, and e-commerce platforms. Our focus lies in crafting seamless customer experiences where intuitive design and smooth functionality come together to provide exceptional interactions, ultimately enhancing user satisfaction.",
         title: ["User Research", "User Experience Design", "User Interface Design", "User Research", "User Experience Design", "User Interface Design"]
     },
     {
         heading: "DEVELOPMENT",
-        icon: icon,
+        icon: img3,
         description: "Enhance your brand's visibility, attract your ideal customers, and boost conversions through our targeted campaigns. We utilize strategic tactics, precise targeting, and compelling messaging to guarantee that your brand distinguishes itself, engages the right audience, and delivers measurable results.",
         title: ["Web Development", "Mobile Development", "Web Development", "Mobile Development"]
     },
     {
         heading: "MARKETING",
-        icon: icon,
+        icon: img4,
         description: "Our marketing strategies are designed to elevate your brand's online presence, boost traffic, and drive conversions. We specialize in SEO, social media marketing, and content marketing, ensuring that your brand stands out in the digital landscape.",
         title: ["SEO", "Social Media Marketing", "Content Marketing", "SEO", "Social Media Marketing", "Content Marketing"]
     }
@@ -43,6 +40,7 @@ const data = [
 
 const Card = ({ cardDetail, index, toggleCard }) => {
     const { heading, icon, description, isOpen } = cardDetail;
+    const first = index === 0;
 
     useEffect(() => {
         gsap.set(`.line #img-${index}`, { x: 10, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom" });
@@ -80,7 +78,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     };
 
     return (
-        <motion.div className='flex w-full even:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 ' key={index}
+        <motion.div className={`flex w-full border-b-[2px] border-opacity-40 border-white gap-2 md:gap-4  ${first && 'border-t-[2px]'}`} key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
             onClick={handleClick}
@@ -90,10 +88,10 @@ const Card = ({ cardDetail, index, toggleCard }) => {
                     <p className='font-normal text-2xl md:text-5xl flex-1'>{heading}</p>
                     <img src={icon2} alt="icon" className={`col-span-3 md:col-span-1 w-7 mx-auto my-auto flex md:hidden ${isOpen && 'rotate-180 '}`} />
                 </div>
-                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 h-full mx-auto my-auto hidden md:flex overflow-hidden' />
+                <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 w-full md:w-[70%] h-full md:h-52  ml-auto my-auto hidden md:flex overflow-hidden object-cover rounded-2xl' />
                 <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex' : "hidden"} `} />
                 <div className='col-span-3 md:col-span-1 grid grid-cols-2 gap-y-2'>
-                    <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto`}>{description}</p>
+                    <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto pl-20`}>{description}</p>
                 </div>
             </div>
         </motion.div>
