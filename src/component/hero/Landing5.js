@@ -91,7 +91,7 @@ const Card = ({ cardDetail, index, toggleCard }) => {
                 <img id={`img-${index}`} src={icon} alt="icon" className='col-span-3 md:col-span-1 w-full md:w-[70%] h-full md:h-52  ml-auto my-auto hidden md:flex overflow-hidden object-cover rounded-2xl' />
                 <img src={icon} alt="icon" className={`col-span-3 md:col-span-1 w-full py-4 md:hidden ${isOpen ? 'flex' : "hidden"} `} />
                 <div className='col-span-3 md:col-span-1 grid grid-cols-2 gap-y-2'>
-                    <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto pl-20`}>{description}</p>
+                    <p className={`col-span-3 md:col-span-2 font-normal text-base md:text-lg ${isOpen ? 'flex' : 'hidden'} md:flex my-auto md:pl-20`}>{description}</p>
                 </div>
             </div>
         </motion.div>
