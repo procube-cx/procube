@@ -1,13 +1,11 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './test.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Landing3 = () => {
-  const [runEffect, setRunEffect] = useState(true);
   useEffect(() => {
-    if (!runEffect) return; // If runEffect is false, return early
-    
+
     gsap.registerPlugin(ScrollTrigger);
     const textElements = gsap.utils.toArray('.text');
 
@@ -26,9 +24,27 @@ const Landing3 = () => {
       });
     });
 
-    // Set runEffect to false to prevent the effect from running again
-    setRunEffect(false);
-  }, [runEffect]);
+  }, []);
+
+
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const textElements = gsap.utils.toArray('.text');
+
+  //   ScrollTrigger.create({
+  //     start: 'top 80%',
+  //     end: 'bottom 40%',
+  //     markers: false,
+  //     scrub: true,
+  //     trigger: '.text',
+  //     animation: gsap.to(textElements, {
+  //       backgroundSize: '100%',
+  //       ease: 'none',
+  //       delay: 1.5,
+  //     }),
+  //   });
+
+  // }, [ScrollTrigger]);
 
 
   return (

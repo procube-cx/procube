@@ -12,31 +12,10 @@ import InsightSlug from './pages/Insight-slug';
 import Partner from './pages/Partner';
 import Casestudy from './pages/Casestudy';
 import Projects from './pages/Projects';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
 
 
 
 function App() {
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   gsap.from('.heading', { opacity: 0, y: 100, duration: 1, delay: 0.5, ease: 'power3.out' })
-  //   const Heading = gsap.utils.toArray('.heading');
-  //   Heading.forEach(heading => {
-  //   gsap.to(heading, {
-  //     scrollTrigger: {
-  //       trigger: heading,
-  //       start: 'top 90%',
-  //       end: 'top 90%',
-  //       markers: false,
-  //     },
-  //     y: 0,
-  //     opacity: 1,
-  //     duration: 1,
-  //     ease: 'power3.out',
-  //   });
-  // });
-  // }, []);
 
   return (
     <div>

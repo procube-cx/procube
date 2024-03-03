@@ -52,7 +52,7 @@ const Landing10 = () => {
         pin: true,
         scrub: 1,
         end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-        markers: true
+        markers: false
       }
     });
 
