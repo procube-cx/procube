@@ -35,11 +35,7 @@ const Landing2 = () => {
       duration: 2,
       ease: 'linear',
     });
-    return () => {
-      if (scroll2) {
-        scroll2.kill();
-      }
-    }
+
   }, [ScrollTrigger]);
 
 
