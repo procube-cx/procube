@@ -46,11 +46,11 @@ const Landing2 = () => {
         const tl = gsap.timeline()
         const scroll2 = ScrollTrigger.create({
           trigger: '.cont',
-          start: '-120% 30%',
+          start: '-100% 30%',
           end: 'bottom center',
           animation: tl,
           scrub: 1,
-          markers: true
+          markers: false
         });
         tl.from('.image-wrapper #img', {
           scale: 0.14,
