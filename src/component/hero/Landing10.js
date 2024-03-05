@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import image1 from '../../assets/images/project-image/image1.png';
@@ -36,61 +36,66 @@ const Landing10 = () => {
   const mobile = window.innerWidth < 768;
 
 
+
   // useEffect(() => {
   //   if (mobile) return;
 
   //   gsap.registerPlugin(ScrollTrigger);
-  //   const tl = gsap.utils.toArray('.panel')
-  //   gsap.to(tl, {
-  //     xPercent: -100 * (tl.length - 1),
-  //     ease: 'none',
-  //     scrollTrigger: {
-  //       trigger: '.horizontal-scroll-wrapper',
-  //       pin: true,
-  //       scrub: 1,
-  //       end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-  //       markers: false
-  //     }
+  //   const tl = gsap.utils.toArray('.panel');
+
+  //   const scroll1 = ScrollTrigger.create({
+  //     trigger: '.horizontal-scroll-wrapper',
+  //     pin: true,
+  //     scrub: 1,
+  //     end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+  //     markers: false,
+  //     animation: gsap.to(tl, {
+  //       xPercent: -100 * (tl.length - 1),
+  //       ease: 'none',
+  //     }),
   //   });
 
-  // }, []);
+  //   return () => {
+  //     if (scroll1) {
+  //       scroll1.kill();
+  //     }
+  //   }
+  // }, [ScrollTrigger]);
 
+  useLayoutEffect(() => {
+    let ctx2 = gsap.context(() => {
+      if (mobile) return;
 
-  useEffect(() => {
-    if (mobile) return;
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.utils.toArray('.panel');
 
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.utils.toArray('.panel');
-
-    const scroll1 = ScrollTrigger.create({
-      trigger: '.horizontal-scroll-wrapper',
-      pin: true,
-      scrub: 1,
-      end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
-      markers: false,
-      animation: gsap.to(tl, {
-        xPercent: -100 * (tl.length - 1),
-        ease: 'none',
-      }),
+      const scroll1 = ScrollTrigger.create({
+        trigger: '.horizontal-scroll-wrapper',
+        pin: true,
+        scrub: 1,
+        end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
+        markers: false,
+        animation: gsap.to(tl, {
+          xPercent: -100 * (tl.length - 1),
+          ease: 'none',
+        }),
+      });
     });
-
     return () => {
-      if (scroll1) {
-        scroll1.kill();
-      }
+      ctx2.revert()
     }
-  }, [ScrollTrigger]);
+  }, [ScrollTrigger, gsap, mobile]);
 
 
 
 
   return (
-    <div className='px-6 md:px-24 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper'>
+    <div className='px-6 md:px-24 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper h-[100vh]'>
       <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Our projects</AnimatedParagraph>
-      <div className='flex flex-col md:flex-row  overflow-x-hidden'>
-        <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16' >
+      <div className='flex flex-col md:flex-row  overflow-x-hidden overflow-y-hidden '>
+        <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16 ' >
           {data.map((item, index) => (
-            <div className='md:w-[50vw] w-full flex flex-col cursor-pointer  panel' key={index}>
+            <div className='md:w-[50vw] w-full flex flex-col cursor-pointer  panel ' key={index}>
               <img src={item.icon} alt={item.name} className='md:w-[600px] mb-3 md:mb-7' />
               <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
               <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>

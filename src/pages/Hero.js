@@ -15,11 +15,17 @@ import Footer from '../component/hero/Footer';
 import Preloader from '../component/proloader';
 
 function Hero() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [loading2, setLoading2] = useState(false);
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 4000);
+  }, []);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading2(true);
+    }, 5000);
   }, []);
 
   return (
@@ -32,12 +38,21 @@ function Hero() {
           <Navbar />
           <Landing1 />
           <Landing2 />
-          <Landing3 />
+          {/* <Landing3 /> */}
+          {loading2 && (
+            <Landing3 />
+          )}
+          {/* <Landing3 /> */}
           <Landing4 />
           <Landing5 />
           <Marquee />
           <Lanidng7 />
-          <Landing10 />
+          {
+            loading2 && (
+              <Landing10 />
+            )
+          }
+          {/* <Landing10 /> */}
           <Landing6 />
           <Landing8 />
           <Landing9 />
