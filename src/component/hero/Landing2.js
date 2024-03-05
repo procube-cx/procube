@@ -50,7 +50,7 @@ const Landing2 = () => {
           end: 'bottom center',
           animation: tl,
           scrub: 1,
-          markers: false
+          markers: true
         });
         tl.from('.image-wrapper #img', {
           scale: 0.14,
