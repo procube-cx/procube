@@ -90,12 +90,12 @@ const Landing10 = () => {
 
 
   return (
-    <div className='px-6 md:px-24 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper h-[100vh]'>
+    <div className='px-6 md:px-0 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper h-[100vh]'>
       <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Our projects</AnimatedParagraph>
       <div className='flex flex-col md:flex-row  overflow-x-hidden overflow-y-hidden '>
         <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16 ' >
           {data.map((item, index) => (
-            <div className='md:w-[50vw] w-full flex flex-col cursor-pointer  panel ' key={index}>
+            <div className={`md:w-[50vw] w-full flex flex-col cursor-pointer  panel ${index === 0 && 'md:pl-28'}`} key={index}>
               <img src={item.icon} alt={item.name} className='md:w-[600px] mb-3 md:mb-7' />
               <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
               <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>
