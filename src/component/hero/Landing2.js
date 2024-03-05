@@ -46,7 +46,7 @@ const Landing2 = () => {
         const tl = gsap.timeline()
         const scroll2 = ScrollTrigger.create({
           trigger: '.cont',
-          start: '-150% center',
+          start: '-120% 30%',
           end: 'bottom center',
           animation: tl,
           scrub: 1,
