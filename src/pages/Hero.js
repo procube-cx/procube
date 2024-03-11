@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from '../component/hero/Navbar2';
+import { motion } from 'framer-motion';
+import Navbar2 from '../component/hero/Navbar2';
+import Navbar from '../component/hero/Navbar';
 import Landing1 from '../component/hero/Landing1';
 import Landing2 from '../component/hero/Landing2';
 import Landing3 from '../component/hero/Landing3';
@@ -17,6 +19,7 @@ import Preloader from '../component/proloader';
 function Hero() {
   const [loading, setLoading] = useState(true);
   const [loading2, setLoading2] = useState(false);
+  const [navbar, setNavbar] = useState(false);
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -28,37 +31,64 @@ function Hero() {
     }, 5000);
   }, []);
 
+  React.useEffect(() => {
+    const progressBar = document.querySelector('.scroll-progress');
+    const scrollHandler = () => {
+      let totalHeight = window.innerHeight;
+      let progress = (window.pageYOffset / totalHeight) * 100;
+      if (progress > 100) {
+        progress = 100;
+        setNavbar(true);
+      }
+      else {
+        setNavbar(false);
+      }
+    };
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, []);
+
   return (
-    <div className=' text-white bg-[#121212]' >
-      {loading ? 
-      (
-        <Preloader />
-      ) : (
-        <div>
-          <Navbar />
-          <Landing1 />
-          <Landing2 />
-          {/* <Landing3 /> */}
-          {loading2 && (
-            <Landing3 />
-          )}
-          {/* <Landing3 /> */}
-          <Landing4 />
-          <Landing5 />
-          <Marquee />
-          <Lanidng7 />
-          {
-            loading2 && (
-              <Landing10 />
-            )
-          }
-          {/* <Landing10 /> */}
-          <Landing6 />
-          <Landing8 />
-          <Landing9 />
-          <Footer />
-        </div>
-      )}
+    <div className=' text-white bg-[#121212] ' >
+      {loading ?
+        (
+          <Preloader />
+        ) : (
+          <div >
+            <Navbar2 />
+            {
+              navbar && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={navbar ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Navbar />
+                </motion.div>
+              )
+            }
+            <div className='scroll-progress'>
+              <Landing1 />
+            </div>
+            <Landing2 />
+            {loading2 && (
+              <Landing3 />
+            )}
+            <Landing4 />
+            <Landing5 />
+            <Marquee />
+            <Lanidng7 />
+            {
+              loading2 && (
+                <Landing10 />
+              )
+            }
+            <Landing6 />
+            <Landing8 />
+            <Landing9 />
+            <Footer />
+          </div>
+        )}
     </div>
   );
 }

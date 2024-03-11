@@ -35,7 +35,7 @@ const Contact1 = () => {
       <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>Got Ideas? Let’s team up</AnimatedParagraph>
       <form onSubmit={handleFormSubmit} className='flex flex-col items-start gap-y-8 md:gap-y-10 w-full'>
         <p className='font-normal text-2xl md:text-4xl max-w-xs text-left'>You need to do</p>
-        <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto'>
+        <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto' style={{ scrollbarWidth : 'none'}}>
           {filter.map((item, index) => (
             <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${id.includes(item) ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => id.includes(item) ? setId(id.filter(i => i !== item)) : setId([...id,item])} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
               <p className='text-sm md:text-lg'>{item}</p>

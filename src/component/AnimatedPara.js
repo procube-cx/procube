@@ -18,9 +18,9 @@ const AnimatedParagraph = ({ children, initial, animate, transition, className }
     return (
         <motion.p
             ref={ref}
-            initial={initial}
-            animate={inView ? animate : { opacity: 0 }}
-            transition={transition}
+            // initial={initial}
+            // animate={inView ? animate : { opacity: 0 }}
+            // transition={transition}
             className={`${className}`}
         >
             {children}

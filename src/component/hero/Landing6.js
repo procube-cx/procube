@@ -68,9 +68,9 @@ const Card = ({ id, title, description, activeCard, onCardClick, pauseTimer, res
             onMouseLeave={handleHoverExit}
             onClick={() => onCardClick(id)}
         >
-            <div className='grid grid-cols-10 flex-1'>
+            <div className='grid grid-cols-9 flex-1'>
                 <p className={`col-span-1 font-normal text-2xl md:text-5xl ${isOpen ? '' : 'italic'}`}>0{id}</p>
-                <p className='col-span-9 font-normal text-2xl md:text-5xl'>{title}</p>
+                <p className='col-span-8 font-normal text-2xl md:text-5xl'>{title}</p>
             </div>
             {isOpen &&
                 <div className='grid grid-cols-10'>

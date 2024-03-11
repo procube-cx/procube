@@ -16,6 +16,7 @@ function About() {
       <About1 />
       <Landing3 />
       <About2 />
+      <About3 />
       <About4 />
       <NextUp Heading={'Services'} />
       <Footer />

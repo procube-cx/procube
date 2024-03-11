@@ -76,7 +76,7 @@ const Landing10 = () => {
         end: () => '+=' + document.querySelector('.horizontal-scroll-wrapper').offsetWidth,
         markers: false,
         animation: gsap.to(tl, {
-          xPercent: -100 * (tl.length - 1),
+          xPercent: -100 * (tl.length - 2),
           ease: 'none',
         }),
       });
@@ -90,20 +90,22 @@ const Landing10 = () => {
 
 
   return (
-    <div className='px-6 md:px-0 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper h-[100vh]'>
+    <div className='px-6 md:px-0 my-12 md:my-28 flex flex-col horizontal-scroll-wrapper md:h-[100vh]'>
       <AnimatedParagraph className='font-normal text-4xl md:text-8xl !leading-tight uppercase text-center pb-10 md:pb-[70px]'>Our projects</AnimatedParagraph>
       <div className='flex flex-col md:flex-row  overflow-x-hidden overflow-y-hidden '>
-        <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16 ' >
+        <div className='flex flex-col md:flex-row gap-y-5 md:gap-x-16 md:pl-28' >
           {data.map((item, index) => (
-            <div className={`md:w-[50vw] w-full flex flex-col cursor-pointer  panel ${index === 0 && 'md:pl-28'}`} key={index}>
+            <div className={`md:w-[50vw] w-full flex flex-col cursor-pointer  panel `} key={index}>
               <img src={item.icon} alt={item.name} className='md:w-[600px] mb-3 md:mb-7' />
               <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
               <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>
             </div>
           ))}
+
+          <img src={arrowIcon} alt="arrow" className='w-24 md:w-48 hidden md:flex flex-row my-auto hover:opacity-55 cursor-pointer panel -ml-[1800px] flex-end' />
         </div>
-        <div>
-          <img src={arrowIcon} alt="arrow" className='w-24 md:w-[600px] mx-auto mt-10 hover:opacity-55 cursor-pointer panel' />
+        <div className='md:hidden'>
+          <img src={arrowIcon} alt="arrow" className='w-24 md:hidden mx-auto mt-10 hover:opacity-55 cursor-pointer' />
         </div>
       </div>
     </div>

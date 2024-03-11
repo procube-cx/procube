@@ -132,7 +132,7 @@ const Career1 = () => {
         className='font-normal text-4xl md:text-8xl max-w-7xl text-center mx-auto pb-6 md:pb-[40px] uppercase !leading-tight'>
         DISCOVER YOUR FUTURE AT PROCUBE
       </AnimatedParagraph>
-      <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto pb-4 md:pb-[30px]'>
+      <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto pb-4 md:pb-[30px]' style={{ scrollbarWidth : 'none'}}>
         {filter.map((item, index) => (
           <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => handleFilter(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
             <p className='text-sm md:text-lg'>{item}</p>
