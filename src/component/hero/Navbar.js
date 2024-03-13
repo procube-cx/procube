@@ -141,7 +141,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed w-full z-40 ${isMenuOpen && ' md:fixed'}`} >
+        <div className={`fixed w-full z-40 ${isMenuOpen && 'relative md:fixed'}`} >
             {/* Header section */}
             {/* Hamburger menu */}
             <div className="flex items-center justify-between md:mx-6 px-6 md:px-12 md:my-3 py-4 rounded-b-xl md:rounded-2xl md:py-4 purplegradient">
@@ -206,7 +206,7 @@ const Navbar = () => {
                         </div>
                         <div className='flex flex-wrap justify-between '>
                             {data.option4.map((item, index) => (
-                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-60'>{item.title}</a>
+                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-60 mb-12 md:mb-0'>{item.title}</a>
                             ))}
                         </div>
                     </motion.div>

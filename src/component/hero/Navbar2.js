@@ -146,10 +146,10 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-6 md:px-24 py-6 md:py-12">
                 {/* Contact Us button */}
                 <div className="items-center hidden md:flex cursor-pointer">
-                    <div className="px-5 py-2 rounded-full border border-1 border-white flex flex-row items-center gap-[2px]">
+                    <a href='/contact' className="px-5 py-2 rounded-full border border-1 border-white flex flex-row items-center gap-[2px]">
                         <GoDotFill className="text-white w-7 h-7" />
                         <p className="font-medium text-xl">Contact Us</p>
-                    </div>
+                    </a>
                 </div>
                 {/* Logo */}
                 <div className="items-center md:hidden flex">
@@ -224,7 +224,7 @@ const Navbar = () => {
                         </div>
                         <div className='flex flex-wrap justify-between '>
                             {data.option4.map((item, index) => (
-                                <a key={index} href={item.links} className='  text-sm md:text-xl hover:opacity-50 mb-10 md:mb-0'>{item.title}</a>
+                                <a key={index} href={item.links} className='  text-sm md:text-xl hover:opacity-50 mb-12 md:mb-0'>{item.title}</a>
                             ))}
                         </div>
                     </motion.div>

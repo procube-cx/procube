@@ -70,7 +70,7 @@ function Hero() {
             <div className='scroll-progress'>
               <Landing1 />
             </div>
-            <Landing2 />
+            {/* <Landing2 /> */}
             {loading2 && (
               <Landing3 />
             )}
