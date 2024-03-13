@@ -28,16 +28,16 @@ const data = [
 ];
 
 const Card = ({ heading, icon, date, index }) => {
+    const isMobile = window.innerWidth < 768;
     useEffect(() => {
         // Check if it's a mobile device
-        const isMobile = window.innerWidth < 768;
 
         // Apply animation only if it's not a mobile device
         if (!isMobile) {
             gsap.set(`.landing #img-${index}`, { x: "-100%", duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
             gsap.set(`.landing #text-${index}`, { x: "-25%", duration: 0.3, width: "137%", opacity: 1, transformOrigin: "right bottom" });
         }
-    }, [index]);
+    }, [index, isMobile]);
 
     const handleHover = () => {
         const isMobile = window.innerWidth < 768;
