@@ -55,12 +55,14 @@ const Project1 = () => {
           <div
             className='flex-1 flex flex-col cursor-pointer w-full col-span-2 md:col-span-1'
           >
-            <motion.img
-              src={item.icon}
-              alt={item.name}
-              className='w-[600px] mb-7'
-              whileHover={{ scale: 1.15 ,transition: { duration: 0.5 , ease: 'easeInOut' }}}
-            />
+            <div className='rounded-lg md:rounded-2xl overflow-hidden'>
+              <motion.img
+                src={item.icon}
+                alt={item.name}
+                className='w-full '
+                whileHover={{ scale: 1.15, transition: { duration: 0.5, ease: 'easeInOut' } }}
+              />
+            </div>
             <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
             <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>
           </div>
