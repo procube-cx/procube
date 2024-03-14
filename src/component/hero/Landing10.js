@@ -189,6 +189,7 @@ const Project1 = () => {
           </div>
         ))}
       </div>
+      <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-16 hover:opacity-55 cursor-pointer' />
     </div>
   );
 };
