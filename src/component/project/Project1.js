@@ -5,39 +5,59 @@ import image1 from '../../assets/images/project-image/image1.png';
 import image2 from '../../assets/images/project-image/image2.png';
 import image3 from '../../assets/images/project-image/image3.png';
 import image4 from '../../assets/images/project-image/image4.png';
+import image5 from '../../assets/images/project-image/image5.png';
+import image6 from '../../assets/images/project-image/image6.png';
+import image7 from '../../assets/images/project-image/image7.png';
+import image8 from '../../assets/images/project-image/image8.png';
+import image9 from '../../assets/images/project-image/image9.png';
 import gsap from 'gsap';
 import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
   {
-    name: 'Louis Vuitton',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Hyperama',
+    desc: 'Ecommerce Development, Branding and Inventory Management',
     icon: image1,
   },
   {
-    name: 'Pizza Hut',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'PetBey',
+    desc: 'UI/UX, Android & iOS App Development, Website Development',
     icon: image2,
   },
   {
+    name: 'Beacon Management Consultant',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
+    icon: image3,
+  },
+  {
+    name: 'NoorJes Perfumes',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
+    icon: image4,
+  },
+  {
     name: 'Apple',
     desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image4,
+    icon: image5,
   },
   {
     name: 'Nike',
     desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image3,
+    icon: image6,
   },
   {
-    name: 'Apple',
+    name: 'Google',
     desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image4,
+    icon: image7,
   },
   {
-    name: 'Nike',
+    name: 'Facebook',
     desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image3,
+    icon: image8,
+  },
+  {
+    name: 'Instagram',
+    desc: 'Branding, Web Design, App Development, Marketing',
+    icon: image9,
   },
 ];
 
@@ -63,7 +83,7 @@ const Project1 = () => {
                 whileHover={{ scale: 1.15, transition: { duration: 0.5, ease: 'easeInOut' } }}
               />
             </div>
-            <p className='text-xl font-normal md:text-4xl'>{item.name}</p>
+            <p className='text-xl font-normal md:text-4xl pt-5 md:pt-8'>{item.name}</p>
             <p className='text-xs font-normal md:text-lg opacity-60'>{item.desc}</p>
           </div>
         ))}

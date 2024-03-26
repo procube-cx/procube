@@ -140,24 +140,24 @@ import AnimatedParagraph from '../AnimatedPara';
 
 const data = [
   {
-    name: 'Louis Vuitton',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Hyperama',
+    desc: 'Ecommerce Development, Branding and Inventory Management',
     icon: image1,
   },
   {
-    name: 'Pizza Hut',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'PetBey',
+    desc: 'UI/UX, Android & iOS App Development, Website Development',
     icon: image2,
   },
   {
-    name: 'Apple',
-    desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image4,
+    name: 'Beacon Management Consultant',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
+    icon: image3,
   },
   {
-    name: 'Nike',
-    desc: 'Branding, Web Design, App Development, Marketing',
-    icon: image3,
+    name: 'NoorJes Perfumes',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
+    icon: image4,
   },
 
 ];
@@ -181,7 +181,7 @@ const Project1 = () => {
                 src={item.icon}
                 alt={item.name}
                 className='w-full '
-                whileHover={{ scale: 1.15 ,transition: { duration: 0.5 , ease: 'easeInOut' }}}
+                whileHover={{ scale: 1.15, transition: { duration: 0.5, ease: 'easeInOut' } }}
               />
             </div>
             <p className='text-xl font-normal md:text-4xl mt-3 md:mt-7'>{item.name}</p>
@@ -189,7 +189,9 @@ const Project1 = () => {
           </div>
         ))}
       </div>
-      <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-16 hover:opacity-55 cursor-pointer' />
+      <a href='/projects'>
+        <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-16 hover:opacity-55 cursor-pointer' />
+      </a>
     </div>
   );
 };

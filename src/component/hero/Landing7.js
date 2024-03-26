@@ -28,20 +28,20 @@ const data = [
     {
         heading: "Procube completely transformed our business",
         details: "Procube completely transformed our business with their careful redesign of my business. They helped us to not only improve the look of our brand, but also to streamline our processes and increase our profits. We've seen tremendous growth since working with them and can't thank them enough for their help. Highly recommend!",
-        name: "John Doe",
-        position: "Google1"
+        name: "Hari Abdurahman",
+        position: "Gazaal Perfumes"
     },
     {
-        heading: "Procube compl",
-        details: "Procube compls with their careful redesign of my business. They helped us to not only improve the look of our brand, but also to streamline our processes and increase our profits. We've seen tremendous growth since working with them and can't thank them enough for their help. Highly recommend!",
-        name: "John Doe",
-        position: "Google2"
+        heading: "Procube Team was so easy to approach",
+        details: "I just wanted to give a shoutout to the team at Procube for being so easy to approach and work with.They were always available to answer my questions and were super patient with me,even when I had a million things going on.It was pleasure working with such a friendly and approachable team.Thanks guys!",
+        name: "Raji Thomas",
+        position: "Alweena Perfumes"
     },
     {
-        heading: "Procube compls",
-        details: "Procube completely transformed our business with their careful redesign of my business. They helped us to not only improve the look of our brand, but also to streamline our processes and increase our profits. We've seen tremendous growth since working with them and can't thank them enough for their help. Highly recommend!",
-        name: "John Doe",
-        position: "Google3"
+        heading: "Their expertise and attention to detail were great",
+        details: "Working with the Procube team was an absolute pleasure. Their expertise and meticulous attention to detail were exceptional,surpassing our expectations.We wholwheartedly recommend them for their hardwork and dedication.A heartfelt thank you for their exceptional hard work and commitment throughout the journey.",
+        name: "Jaseem ummer",
+        position: "Intercool"
     }
 ]
 
