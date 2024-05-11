@@ -12,6 +12,7 @@ import InsightSlug from './pages/Insight-slug';
 import Partner from './pages/Partner';
 import Casestudy from './pages/Casestudy';
 import Projects from './pages/Projects';
+import ServiceInner from './pages/ServiceInner';
 
 
 
@@ -23,10 +24,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Hero />} />
           <Route path='/about' element={<About />} />
-          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/  ' element={<Portfolio />} />
           <Route path='/insight' element={<Insight />} />
           <Route path='/insight/:id' element={<InsightSlug />} />
           <Route path='/services' element={<Services />} />
+          <Route path='/services/:id' element={<ServiceInner />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/careers' element={<Career />} />
           <Route path='/partners' element={<Partner />} />
