@@ -15,11 +15,13 @@ import Landing8 from '../component/hero/Landing8';
 import Landing9 from '../component/hero/Landing9';
 import Footer from '../component/hero/Footer';
 import Preloader from '../component/proloader';
+import Popup from '../component/Popup';
 
 function Hero() {
   const [loading, setLoading] = useState(true);
   const [loading2, setLoading2] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const [open, setOpen] = React.useState(true)
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -89,6 +91,7 @@ function Hero() {
             <Footer />
           </div>
         )}
+        <Popup open={open} setOpen={setOpen}/>
     </div>
   );
 }

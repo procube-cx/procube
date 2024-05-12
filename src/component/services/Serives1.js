@@ -3,8 +3,13 @@ import Service1 from '../../assets/images/Services/services1.webp'
 import Service2 from '../../assets/images/Services/services2.webp'
 import Service3 from '../../assets/images/Services/services3.webp'
 import Service4 from '../../assets/images/Services/services4.webp'
+import star from '../../assets/images/Services/star.svg';
 import '../hero/hero.css';
 import AnimatedParagraph from '../AnimatedPara';
+import icon2 from '../../assets/images/icons/icon2.svg';
+import { FaStarOfLife } from "react-icons/fa";
+
+
 
 const data = [
     {
@@ -34,22 +39,27 @@ const data = [
 ];
 
 const Card = ({ heading, icon, details, index, tags }) => {
-
-    const lastcard = index === data.length - 1;
+    const [isHovered, setIsHovered] = React.useState(false);
 
 
     return (
         <div
-            className={`flex w-full py-7 md:py-10 md:px-24 cursor-pointer border-t-2 border-white border-opacity-40  ${lastcard ? "border-b-2" : "border-b-0"}`}
+            className={`flex w-full py-7 md:py-10 cursor-pointer`}
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>
-                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover' />
-                <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
+                <img src={icon} alt={heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover md:hidden' />
+                <div className='flex flex-row overflow-hidden'
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                    <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
+                    <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-3 ${isHovered && 'translate-x-14 -translate-y-14 transition-transform duration-300 ease-in-out'}`} />
+                    <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-2 -translate-x-32 translate-y-14  ${isHovered && '!-translate-x-10 md:!-translate-x-16 !-translate-y-0 transition-transform duration-300 ease-in-out'}`} />
+                </div>
                 <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{details}</p>
                 <div className='flex flex-wrap gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4'>
                     {tags.map((tag, index) => (
-                        <p key={index} className='text-sm md:text-base bg-[#870FF3] px-2 md:px-4 py-1 md:py-2 rounded-full'>{tag}</p>
+                        <p key={index} className='text-sm md:text-base bg-white bg-opacity-10 px-2 md:px-4 py-1 md:py-2 rounded-full'>{tag}</p>
                     ))}
                 </div>
             </div>
@@ -60,17 +70,19 @@ const Card = ({ heading, icon, details, index, tags }) => {
 const Services1 = () => {
     return (
         <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-48 flex flex-col'>
-            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products</AnimatedParagraph>
-            {data.map((cardDetail, index) => (
-                <Card
-                    heading={cardDetail.heading}
-                    icon={cardDetail.icon}
-                    details={cardDetail.details}
-                    index={index}
-                    tags={cardDetail.tags}
-                    key={index}
-                />
-            ))}
+            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products </AnimatedParagraph>
+            <div className='w-full md:w-1/2'>
+                {data.map((cardDetail, index) => (
+                    <Card
+                        heading={cardDetail.heading}
+                        icon={cardDetail.icon}
+                        details={cardDetail.details}
+                        index={index}
+                        tags={cardDetail.tags}
+                        key={index}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
