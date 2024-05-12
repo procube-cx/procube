@@ -16,6 +16,7 @@ import Landing9 from '../component/hero/Landing9';
 import Footer from '../component/hero/Footer';
 import Preloader from '../component/proloader';
 import Popup from '../component/Popup';
+import Whatsapp from '../component/Whatsapp';
 
 function Hero() {
   const [loading, setLoading] = useState(true);
@@ -92,6 +93,7 @@ function Hero() {
           </div>
         )}
         <Popup open={open} setOpen={setOpen}/>
+        <Whatsapp />
     </div>
   );
 }
