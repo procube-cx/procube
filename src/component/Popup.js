@@ -7,7 +7,7 @@ const Popup = ({ open, handleClose }) => {
         open && (
             <>
                 <div className='fixed bg-black opacity-80 w-full h-full top-0 z-50'></div>
-                <div className="fixed bottom-3 right-3 md:bottom-10 md:right-10 z-50 w-[90vw] md:w-1/2">
+                <div className="fixed bottom-3 left-[50%] -translate-x-[50%] md:translate-x-0 md:bottom-10 md:right-10 z-50 w-[90vw] md:w-1/2">
                     <div className="flex flex-col-reverse md:flex-row bg-[#1A1A1A] rounded-xl md:rounded-2xl md:gap-10 overflow-hidden">
                         <div className='flex my-auto md:my-0 md:w-2/5 relative md:h-full w-full max-h-[250px] md:max-h-[1000px]' >
                             <img src={join} alt='join' className='w-full h-full object-cover md:min-h-[350px]' />

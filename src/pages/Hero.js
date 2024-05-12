@@ -111,7 +111,6 @@ function Hero() {
           <Popup open={open} handleClose={handleClose} />
         )
       }
-      <Whatsapp />
     </div>
   );
 }

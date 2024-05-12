@@ -13,6 +13,7 @@ import Partner from './pages/Partner';
 import Casestudy from './pages/Casestudy';
 import Projects from './pages/Projects';
 import ServiceInner from './pages/ServiceInner';
+import Whatsapp from './component/Whatsapp';
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/projects' element={<Projects />} />
         </Routes>
       </BrowserRouter>
+      <Whatsapp />
     </div>
   );
 }

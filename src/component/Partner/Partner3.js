@@ -42,7 +42,7 @@ const Partner3 = () => {
 
   return (
     <div className='px-6 md:px-24 py-6 md:py-12'>
-      <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-5xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>Who might find our services appealing?</AnimatedParagraph>
+      <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-5xl text-center mx-auto pb-16 md:pb-[110px] uppercase !leading-tight'>Who might find our services appealing?</AnimatedParagraph>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12 md:gap-y-20'>
         {data.map((item, index) => (
           <div key={index} className='bg-[#1A1A1A] py-5 px-4 md:py-10 md:px-7 rounded-lg md:rounded-2xl relative'>
