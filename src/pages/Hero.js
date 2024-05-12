@@ -22,34 +22,45 @@ function Hero() {
   const [loading, setLoading] = useState(true);
   const [loading2, setLoading2] = useState(false);
   const [navbar, setNavbar] = useState(false);
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
+  const [closedOnce, setClosedOnce] = useState(false);
+  const landing5Ref = React.useRef(null);
+
+
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 4000);
-  }, []);
-  React.useEffect(() => {
+
     setTimeout(() => {
       setLoading2(true);
     }, 5000);
-  }, []);
 
-  React.useEffect(() => {
-    const progressBar = document.querySelector('.scroll-progress');
     const scrollHandler = () => {
-      let totalHeight = window.innerHeight;
-      let progress = (window.pageYOffset / totalHeight) * 100;
-      if (progress > 100) {
-        progress = 100;
-        setNavbar(true);
+      if (landing5Ref.current) {
+        const landing5Position = landing5Ref.current.getBoundingClientRect().top;
+        if (landing5Position < window.innerHeight) {
+          setOpen(true);
+        }
       }
-      else {
+
+      const totalHeight = document.body.clientHeight;
+      const progress = (window.pageYOffset / totalHeight) * 100;
+      if (progress > 100) {
+        setNavbar(true);
+      } else {
         setNavbar(false);
       }
     };
+
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
+
+  const handleClose = () => {
+    setOpen(false);
+    setClosedOnce(true);
+}
 
   return (
     <div className=' text-white bg-[#121212] ' >
@@ -79,8 +90,11 @@ function Hero() {
             )}
             <Landing4 />
             <Landing5 />
-            <Marquee />
-            <Lanidng7 />
+            <div ref={landing5Ref}>
+
+              <Marquee />
+              <Lanidng7 />
+            </div>
             {
               loading2 && (
                 <Landing10 />
@@ -92,8 +106,12 @@ function Hero() {
             <Footer />
           </div>
         )}
-        <Popup open={open} setOpen={setOpen}/>
-        <Whatsapp />
+      {
+        !closedOnce && (
+          <Popup open={open} handleClose={handleClose} />
+        )
+      }
+      <Whatsapp />
     </div>
   );
 }
