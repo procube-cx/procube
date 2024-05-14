@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Service1 from '../../assets/images/Services/services1.webp'
 import Service2 from '../../assets/images/Services/services2.webp'
 import Service3 from '../../assets/images/Services/services3.webp'
@@ -8,6 +8,11 @@ import '../hero/hero.css';
 import AnimatedParagraph from '../AnimatedPara';
 import icon2 from '../../assets/images/icons/icon2.svg';
 import { FaStarOfLife } from "react-icons/fa";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -68,20 +73,109 @@ const Card = ({ heading, icon, details, index, tags }) => {
 };
 
 const Services1 = () => {
+
+    const [windowWidth, setWindowWidth] = React.useState(0);
+    // useEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             scrub: 1,
+    //             pin: true,
+    //             pinSpacing: false,
+    //             trigger: ".pin-windmill-wrap",
+    //             start: "top 20%",
+    //             endTrigger: ".pin-windmill-wrap",
+    //             end: "bottom 90%",
+    //             markers: true,
+    //         },
+    //     });
+
+    //     return () => {
+    //         tl.kill();
+    //     };
+    // }, []);
+
+
+    const animationGsap = () => {
+
+        let revealContainers = document.querySelectorAll(
+            ".imageContainer"
+        );
+
+        revealContainers.forEach((container) => {
+            let trigger = container.querySelector(".cards");
+            let image = container.querySelector(
+                ".imageContainer img"
+            );
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: container,
+                    toggleActions: "restart none none reset",
+                    start: "center 50%",
+                    end: "center 50%",
+                    markers:true,
+                },
+            });
+
+            tl.set(container, { autoAlpha: 1 });
+
+            tl.from(image, {
+                opacity: 0,
+                duration: 0.05,
+                ease: "Power2.out",
+            });
+            tl.to(image, {
+                duration: 0.05,
+                ease: "Power2.out",
+                opacity: 1,
+            });
+        });
+
+        // initializeAnimations();
+    };
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            // Update the state with the initial window width
+            setWindowWidth(window.innerWidth);
+            animationGsap();
+
+            // Event listener to update the state when the window is resized
+            const handleResize = () => {
+                setWindowWidth(window.innerWidth);
+            };
+
+            // Attach the event listener
+            window.addEventListener("resize", handleResize);
+
+            // Cleanup: remove the event listener when the component unmounts
+            return () => {
+                window.removeEventListener("resize", handleResize);
+            };
+        }
+    }, [animationGsap]);
+
+
     return (
         <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-48 flex flex-col'>
             <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products </AnimatedParagraph>
-            <div className='w-full md:w-1/2'>
-                {data.map((cardDetail, index) => (
-                    <Card
-                        heading={cardDetail.heading}
-                        icon={cardDetail.icon}
-                        details={cardDetail.details}
-                        index={index}
-                        tags={cardDetail.tags}
-                        key={index}
-                    />
-                ))}
+            <div className='flex flex-row gap-14 cards '>
+                <div className='w-full md:w-1/2'>
+                    {data.map((cardDetail, index) => (
+                        <Card
+                            heading={cardDetail.heading}
+                            icon={cardDetail.icon}
+                            details={cardDetail.details}
+                            index={index}
+                            tags={cardDetail.tags}
+                            key={index}
+                        />
+                    ))}
+                </div>
+                <div className='w-full md:w-1/2 pin-windmill-wrap relative imageContainer'>
+                    {data.map((cardDetail, index) => (
+                        <img src={cardDetail.icon} alt={cardDetail.heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover hidden md:flex flex-col absolute top-0' />
+                    ))}
+                </div>
             </div>
         </div>
     );
