@@ -75,6 +75,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 const Services1 = () => {
 
     const [windowWidth, setWindowWidth] = React.useState(0);
+    const [index, setIndex] = React.useState(0);
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -86,13 +87,16 @@ const Services1 = () => {
                 endTrigger: ".pin-windmill-wrap",
                 end: "bottom 90%",
                 markers: true,
+                onUpdate: (self) => {
+                    setIndex(Math.round((self.progress + 0.010) * (data.length - 1)));
+                },
             },
         });
-
+        
         return () => {
-            tl.kill();
+          tl.kill();
         };
-    }, []);
+      }, []);
 
 
     // const animationGsap = () => {
@@ -171,10 +175,8 @@ const Services1 = () => {
                         />
                     ))}
                 </div>
-                <div className='w-full md:w-1/2 pin-windmill-wrap relative imageContainer'>
-                    {data.map((cardDetail, index) => (
-                        <img src={cardDetail.icon} alt={cardDetail.heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover hidden md:flex flex-col absolute top-0' />
-                    ))}
+                <div className='w-full md:w-1/2 pin-windmill-wrap relative imageContainer hidden md:block'>
+                    <img src={data[index].icon} alt={data[0].heading} className='w-full md:w-full rounded-lg md:rounded-3xl mb-2 md:mb-4 h-[30vh] md:h-[70vh] object-cover hidden md:flex flex-col absolute top-0' />
                 </div>
             </div>
         </div>
