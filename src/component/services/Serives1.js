@@ -86,7 +86,7 @@ const Services1 = () => {
                 start: "top 20%",
                 endTrigger: ".pin-windmill-wrap",
                 end: "bottom 90%",
-                markers: true,
+                markers: false,
                 onUpdate: (self) => {
                     setIndex(Math.round((self.progress + 0.010) * (data.length - 1)));
                 },
