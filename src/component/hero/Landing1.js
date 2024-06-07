@@ -62,7 +62,7 @@ const Landing1 = () => {
         <div className='flex flex-row mr-auto gap-3 md:gap-5 mt-14'>
           <div className=' mr-auto relative'>
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
-              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 75)}px)`, transition: 'transform 0.3s ease' }}>
+              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set1.map((tag, index) => (
                   <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
