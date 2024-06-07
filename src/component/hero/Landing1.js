@@ -37,12 +37,10 @@ const Landing1 = () => {
           <div className='line h-16 lg:h-[90px] xl:h-28 hidden md:flex'>
             <span> Digital Ecosystem</span>
           </div>
-          <div className='md:hidden'>
-            <span>Crafting Your</span>
-            <span> Digital Experience</span>
-            <span> with Technology,</span>
-            <span> Design & Marketing</span>
-            <span> Magic!</span>
+          <div className='md:hidden leading-tight'>
+            <span>Building Your</span><br/>
+            <span>Future-Proof</span><br/>
+            <span>Digital Ecosystem</span>
           </div>
         </div>
         <div className="md:ml-auto md:mt-auto hidden md:flex">
