@@ -29,9 +29,41 @@ import Ec3 from './Ec3.svg';
 import Ec4 from './Ec4.svg';
 import Ec5 from './Ec5.svg';
 
+import l1 from './SVG/1.svg'
+import l2 from './SVG/2.svg'
+import l3 from './SVG/3.svg'
+import l4 from './SVG/4.svg'
+import l5 from './SVG/5.svg'
+import l6 from './SVG/6.svg'
+import l7 from './SVG/7.svg'
+import l8 from './SVG/8.svg'
+import l9 from './SVG/9.svg'
+import l10 from './SVG/10.svg'
+import l11 from './SVG/11.svg'
+import l12 from './SVG/12.svg'
+import l13 from './SVG/13.svg'
+import l14 from './SVG/14.svg'
+import l15 from './SVG/15.svg'
+import l16 from './SVG/16.svg'
+import l17 from './SVG/17.svg'
+import l18 from './SVG/18.svg'
+import l19 from './SVG/19.svg'
+import l20 from './SVG/20.svg'
+import l21 from './SVG/21.svg'
+import l22 from './SVG/22.svg'
+import l23 from './SVG/23.svg'
+import l24 from './SVG/24.svg'
+import l25 from './SVG/25.svg'
+
+
 
 export const Design = [Design1, Design2, Design3, Design4, Design5];
 export const Front = [Front1, Front2, Front3, Front4, Front5];
 export const Back = [Back1, Back2, Back3, Back4, Back5];
 export const Db = [Db1, Db2, Db3, Db4, Db5, Db6];
 export const Ecommerce = [Ec1, Ec2, Ec3, Ec4, Ec5];
+export const set1 = [l1, l2, l3, l4, l5]
+export const set2 = [l6, l7, l8, l9, l10]
+export const set3 = [l11, l12, l13, l14, l15]
+export const set4 = [l16, l17, l18, l19, l20]
+export const set5 = [l21, l22, l23, l24, l25]
