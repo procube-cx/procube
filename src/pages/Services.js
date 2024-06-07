@@ -16,6 +16,7 @@ function Services() {
       <Navbar />
       <Services1 />
       <Landing6 />
+      <div className='md:h-10 w-full'></div>
       <Landing8 />
       <Services2 />
       <NextUp Heading={'Projects'} />
