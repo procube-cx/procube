@@ -15,25 +15,25 @@ const data = [
     {
         heading: "DIGITAL STRATEGY",
         icon: img1,
-        description: " Accelerate Your Business with Our Technology-Driven Strategic Approach. We conduct market research and customize online initiatives to align with your goals. Engaging audiences, boosting brand visibility, and driving conversions are our key strategies, ensuring resounding success in the digital landscape.",
+        description: "We create tailored strategies that align with your business goals, leveraging market intelligence, audience insights, and competitor analysis to ensure your brand stands out.",
         title: ["Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping", "Mobile App Design", "Research & Discovery", "Competitive analysis", "Design systems", "Prototyping"]
     },
     {
         heading: "DESIGNING",
         icon: img2,
-        description: "We specialize in creating visually stunning designs that enhance brand recognition, leaving an unforgettable impact on your audience. Whether it's brand kits, graphic posters, motion graphics, or UI/UX designs, we guarantee a lasting impression that sets your brand apart.",
+        description: "We translate strategy into experiences that captivate. Every detail, from visuals to user interactions, resonates with your audience.",
         title: ["User Research", "User Experience Design", "User Interface Design", "User Research", "User Experience Design", "User Interface Design"]
     },
     {
         heading: "DEVELOPMENT",
         icon: img3,
-        description: "Enhance your brand's visibility, attract your ideal customers, and boost conversions through our targeted campaigns. We utilize strategic tactics, precise targeting, and compelling messaging to guarantee that your brand distinguishes itself, engages the right audience, and delivers measurable results.",
+        description: "We craft user-centric solutions that fuel business growth. Every element, from interface to functionality, is designed to delight users and propel your digital success.",
         title: ["Web Development", "Mobile Development", "Web Development", "Mobile Development"]
     },
     {
         heading: "MARKETING",
         icon: img4,
-        description: "Our marketing strategies are designed to elevate your brand's online presence, boost traffic, and drive conversions. We specialize in SEO, social media marketing, and content marketing, ensuring that your brand stands out in the digital landscape.",
+        description: "We craft compelling narratives that ignite user passion and drive product adoption.  Leveraging data, we design targeted campaigns.",
         title: ["SEO", "Social Media Marketing", "Content Marketing", "SEO", "Social Media Marketing", "Content Marketing"]
     }
 ];
@@ -47,18 +47,18 @@ const Card = ({ cardDetail, index, toggleCard }) => {
     }, [index]);
 
     const handleHover = () => {
-        gsap.to(`.line #img-${index}`, { 
-            x: 0, 
-            y: 6, 
-            skewY: 0, 
+        gsap.to(`.line #img-${index}`, {
+            x: 0,
+            y: 6,
+            skewY: 0,
             // skewX: -2,
-            duration: 0.325, 
-            opacity: 1, 
+            duration: 0.325,
+            opacity: 1,
             transformOrigin: "right top",
             ease: CustomEase.create("easeName", "0.15,0.45,0.15,1.35"),
             onComplete: () => {
-                gsap.to(`.line #img-${index}`, { 
-                    skewY: 0, 
+                gsap.to(`.line #img-${index}`, {
+                    skewY: 0,
                     skewX: 0,
                     y: 0,
                     duration: 0.05
@@ -66,12 +66,12 @@ const Card = ({ cardDetail, index, toggleCard }) => {
             }
         });
     };
-    
+
 
     const handleHoverExit = () => {
         gsap.to(`.line #img-${index}`, { x: 10, y: 100, skewY: -45, opacity: 0, transformOrigin: "right bottom", duration: 0.325, ease: CustomEase.create("easeName", "0.15,0.45,0.15,1.35") });
     };
-    
+
 
     const handleClick = () => {
         toggleCard(index);

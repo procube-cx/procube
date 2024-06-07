@@ -23,10 +23,10 @@ const data = {
         }
     ],
     option2: [
-        {
-            title: 'Home',
-            links: '.'
-        },
+        // {
+        //     title: 'Home',
+        //     links: '.'
+        // },
         {
             title: 'About Us',
             links: 'about'
@@ -41,10 +41,10 @@ const data = {
         }
     ],
     option3: [
-        {
-            title: 'Partners',
-            links: 'partners'
-        },
+        // {
+        //     title: 'Partners',
+        //     links: 'partners'
+        // },
         {
             title: 'Insights',
             links: 'insight'
@@ -106,12 +106,12 @@ const Footer = () => {
                 </div>
                 <div className='flex-1 flex justify-between font-normal py-8 md:py-0'>
                     <div className='flex flex-col col-span-1 gap-8'>
-                        {data.option1.map((item, index) => {
+                        {/* {data.option1.map((item, index) => {
                             return (
                                 <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-40'>{item.title}</a>
                             )
                         }
-                        )}
+                        )} */}
                     </div>
                     <div className='flex flex-col col-span-1 gap-8'>
                         {data.option2.map((item, index) => {

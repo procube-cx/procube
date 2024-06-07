@@ -57,7 +57,11 @@ const Landing3 = () => {
   return (
     <div className='px-6 md:px-24 py-12 md:py-24 pt-16 md:pt-36'>
       <p className='font-medium text-2xl md:text-5xl leading-10 md:!leading-[78px] text-left'>
-        <span className='text'>At Procube, we unlock innovation's power. Collaborating with brands and visionaries, we revitalize identities, craft impactful digital journeys, and lead transformative advancements. Welcome to Procube, where innovation fuels growth, redefines brands, and turns dreams into reality
+        <span className='text'>
+          We empower businesses to break boundaries and become digital pioneers.
+          By crafting secure and enduring digital ecosystems, we fuse cutting-edge
+          technologies with strategic marketing expertise. This potent blend unlocks
+          transformative growth, propelling you towards unrivaled digital leadership
         </span>
       </p>
     </div>

@@ -8,11 +8,11 @@ import icon3 from '../../assets/images/icons/icon3_purple.svg'
 const data = [
     {
         heading: "Who we are",
-        description: "At Procube, we are a passionate team of creators, strategists, and innovators. We're more than just professionals; we're dreamers, thinkers, and doers. Our diverse backgrounds and experiences enrich our approach, allowing us to see challenges from multiple perspectives and find creative solutions. We thrive on collaboration, pushing the boundaries of what's possible, and, most importantly, making a positive impact on the digital landscape",
+        description: "We are Procube, a team of experts in growth, design, innovation, and collaboration. Our mission is to transform brands through strategic planning, creative design, and latest technology. We thrive on collective brilliance, ensuring every project reflects our clients' unique visions and goals.",
     },
     {
         heading:"What we Do",
-        description:"At Procube, we specialize in crafting exceptional digital experiences with three core pillars: technology, design, and strategy. We empower businesses with cutting-edge technology, create lasting brand impressions through captivating design, and ensure every project becomes a transformative journey. We work closely with clients, diving into brainstorming, design, and strategic development, delivering remarkable results that redefine user engagement."
+        description:"Our strategists create  data-driven roadmaps to elevate your brand. Our designers combine stunning visuals with seamless user experiences. Our developers create scalable solutions for effortless user journeys, fostering collaboration to bring your vision to life."
     }
 ];
 

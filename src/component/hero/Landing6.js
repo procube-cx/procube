@@ -12,32 +12,32 @@ import AnimatedParagraph from '../AnimatedPara';
 const data = [
     {
         id: 1,
-        title: "Strategic framework",
-        description: "Crafting a comprehensive strategy tailored to your goals and industry dynamics.",
+        title: "Market Research",
+        description: "We leverage market research techniques and user testing to identify core user needs and validate product concepts.",
         icon: process1
     },
     {
         id: 2,
-        title: "Design Philosophy",
-        description: "Creating captivating visuals that resonate with your audience and enhance user experiences.",
+        title: "Product Design",
+        description: "We translate validated concepts into high-fidelity prototypes for user feedback and usability testing.",
         icon: process2
     },
     {
         id: 3,
-        title: "Visualization Techniques",
-        description: "Utilizing cutting-edge techniques to bring your vision to life through vivid imagery.",
+        title: "Development",
+        description: "We utilize agile methodologies for rapid development and implementation of the final product.",
         icon: process3
     },
     {
         id: 4,
-        title: "Development Methodology",
-        description: "Expertly building functional, user-friendly digital solutions that meet your unique needs.",
+        title: "Go-To-Market Strategy",
+        description: "We partner with you to develop a comprehensive go-to-market strategy and execute a flawless launch to maximize brand awareness and user acquisition.",
         icon: process4
     },
     {
         id: 5,
-        title: "Continuous Enhancements",
-        description: "A commitment to ongoing refinement, ensuring your digital presence stays ahead of the curve.",
+        title: "Continuous Optimization",
+        description: "We leverage user insights to continuously improve performance and foster lasting engagement.",
         icon: process5
     }
 
@@ -154,7 +154,7 @@ const Landing6 = () => {
                 <div className='flex xl:w-[54%] h-full flex-col my-auto'>
                     {data.map((cardDetail) => (
                         <Card
-                            key={cardDetail.id} // added key prop
+                            key={cardDetail.id} 
                             id={cardDetail.id}
                             title={cardDetail.title}
                             description={cardDetail.description}
