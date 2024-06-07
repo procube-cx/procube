@@ -41,15 +41,16 @@ const data = {
             title: 'Services',
             links: 'services'
         },
+        // {
+        //     title: 'Partners',
+        //     links: 'partners'
+        // }
+    ],
+    option3: [
+        
         {
             title: 'Projects',
             links: 'projects'
-        }
-    ],
-    option3: [
-        {
-            title: 'Partners',
-            links: 'partners'
         },
         {
             title: 'Insights',
@@ -59,10 +60,10 @@ const data = {
             title: 'Careers',
             links: 'careers'
         },
-        {
-            title: 'Contact Us',
-            links: 'contact'
-        }
+        // {
+        //     title: 'Contact Us',
+        //     links: 'contact'
+        // }
     ],
     option4: [
         {
@@ -183,7 +184,7 @@ const Navbar = () => {
                         initial={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100vh" } : isMenuOpen ? { opacity: 1, y: -100 } : { opacity: 1, y: "-150vh" }}
                         animate={isMobile ? isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" } : isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 1, y: "-150vh" }}
                         transition={isMobile ? isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5 } : isMenuOpen ? { duration: 1, delay: 0 } : { duration: 0.5, delay: 0 }}
-                        className='col-span-7 md:col-span-4 h-[67vh] md:h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
+                        className='col-span-7 md:col-span-4 h-[63vh] md:h-screen flex flex-col justify-around bg-[#121212] px-6 md:px-24'>
                         <div className='hidden md:block'></div>
                         <div className=' grid grid-cols-2 md:grid-cols-2 font-normal py-8 gap-y-10 items-center'>
                             {/* <div className='flex flex-col col-span-2 gap-5 md:gap-8'>

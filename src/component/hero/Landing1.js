@@ -5,7 +5,7 @@ import { set1, set2, set3, set4, set5 } from '../../assets/images/Tech Logo/Logo
 
 const Landing1 = () => {
   const textRef = useRef(null);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(4);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -32,9 +32,9 @@ const Landing1 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => {
-        let newIndex = prevIndex + 1;
-        if (newIndex > 4) {
-          newIndex = 0;
+        let newIndex = prevIndex - 1;
+        if (newIndex < 0) {
+          newIndex = 4;
         }
         return newIndex;
       });
@@ -71,7 +71,7 @@ const Landing1 = () => {
           </div>
           <div className=' mr-auto relative'>
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
-              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 75)}px)`, transition: 'transform 0.3s ease' }}>
+              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set2.map((tag, index) => (
                   <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
@@ -80,7 +80,7 @@ const Landing1 = () => {
           </div>
           <div className=' mr-auto relative'>
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
-              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 75)}px)`, transition: 'transform 0.3s ease' }}>
+              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set3.map((tag, index) => (
                   <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
@@ -89,7 +89,7 @@ const Landing1 = () => {
           </div>
           <div className=' mr-auto relative'>
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
-              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 75)}px)`, transition: 'transform 0.3s ease' }}>
+              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set4.map((tag, index) => (
                   <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
@@ -98,7 +98,7 @@ const Landing1 = () => {
           </div>
           <div className=' mr-auto relative hidden md:flex'>
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
-              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 75)}px)`, transition: 'transform 0.3s ease' }}>
+              <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set5.map((tag, index) => (
                   <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
