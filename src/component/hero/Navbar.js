@@ -42,10 +42,6 @@ const data = {
             title: 'Services',
             links: 'services'
         },
-        {
-            title: 'Projects',
-            links: 'projects'
-        },
         // {
         //     title: 'Partners',
         //     links: 'partners'

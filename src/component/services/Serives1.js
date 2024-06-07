@@ -99,65 +99,6 @@ const Services1 = () => {
       }, []);
 
 
-    // const animationGsap = () => {
-
-    //     let revealContainers = document.querySelectorAll(
-    //         ".imageContainer"
-    //     );
-
-    //     revealContainers.forEach((container) => {
-    //         let trigger = container.querySelector(".cards");
-    //         let image = container.querySelector(
-    //             ".imageContainer img"
-    //         );
-    //         let tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: container,
-    //                 toggleActions: "restart none none reset",
-    //                 start: "center 50%",
-    //                 end: "center 50%",
-    //                 markers:true,
-    //             },
-    //         });
-
-    //         tl.set(container, { autoAlpha: 1 });
-
-    //         tl.from(image, {
-    //             opacity: 0,
-    //             duration: 0.05,
-    //             ease: "Power2.out",
-    //         });
-    //         tl.to(image, {
-    //             duration: 0.05,
-    //             ease: "Power2.out",
-    //             opacity: 1,
-    //         });
-    //     });
-
-    //     // initializeAnimations();
-    // };
-
-    // useEffect(() => {
-    //     if (typeof window !== "undefined") {
-    //         // Update the state with the initial window width
-    //         setWindowWidth(window.innerWidth);
-    //         animationGsap();
-
-    //         // Event listener to update the state when the window is resized
-    //         const handleResize = () => {
-    //             setWindowWidth(window.innerWidth);
-    //         };
-
-    //         // Attach the event listener
-    //         window.addEventListener("resize", handleResize);
-
-    //         // Cleanup: remove the event listener when the component unmounts
-    //         return () => {
-    //             window.removeEventListener("resize", handleResize);
-    //         };
-    //     }
-    // }, [animationGsap]);
-
 
     return (
         <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-48 flex flex-col'>
