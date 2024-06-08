@@ -57,7 +57,8 @@ export const blogdata = [
                 content: "In conclusion, launching and growing a thriving online business demands careful planning and execution. By selecting the right product, sales channel, and marketing strategies while delivering top-notch customer service, you'll position your online venture for long-term success. Remember that each step in this journey is an opportunity to learn, adapt, and refine your approach as you build your online presence and reach your business goals.",
                 type: "content"
             }
-        ]
+        ],
+        tags : [ "Visual Design", "Website Design", "Case Study"]
     },
     {
         heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
@@ -132,7 +133,8 @@ export const blogdata = [
                 content: "Remember, lead generation is a continuous process, but it's an indispensable one if you aspire to witness your business thrive. By applying the strategies discussed above, you can establish a robust lead generation framework that fuels your business's growth and success.",
                 type: "content"
             }
-        ]
+        ],
+        tags : [ "Visual Design", "Website Design", "Case Study"]
     },
     {
         heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
@@ -189,6 +191,7 @@ export const blogdata = [
                     "take the first step with Procube Product Labs and turn your product company into a thriving success story. Your path to innovation and strategic success begins here, and we're here to walk it with you. Join us in the pursuit of excellence and watch your vision come to life."
                 ]
             }
-        ]
+        ],
+        tags : ["Product Design", "Visual Design", "Website Design", "Case Study"]
     }
 ];
