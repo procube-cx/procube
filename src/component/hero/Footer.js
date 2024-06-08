@@ -29,39 +29,39 @@ const data = {
         // },
         {
             title: 'About Us',
-            links: 'about'
+            links: '../about'
         },
         {
             title: 'Services',
-            links: 'services'
+            links: '../services'
         },
         {
             title: 'Projects',
-            links: 'projects'
+            links: '../projects'
         }
     ],
     option3: [
         // {
         //     title: 'Partners',
-        //     links: 'partners'
+        //     links: '../partners'
         // },
         {
             title: 'Insights',
-            links: 'insight'
+            links: '../insight'
         },
         {
             title: 'Careers',
-            links: 'careers'
+            links: '../careers'
         },
         {
             title: 'Contact Us',
-            links: 'contact'
+            links: '../contact'
         }
     ],
     option4: [
         {
             title: 'Twitter',
-            links: ''
+            links: '../'
         },
         {
             title: 'Instagram',

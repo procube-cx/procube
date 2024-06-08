@@ -29,38 +29,38 @@ const data = {
     option2: [
         {
             title: 'Home',
-            links: '.'
+            links: '../.'
         },
         {
             title: 'About\ Us',
-            links: 'about'
+            links: '../about'
         },
         {
             title: 'Services',
-            links: 'services'
+            links: '../services'
         },
         // {
         //     title: 'Partners',
-        //     links: 'partners'
+        //     links: '../partners'
         // }
     ],
     option3: [
         
         {
             title: 'Projects',
-            links: 'projects'
+            links: '../projects'
         },
         {
             title: 'Insights',
-            links: 'insight'
+            links: '../insight'
         },
         {
             title: 'Careers',
-            links: 'careers'
+            links: '../careers'
         },
         // {
         //     title: 'Contact Us',
-        //     links: 'contact'
+        //     links: '../contact'
         // }
     ],
     option4: [
