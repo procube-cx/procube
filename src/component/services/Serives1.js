@@ -49,7 +49,7 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
     return (
         <div
-            className={`flex w-full py-7 md:py-10 cursor-pointer`}
+            className={`flex w-full py-7 md:py-10`}
             key={index}
         >
             <div className='flex flex-col justify-center gap-y-3 md:gap-y-8'>

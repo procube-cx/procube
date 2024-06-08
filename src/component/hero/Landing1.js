@@ -34,7 +34,7 @@ const Landing1 = () => {
       setIndex((prevIndex) => {
         let newIndex = prevIndex - 1;
         if (newIndex < 0) {
-          newIndex = 4;
+          newIndex = 5;
         }
         return newIndex;
       });

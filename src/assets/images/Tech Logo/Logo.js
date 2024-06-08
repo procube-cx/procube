@@ -54,6 +54,11 @@ import l22 from './SVG/22.svg'
 import l23 from './SVG/23.svg'
 import l24 from './SVG/24.svg'
 import l25 from './SVG/25.svg'
+import l26 from './SVG/26.svg'
+import l27 from './SVG/27.svg'
+import l28 from './SVG/28.svg'
+import l29 from './SVG/29.svg'
+import l30 from './SVG/30.svg'
 
 
 
@@ -62,8 +67,8 @@ export const Front = [Front1, Front2, Front3, Front4, Front5];
 export const Back = [Back1, Back2, Back3, Back4, Back5];
 export const Db = [Db1, Db2, Db3, Db4, Db5, Db6];
 export const Ecommerce = [Ec1, Ec2, Ec3, Ec4, Ec5];
-export const set1 = [l1, l2, l3, l4, l5]
-export const set2 = [l6, l7, l8, l9, l10]
-export const set3 = [l11, l12, l13, l14, l15]
-export const set4 = [l16, l17, l18, l19, l20]
-export const set5 = [l21, l22, l23, l24, l25]
+export const set1 = [l1, l2, l3, l4, l5, l6];
+export const set2 = [l7, l8, l9, l10, l11, l12];
+export const set3 = [l13, l14, l15, l16, l17, l18];
+export const set4 = [l19, l20, l21, l22, l23, l24];
+export const set5 = [l25, l26, l27, l28, l29, l30];
