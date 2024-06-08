@@ -1,13 +1,10 @@
 import React from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import { GoDotFill } from 'react-icons/go';
 import { AiOutlineClose } from "react-icons/ai";
 import logo from '../../assets/images/Procube-white.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive';
-import SplitType from 'split-type';
-import { gsap } from 'gsap';
 import Button from './Button';
 
 const data = {
@@ -107,21 +104,15 @@ const data = {
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const [activeLink, setActiveLink] = React.useState('/');
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const [isHovered, setIsHovered] = React.useState(false);
     const [hoveredId, setHoveredId] = React.useState(null);
-    const [id, setId] = React.useState(null);
 
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1
     });
 
-    React.useEffect(() => {
-        const pathName = window.location.pathname;
-        setActiveLink(pathName);
-    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);

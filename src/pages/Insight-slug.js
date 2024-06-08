@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Landing9 from '../component/hero/Landing9';
+import React from 'react';
 import Footer from '../component/hero/Footer';
 import NextUp from '../component/NextUp';
 import Navbar from '../component/hero/Navbar';

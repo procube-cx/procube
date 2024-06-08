@@ -64,7 +64,7 @@ const Landing1 = () => {
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
               <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set1.map((tag, index) => (
-                  <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
+                  <img alt='tag' src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
               </div>
             </div>
@@ -73,7 +73,7 @@ const Landing1 = () => {
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
               <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set2.map((tag, index) => (
-                  <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
+                  <img alt='tag' src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
               </div>
             </div>
@@ -82,7 +82,7 @@ const Landing1 = () => {
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
               <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set3.map((tag, index) => (
-                  <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
+                  <img alt='tag' src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
               </div>
             </div>
@@ -91,7 +91,7 @@ const Landing1 = () => {
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
               <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set4.map((tag, index) => (
-                  <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
+                  <img alt='tag' src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
               </div>
             </div>
@@ -100,7 +100,7 @@ const Landing1 = () => {
             <div className='h-16 lg:h-20 w-16 lg:w-20 bg-white opacity-[93%] rounded-2xl relative p-3 overflow-hidden'>
               <div className='flex flex-row gap-5' style={{ transform: `translateX(-${index * (window.innerWidth < 750 ? 60 : 76)}px)`, transition: 'transform 0.3s ease' }}>
                 {set5.map((tag, index) => (
-                  <img src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
+                  <img alt='tag' src={tag} key={index} className='aspect-square min-w-10 md:min-w-14' />
                 ))}
               </div>
             </div>

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import arrowIcon from '../../assets/images/exploreMore.png';
 import image1 from '../../assets/images/project-image/image1.png';
 import image2 from '../../assets/images/project-image/image2.png';
 import image3 from '../../assets/images/project-image/image3.png';
@@ -11,7 +10,6 @@ import image7 from '../../assets/images/project-image/image7.png';
 import image8 from '../../assets/images/project-image/image8.png';
 import image9 from '../../assets/images/project-image/image9.png';
 import image10 from '../../assets/images/project-image/image10.png';
-import gsap from 'gsap';
 import AnimatedParagraph from '../AnimatedPara';
 
 const data = [

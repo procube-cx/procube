@@ -1,5 +1,4 @@
 import React from 'react'
-import hero from '../../assets/images/insight.png'
 
 const Blogstructure = ({ data }) => {
   return (
@@ -27,7 +26,6 @@ const Insightview = (blogdata) => {
         <p className='text-sm md:text-lg'>{data?.date}</p>
       </div>
       <img src={data?.icon} alt="hero" className='w-full md:w-5/6 mx-auto object-cover md:h-[80vh] rounded-lg md:rounded-2xl' />
-      {/* <p className='text-center font-normal w-full md:w-5/6 mx-auto text-xs md:text-lg opacity-60'>{data?.content}</p> */}
       {data?.content.map((data, index) => (
         <Blogstructure key={index} data={data} />
       ))}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar2 from '../component/hero/Navbar2';
 import Navbar from '../component/hero/Navbar';
 import Landing1 from '../component/hero/Landing1';
-import Landing2 from '../component/hero/Landing2';
+// import Landing2 from '../component/hero/Landing2';
 import Landing3 from '../component/hero/Landing3';
 import Landing4 from '../component/hero/Landing4';
 import Landing5 from '../component/hero/Landing5';
@@ -16,7 +16,7 @@ import Landing9 from '../component/hero/Landing9';
 import Footer from '../component/hero/Footer';
 import Preloader from '../component/proloader';
 import Popup from '../component/Popup';
-import Whatsapp from '../component/Whatsapp';
+// import Whatsapp from '../component/Whatsapp';
 
 function Hero() {
   const [loading, setLoading] = useState(true);

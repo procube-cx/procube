@@ -3,11 +3,8 @@ import Service1 from '../../assets/images/Services/services1.webp'
 import Service2 from '../../assets/images/Services/services2.webp'
 import Service3 from '../../assets/images/Services/services3.webp'
 import Service4 from '../../assets/images/Services/services4.webp'
-import star from '../../assets/images/Services/star.svg';
 import '../hero/hero.css';
 import AnimatedParagraph from '../AnimatedPara';
-import icon2 from '../../assets/images/icons/icon2.svg';
-import { FaStarOfLife } from "react-icons/fa";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
@@ -75,7 +72,6 @@ const Card = ({ heading, icon, details, index, tags }) => {
 
 const Services1 = () => {
 
-    const [windowWidth, setWindowWidth] = React.useState(0);
     const [index, setIndex] = React.useState(0);
     useEffect(() => {
         const tl = gsap.timeline({

@@ -106,21 +106,14 @@ const data = {
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const [activeLink, setActiveLink] = React.useState('/');
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const [isHovered, setIsHovered] = React.useState(false);
     const [hoveredId, setHoveredId] = React.useState(null);
-    const [id, setId] = React.useState(null);
 
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1
     });
-
-    React.useEffect(() => {
-        const pathName = window.location.pathname;
-        setActiveLink(pathName);
-    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
