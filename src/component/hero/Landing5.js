@@ -123,7 +123,7 @@ const Landing5 = () => {
                     toggleCard={toggleCard}
                 />
             ))}
-            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-24 hover:opacity-55 cursor-pointer' />
+            <a href='../services'><img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' /></a>
 
         </div>
     );

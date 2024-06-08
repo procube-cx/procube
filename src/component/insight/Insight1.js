@@ -6,28 +6,24 @@ import arrowIcon from '../../assets/images/exploreMore.png';
 import AnimatedParagraph from '../AnimatedPara';
 import { blogdata } from '../../data/blogdata';
 
-
 const filter = ["All", "Product Design", "Visual Design", "Website Design", "Case Study"]
 
-const Card = ({ heading, icon, date, index ,slug}) => {
+const Card = ({ heading, icon, date, index, slug }) => {
 
-    
+
 
     useEffect(() => {
-        // Check if it's a mobile device
         const isMobile = window.innerWidth < 768;
-        
-        // Apply animation only if it's not a mobile device
+
         if (!isMobile) {
             gsap.set(`.landing #img-${index}`, { x: "-100%", duration: 0.25, opacity: 0, transformOrigin: "right bottom" });
             gsap.set(`.landing #text-${index}`, { x: "-25%", duration: 0.25, width: "137%", opacity: 1, transformOrigin: "right bottom" });
         }
     }, [index]);
-    
+
     const handleHover = () => {
         const isMobile = window.innerWidth < 768;
 
-        // Apply animation only if it's not a mobile device
         if (!isMobile) {
             gsap.to(`.landing #img-${index}`, { x: 0, duration: 0.25, opacity: 1, transformOrigin: "right bottom" });
             gsap.to(`.landing #text-${index}`, { x: 0, duration: 0.25, width: "100%", opacity: 1, transformOrigin: "right bottom" });
@@ -36,8 +32,7 @@ const Card = ({ heading, icon, date, index ,slug}) => {
 
     const handleHoverExit = () => {
         const isMobile = window.innerWidth < 768;
-        
-        // Apply animation only if it's not a mobile device
+
         if (!isMobile) {
             gsap.to(`.landing #img-${index}`, { x: "-100%", duration: 0.25, opacity: 0, transformOrigin: "right bottom" });
             gsap.to(`.landing #text-${index}`, { x: "-25%", duration: 0.25, width: "137%", opacity: 1, transformOrigin: "right bottom" });
@@ -66,14 +61,14 @@ const Card = ({ heading, icon, date, index ,slug}) => {
     );
 };
 
-const Insight1 = ({Heading , filterShow}) => {
+const Insight1 = ({ Heading, filterShow }) => {
     const [id, setId] = React.useState('All');
     return (
         <div className={`px-6 md:px-24  flex flex-col relative  ${filterShow ? 'pt-24 md:pt-48' : 'pt-12 md:pt-24'}`}>
             <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-6 md:pb-[40px]'>{Heading}</AnimatedParagraph>
-            <div className='flex flex-row gap-4 md:gap-8 overflow-x-auto lg:justify-center pb-4 md:pb-[30px]' style={{ scrollbarWidth : 'none'}}>
+            <div className='flex flex-row gap-4 md:gap-8 overflow-x-auto lg:justify-center pb-4 md:pb-[30px]' style={{ scrollbarWidth: 'none' }}>
                 {filterShow && filter.map((item, index) => (
-                    <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => setId(item)}  style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+                    <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${item === id ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => setId(item)} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
                         <p className='text-sm md:text-lg'>{item}</p>
                     </div>
                 ))}
@@ -91,7 +86,7 @@ const Insight1 = ({Heading , filterShow}) => {
                     />
                 ))}
             </div>
-            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto mt-10 md:mt-16 hover:opacity-55 cursor-pointer' />
+            <a href='../insight'><img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' /></a>
         </div>
     );
 };

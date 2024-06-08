@@ -5,34 +5,11 @@ import { motion } from 'framer-motion';
 import './hero.css';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import AnimatedParagraph from '../AnimatedPara';
-import img1 from '../../assets/images/Blogs/img1.webp';
-import img2 from '../../assets/images/Blogs/img2.webp';
-import img3 from '../../assets/images/Blogs/img3.webp';
+import { blogdata } from '../../data/blogdata';
 
-const data = [
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: img1,
-        date: "June 23, 2023",
-    },
-    {
-        heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
-        icon: img2,
-        date: "June 23, 2023",
-    },
-    {
-        heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
-        icon: img3,
-        date: "June 23, 2023",
-    },
-];
-
-const Card = ({ heading, icon, date, index }) => {
+const Card = ({ heading, icon, date, index, slug }) => {
     const isMobile = window.innerWidth < 768;
     useEffect(() => {
-        // Check if it's a mobile device
-
-        // Apply animation only if it's not a mobile device
         if (!isMobile) {
             gsap.set(`.landing #img-${index}`, { x: "-100%", duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
             gsap.set(`.landing #text-${index}`, { x: "-25%", duration: 0.3, width: "137%", opacity: 1, transformOrigin: "right bottom" });
@@ -41,8 +18,6 @@ const Card = ({ heading, icon, date, index }) => {
 
     const handleHover = () => {
         const isMobile = window.innerWidth < 768;
-
-        // Apply animation only if it's not a mobile device
         if (!isMobile) {
             gsap.to(`.landing #img-${index}`, { x: 0, duration: 0.3, opacity: 1, transformOrigin: "right bottom" });
             gsap.to(`.landing #text-${index}`, { x: 0, duration: 0.3, width: "100%", opacity: 1, transformOrigin: "right bottom" });
@@ -51,8 +26,6 @@ const Card = ({ heading, icon, date, index }) => {
 
     const handleHoverExit = () => {
         const isMobile = window.innerWidth < 768;
-
-        // Apply animation only if it's not a mobile device
         if (!isMobile) {
             gsap.to(`.landing #img-${index}`, { x: "-100%", duration: 0.3, opacity: 0, transformOrigin: "right bottom" });
             gsap.to(`.landing #text-${index}`, { x: "-25%", duration: 0.3, width: "137%", opacity: 1, transformOrigin: "right bottom" });
@@ -63,6 +36,7 @@ const Card = ({ heading, icon, date, index }) => {
         <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 cursor-pointer' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
+            onClick={() => window.location.href = `/insight/${slug}`}
         >
             <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing gap-y-5'>
                 <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block rounded-2xl' />
@@ -84,19 +58,20 @@ const Landing9 = () => {
     return (
         <div className='px-6 md:px-24 pb-12 md:pb-24 flex flex-col'>
             <AnimatedParagraph className='font-normal text-4xl md:text-8xl max-w-4xl text-center uppercase mx-auto pb-10 md:pb-[70px]'>BLOGS</AnimatedParagraph>
-                
+
             <div>
-            {data.map((cardDetail, index) => (
-                <Card
-                    heading={cardDetail.heading}
-                    icon={cardDetail.icon}
-                    date={cardDetail.date}
-                    index={index}
-                    key={index}
-                />
-            ))}
+                {blogdata.map((cardDetail, index) => (
+                    <Card
+                        heading={cardDetail.heading}
+                        icon={cardDetail.icon}
+                        date={cardDetail.date}
+                        slug={cardDetail.slug}
+                        index={index}
+                        key={index}
+                    />
+                ))}
             </div>
-            <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' />
+            <a href='../insight'><img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' /></a>
         </div>
     );
 };
