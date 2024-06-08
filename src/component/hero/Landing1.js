@@ -45,7 +45,7 @@ const Landing1 = () => {
 
   return (
     <div className='flex flex-col md:flex-row w-full h-screen max-h-[900px] py-0 px-0 md:py-6 md:px-6'>
-      <div className='w-full h-full purplegradient rounded-b-xl md:rounded-3xl px-6 md:px-20 py-4 md:pr-10 flex flex-col items-center justify-center'>
+      <div className='w-full h-full purplegradient rounded-b-xl md:rounded-3xl px-6 md:px-20 py-4 md:pt-20 md:pr-10 flex flex-col items-center justify-center'>
         <div ref={textRef} className="container font-normal text-5xl md:text-[42px] lg:text-[63px] xl:text-[80px] 2xl:text-8xl md:!leading-  md:mt-auto flex flex-wrap">
           <div className='line h-16 lg:h-[90px] xl:h-28 hidden md:flex'>
             <span>Building Your Future-Proof</span>
