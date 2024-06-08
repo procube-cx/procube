@@ -3,12 +3,19 @@ import React from 'react'
 const Blogstructure = ({ data }) => {
   return (
     <>
-      {data.type === 'heading' && <p className='font-normal text-2xl md:text-4xl max-w-full text-center uppercase mx-auto !leading-tight'>{data.content}</p>}
-      {data.type === 'subheading' && <p className='font-normal text-xl md:text-2xl max-w-full text-center uppercase mx-auto !leading-tight'>{data.content}</p>}
-      {data.type === 'content' && <p className='text-center font-normal w-full md:w-5/6 mx-auto text-xs md:text-lg opacity-60'>{data.content}</p>}
-      {data.type === 'ul' && <ul className='text-center font-normal w-full md:w-5/6 mx-auto text-xs md:text-lg opacity-60'>{data.ul.map((data, index) => (
-        <li key={index}>{data}</li>
-      ))}</ul>}
+      {data.type === 'heading' && <p className='md:text-5xl'>{data.content}</p>}
+      {data.type === 'subheading' && <p className='text-xl md:text-2xl font-semibold pt-6 md:pt-10'>{data.content}</p>}
+      {data.type === 'content' && <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{data.content}</p>}
+      {data.type === 'ul' &&
+        <>
+          <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{data.content}</p>
+          <ul className=''>{data.ul.map((data, index) => (
+            <li key={index} style={{paddingLeft : '10px'}}>
+              <p className='text-sm md:text-lg opacity-60 !leading-relaxed '>- {data}</p>
+            </li>
+          ))}</ul>
+        </>
+      }
     </>
   )
 }
@@ -18,7 +25,6 @@ const Insightview = (blogdata) => {
   const slug = window.location.pathname.split('/')[2]
   const filterdata = blogdata.blogdata.filter(data => data.slug === slug)
   const data = filterdata[0]
-  console.log(data)
   return (
     <div className='px-6 md:px-24  flex flex-col gap-y-5 md:gap-y-10 relative pt-24 md:pt-48'>
       <p className='font-normal text-4xl md:text-7xl max-w-full text-center uppercase mx-auto !leading-tight'>{data?.heading}</p>
@@ -26,9 +32,11 @@ const Insightview = (blogdata) => {
         <p className='text-sm md:text-lg'>{data?.date}</p>
       </div>
       <img src={data?.icon} alt="hero" className='w-full md:w-5/6 mx-auto object-cover md:h-[80vh] rounded-lg md:rounded-2xl' />
-      {data?.content.map((data, index) => (
-        <Blogstructure key={index} data={data} />
-      ))}
+      <div className='w-full md:w-5/6 mx-auto'>
+        {data?.content.map((data, index) => (
+          <Blogstructure key={index} data={data} />
+        ))}
+      </div>
     </div>
   )
 }
