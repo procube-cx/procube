@@ -4,32 +4,12 @@ import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import arrowIcon from '../../assets/images/exploreMore.png';
 import AnimatedParagraph from '../AnimatedPara';
-import img1 from '../../assets/images/Blogs/img1.webp';
-import img2 from '../../assets/images/Blogs/img2.webp';
-import img3 from '../../assets/images/Blogs/img3.webp';
-
-const data = [
-    {
-        heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
-        icon: img1,
-        date: "October 11, 2023",
-    },
-    {
-        heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
-        icon: img2,
-        date: "October 11, 2023",
-    },
-    {
-        heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
-        icon: img3,
-        date: "October 11, 2023",
-    }
-];
+import { blogdata } from '../../data/blogdata';
 
 
 const filter = ["All", "Product Design", "Visual Design", "Website Design", "Case Study"]
 
-const Card = ({ heading, icon, date, index }) => {
+const Card = ({ heading, icon, date, index ,slug}) => {
 
     
 
@@ -68,7 +48,7 @@ const Card = ({ heading, icon, date, index }) => {
         <motion.div className='overflow-hidden flex w-full odd:border-y-[2px] border-opacity-40 border-white gap-2 md:gap-4 py-5 md:py-8 cursor-pointer' key={index}
             onMouseEnter={handleHover}
             onMouseLeave={handleHoverExit}
-            onClick={() => window.location.href = `/insight/${index + 1}`}
+            onClick={() => window.location.href = `/insight/${slug}`}
         >
             <div className='md:min-h-[210px] grid grid-cols-12 flex-1 landing gap-y-5'>
                 <img id={`img-${index}`} src={icon} alt="icon" className='col-span-12 md:col-span-3 w-full md:w-11/12 my-auto block rounded-2xl' />
@@ -100,11 +80,12 @@ const Insight1 = ({Heading , filterShow}) => {
             </div>
 
             <div>
-                {data.map((cardDetail, index) => (
+                {blogdata.map((cardDetail, index) => (
                     <Card
                         heading={cardDetail.heading}
                         icon={cardDetail.icon}
                         date={cardDetail.date}
+                        slug={cardDetail.slug}
                         index={index}
                         key={index}
                     />
