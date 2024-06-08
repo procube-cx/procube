@@ -58,8 +58,9 @@ const Card = ({ heading, icon, details, index, tags }) => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}>
                     <p className=' font-normal text-2xl md:text-5xl'>{heading}</p>
-                    <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-3 ${isHovered && 'translate-x-14 -translate-y-14 transition-transform duration-300 ease-in-out'}`} />
-                    <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-2 -translate-x-32 translate-y-14  ${isHovered && '!-translate-x-10 md:!-translate-x-16 !-translate-y-0 transition-transform duration-300 ease-in-out'}`} />
+                    {/* dont remove this line might need in future */}
+                    {/* <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-3 ${isHovered && 'translate-x-14 -translate-y-14 transition-transform duration-300 ease-in-out'}`} />
+                    <img src={icon2} alt={heading} className={`w-8 md:w-14 ml-2 -translate-x-32 translate-y-14  ${isHovered && '!-translate-x-10 md:!-translate-x-16 !-translate-y-0 transition-transform duration-300 ease-in-out'}`} /> */}
                 </div>
                 <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{details}</p>
                 <div className='flex flex-wrap gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4'>
@@ -102,7 +103,7 @@ const Services1 = () => {
 
     return (
         <div className='px-6 md:px-24 pt-24 pb-12 md:pb-24 md:pt-48 flex flex-col'>
-            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight'>Crafting Exceptional Digital Products </AnimatedParagraph>
+            <AnimatedParagraph className='flex font-normal text-4xl md:text-8xl text-center uppercase mx-auto pb-10 md:pb-[70px] !leading-tight max-w-4xl'>We Build Your Digital Edge </AnimatedParagraph>
             <div className='flex flex-row gap-14 cards '>
                 <div className='w-full md:w-1/2'>
                     {data.map((cardDetail, index) => (

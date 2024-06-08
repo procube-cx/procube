@@ -35,7 +35,7 @@ const data = {
             links: '.'
         },
         {
-            title: 'About Us',
+            title: 'About\ Us',
             links: 'about'
         },
         {
@@ -221,7 +221,7 @@ const Navbar = () => {
                         <div className='flex flex-col gap-y-[10px]'>
                             <p className='text-normal text-base md:text-2xl opacity-60'>Got An Idea?</p>
                             <p className='font-normal text-2xl md:text-4xl'>Let’s turn your idea into reality</p>
-                            <div className='button-hover bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full cursor-pointer'>Get in Touch</div>
+                            <a href='/contact' className='button-hover bg-[#7605C1] mr-auto md:mt-5 font-normal text-base md:text-2xl py-[10px] px-5 md:px-10 md:py-4 rounded-full cursor-pointer'>Get in Touch</a>
                         </div>
                     </motion.div>
                 </div>

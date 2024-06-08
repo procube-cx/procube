@@ -10,6 +10,7 @@ import image6 from '../../assets/images/project-image/image6.png';
 import image7 from '../../assets/images/project-image/image7.png';
 import image8 from '../../assets/images/project-image/image8.png';
 import image9 from '../../assets/images/project-image/image9.png';
+import image10 from '../../assets/images/project-image/image10.png';
 import gsap from 'gsap';
 import AnimatedParagraph from '../AnimatedPara';
 
@@ -30,35 +31,40 @@ const data = [
     icon: image3,
   },
   {
-    name: 'NoorJes Perfumes',
+    name: 'Riyas Hakkim',
     desc: 'Logo, Branding, UI/UX Designing, Website Development',
     icon: image4,
   },
   {
-    name: 'Apple',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Stefurn Steel',
+    desc: 'UI/UX Designing, Dashboard Development & Integrations',
     icon: image5,
   },
   {
-    name: 'Nike',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'NoorJes Perfumes',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
     icon: image6,
   },
   {
-    name: 'Google',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Waiver App',
+    desc: ' UI/UX for User App, Partner App, Website & Dashboard',
     icon: image7,
   },
   {
-    name: 'Facebook',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Roofing Stars',
+    desc: 'Branding, UI/UX Designing, Content, Website Development',
     icon: image8,
   },
   {
-    name: 'Instagram',
-    desc: 'Branding, Web Design, App Development, Marketing',
+    name: 'Gisco GCC',
+    desc: 'Logo, Branding, UI/UX Designing, Website Development',
     icon: image9,
   },
+  {
+    name: 'Bright Line School',
+    desc: 'Branding, UI/UX Designing, Website Development',
+    icon: image10,
+  }
 ];
 
 const Project1 = () => {

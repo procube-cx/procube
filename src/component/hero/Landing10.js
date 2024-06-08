@@ -155,7 +155,7 @@ const data = [
     icon: image3,
   },
   {
-    name: 'NoorJes Perfumes',
+    name: 'Riyas Hakkim',
     desc: 'Logo, Branding, UI/UX Designing, Website Development',
     icon: image4,
   },
