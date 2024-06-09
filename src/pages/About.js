@@ -11,11 +11,21 @@ import About5 from '../component/about/About5';
 
 function About() {
 
+  const [loading,setLoading] = React.useState(false)
+
+  React.useEffect(() => {
+    const interval = setInterval(()=>{
+      setLoading(true)
+    },2000)
+  },[])
+
   return (
     <div className=' text-white bg-[#121212]' >
       <Navbar />
       <About1 />
-      <Landing3 />
+      {
+        loading && <Landing3 />
+      }
       <About2 />
       <About3 />
       <About4 />
