@@ -4,7 +4,7 @@ const Blogstructure = ({ data }) => {
   return (
     <>
       {data.type === 'heading' && <p className='md:text-5xl'>{data.content}</p>}
-      {data.type === 'subheading' && <p className='text-xl md:text-2xl font-semibold pt-6 md:pt-10'>{data.content}</p>}
+      {data.type === 'subheading' && <p className='text-xl md:text-2xl font-semibold leading-[173%] pt-6 md:pt-10'>{data.content}</p>}
       {data.type === 'content' && <p className='text-sm md:text-lg opacity-60 !leading-relaxed'>{data.content}</p>}
       {data.type === 'ul' &&
         <>

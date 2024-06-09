@@ -5,7 +5,7 @@ import { set1, set2, set3, set4, set5 } from '../../assets/images/Tech Logo/Logo
 
 const Landing1 = () => {
   const textRef = useRef(null);
-  const [index, setIndex] = useState(4);
+  const [index, setIndex] = useState(5);
 
   useEffect(() => {
     const tl = gsap.timeline();
