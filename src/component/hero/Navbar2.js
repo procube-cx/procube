@@ -67,20 +67,20 @@ const data = {
     ],
     option4: [
         {
-            title: 'Twitter',
-            links: ''
+            title: 'X',
+            links: 'https://x.com/ProcubeCx'
         },
         {
             title: 'Instagram',
-            links: ''
+            links: 'https://www.instagram.com/procube.cx/'
         },
         {
             title: 'Dribbble',
-            links: ''
+            links: 'https://dribbble.com/procube'
         },
         {
             title: 'Linkedin',
-            links: ''
+            links: 'https://www.linkedin.com/company/procubecx/'
         }
     ],
     option5: [

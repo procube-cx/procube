@@ -59,7 +59,7 @@ const data = [
     icon: image9,
   },
   {
-    name: 'Bright Line School',
+    name: 'Loopify',
     desc: 'Branding, UI/UX Designing, Website Development',
     icon: image10,
   }

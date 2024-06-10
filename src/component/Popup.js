@@ -17,7 +17,7 @@ const Popup = ({ open, handleClose }) => {
                             <div className='w-full flex flex-col gap-3 relative'>
                                 <p className='font-normal text-xl md:text-3xl capitalize'>Book a free consultation with Procube today!</p>
                                 <p className='font-normal text-sm md:text-lg opacity-60'>Our experts will work with you to understand your business needs and craft a personalized strategy to elevate your business.</p>
-                                <a href='/contact' className='button-hover bg-[#7605C1] px-8 py-2 text-sm md:text-xl rounded-full cursor-pointer mr-auto mt-1'>
+                                <a href='https://calendly.com/procube-cx/30min' className='button-hover bg-[#7605C1] px-8 py-2 text-sm md:text-xl rounded-full cursor-pointer mr-auto mt-1'>
                                     Book Now
                                 </a>
                             </div>

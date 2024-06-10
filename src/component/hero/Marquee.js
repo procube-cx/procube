@@ -25,7 +25,7 @@ const Marquee = () => {
       <div className="relative w-full">
         <motion.div
           className="track"
-          style={{ animationDuration: "30s"}}
+          style={{ animationDuration: "20s"}}
           variants={marqueeVariants}
           animate="animate"
         >
