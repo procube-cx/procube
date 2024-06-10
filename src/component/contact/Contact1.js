@@ -17,6 +17,10 @@ const Contact1 = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (!name || !email || !phone || !project) {
+      setError('Please fill out all required fields');
+      return;
+    }
     const formData = {
       id: id.join(', '),
       name,
@@ -89,8 +93,7 @@ const Contact1 = () => {
         >
           Submit
         </button>
-        {success && <p className='text-green-500'>Form submitted successfully!</p>}
-        {error && <p className='text-red-500'>Form submission failed: {error}</p>}
+        {error && <p className='text-red-500'>{error}</p>}
       </form>
     </div>
   );
