@@ -7,6 +7,11 @@ import Career2 from '../component/career/Career2';
 import Project1 from '../component/project/Project1';
 
 const Projects = () => {
+
+  React.useEffect(() => {
+    document.title = 'Projects'
+  }
+  , [])
   return (
     <div className=' text-white bg-[#121212]' >
       <Navbar />

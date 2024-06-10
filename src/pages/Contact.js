@@ -7,6 +7,12 @@ import Contact3 from '../component/contact/Contact3';
 import Contact2 from '../component/contact/Contact2';
 
 const Contact = () => {
+
+  React.useEffect(() => {
+    document.title = 'Contact Us'
+  },[])
+
+
   return (
     <div className=' text-white bg-[#121212]' >
       <Navbar />

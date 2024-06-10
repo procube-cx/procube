@@ -10,6 +10,10 @@ import Services2 from '../component/services/Services2';
 
 function Services() {
 
+  React.useEffect(() => {
+    document.title = 'Services'
+  }, [])
+
 
   return (
     <div className=' text-white bg-[#121212]' >

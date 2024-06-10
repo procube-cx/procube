@@ -14,10 +14,12 @@ function About() {
   const [loading,setLoading] = React.useState(false)
 
   React.useEffect(() => {
+    document.title = 'About Us'
     const interval = setInterval(()=>{
       setLoading(true)
     },2000)
   },[])
+  
 
   return (
     <div className=' text-white bg-[#121212]' >

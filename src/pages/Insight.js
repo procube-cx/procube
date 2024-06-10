@@ -8,6 +8,9 @@ import Insight1 from '../component/insight/Insight1';
 
 function Insight() {
 
+    React.useEffect(() => {
+        document.title = 'Insights'
+    }, [])
 
     return (
         <div className=' text-white bg-[#121212]' >
