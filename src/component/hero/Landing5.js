@@ -6,10 +6,10 @@ import './hero.css';
 import icon2 from '../../assets/images/icons/icon2.svg'
 import CustomEase from 'gsap/CustomEase';
 import AnimatedParagraph from '../AnimatedPara';
-import img1 from '../../assets/images/OurExpertise/1.webp';
-import img2 from '../../assets/images/OurExpertise/2.webp';
-import img3 from '../../assets/images/OurExpertise/3.webp';
-import img4 from '../../assets/images/OurExpertise/4.webp';
+import img1 from '../../assets/images/OurExpertise/1.png';
+import img2 from '../../assets/images/OurExpertise/2.png';
+import img3 from '../../assets/images/OurExpertise/3.png';
+import img4 from '../../assets/images/OurExpertise/4.png';
 
 const data = [
     {

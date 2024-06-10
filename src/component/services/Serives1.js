@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import Service1 from '../../assets/images/Services/services1.webp'
-import Service2 from '../../assets/images/Services/services2.webp'
+import Service1 from '../../assets/images/Services/services1.png'
+import Service2 from '../../assets/images/Services/services2.png'
 import Service3 from '../../assets/images/Services/services3.png'
 import Service4 from '../../assets/images/Services/services4.png'
 import '../hero/hero.css';
