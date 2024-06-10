@@ -65,7 +65,7 @@ const data = {
     ],
     option4: [
         {
-            title: 'X',
+            title: 'x',
             links: 'https://x.com/ProcubeCx'
         },
         {
