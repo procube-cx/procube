@@ -202,7 +202,7 @@ const Navbar = () => {
                         </div>
                         <div className='flex flex-wrap justify-between '>
                             {data.option4.map((item, index) => (
-                                <a key={index} href={item.links} className='text-sm md:text-xl hover:opacity-60 mb-12 md:mb-0'>{item.title}</a>
+                                <a key={index} href={item.links} target="_blank" rel="noopener noreferrer" className='text-sm md:text-xl hover:opacity-60 mb-12 md:mb-0'>{item.title}</a>
                             ))}
                         </div>
                     </motion.div>
