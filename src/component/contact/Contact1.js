@@ -65,6 +65,7 @@ const Contact1 = () => {
           placeholder='Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
+          autoComplete={`no-${Math.random()}`}
         />
         <input
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-7 md:pb-12 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
@@ -72,6 +73,7 @@ const Contact1 = () => {
           placeholder='Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoComplete={`no-${Math.random()}`}
         />
         <input
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-7 md:pb-12 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
@@ -79,6 +81,7 @@ const Contact1 = () => {
           placeholder='Phone Number'
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          autoComplete={`no-${Math.random()}`}
         />
         <textarea
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-20 md:pb-36 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
@@ -90,6 +93,7 @@ const Contact1 = () => {
         <button
           className='button-hover flex ml-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1] md:text-3xl '
           type='submit'
+          autoComplete={`no-${Math.random()}`}
         >
           Submit
         </button>
