@@ -60,21 +60,25 @@ const data = {
     ],
     option4: [
         {
-            title: 'x',
-            links: 'https://x.com/ProcubeCx'
-        },
-        {
             title: 'Instagram',
             links: 'https://www.instagram.com/procube.cx/'
+        },
+        {
+            title: 'Linkedin',
+            links: 'https://www.linkedin.com/company/procubecx/'
+        },
+        {
+            title: 'x',
+            links: 'https://x.com/procubeCx'
+        },
+        {
+            title: 'Behance',
+            links: 'https://www.behance.net/procubedubai'
         },
         {
             title: 'Dribbble',
             links: 'https://dribbble.com/procube/about?utm_source=Clipboard_%22clipboard_about%22&utm_campaign=%22procube%22&utm_content=%22About%20procube%22&utm_medium=Social_Share'
         },
-        {
-            title: 'Linkedin',
-            links: 'https://www.linkedin.com/company/procubecx/'
-        }
     ]
 };
 
@@ -103,7 +107,7 @@ const Footer = () => {
                             )}
 
                         </div>
-                        <div className='font-normal text-sm md:text-xl'>© 2023  All Right Reserved | Powered by procube.cx</div>
+                        <div className='font-normal text-sm md:text-xl'>© 2024  All Right Reserved | Powered by <a href='/' className='hover:opacity-80'> procube.cx</a></div>
                     </div>
                 </div>
                 <div className='flex-1 flex gap-14 md:gap-24 md:justify-end font-normal py-8 md:py-0'>

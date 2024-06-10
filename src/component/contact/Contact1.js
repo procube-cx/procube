@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../hero/hero.css'
 import AnimatedParagraph from '../AnimatedPara';
 
-const filter = ["Development", "User Experience", "Digital  Strategy", "Branding"]
+const filter = ["DIGITAL STRATEGY", "DESIGNING", "DEVELOPMENT", "MARKETING"]
 
 
 const Contact1 = () => {

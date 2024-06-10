@@ -45,7 +45,7 @@ const data = {
         // }
     ],
     option3: [
-        
+
         {
             title: 'Projects',
             links: '../projects'
@@ -65,21 +65,25 @@ const data = {
     ],
     option4: [
         {
-            title: 'x',
-            links: 'https://x.com/ProcubeCx'
-        },
-        {
             title: 'Instagram',
             links: 'https://www.instagram.com/procube.cx/'
+        },
+        {
+            title: 'Linkedin',
+            links: 'https://www.linkedin.com/company/procubecx/'
+        },
+        {
+            title: 'x',
+            links: 'https://x.com/procubeCx'
+        },
+        {
+            title: 'Behance',
+            links: 'https://www.behance.net/procubedubai'
         },
         {
             title: 'Dribbble',
             links: 'https://dribbble.com/procube/about?utm_source=Clipboard_%22clipboard_about%22&utm_campaign=%22procube%22&utm_content=%22About%20procube%22&utm_medium=Social_Share'
         },
-        {
-            title: 'Linkedin',
-            links: 'https://www.linkedin.com/company/procubecx/'
-        }
     ],
     option5: [
         {
