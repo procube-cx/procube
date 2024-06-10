@@ -15,6 +15,7 @@ function About() {
 
   React.useEffect(() => {
     document.title = 'About Us | Who we are'
+    const setMetaDescription = document.querySelector('meta[name="description"]').setAttribute("content", "We empower businesses to break boundaries and become digital pioneers. By crafting secure and enduring digital ecosystems, we fuse cutting-edge technologies with strategic marketing expertise.")
     const interval = setInterval(()=>{
       setLoading(true)
     },2000)

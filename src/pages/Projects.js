@@ -10,6 +10,7 @@ const Projects = () => {
 
   React.useEffect(() => {
     document.title = 'Projects | Our Major Works'
+    const setMetaDescription = document.querySelector('meta[name="description"]').setAttribute("content", "Discover Procube’s innovative projects that drive digital transformation and growth. Explore our portfolio of web development, app development, digital marketing, and branding solutions, showcasing our commitment to excellence and delivering measurable results. Partner with us to elevate your brand and achieve your business goals.")
   }
   , [])
   return (

@@ -21,10 +21,11 @@ const Blogstructure = ({ data }) => {
 }
 
 
-const Insightview = (blogdata) => {
+const Insightview = ({blogdata , setIndex}) => {
   const slug = window.location.pathname.split('/')[2]
-  const filterdata = blogdata.blogdata.filter(data => data.slug === slug)
+  const filterdata = blogdata.filter(data => data.slug === slug)
   const data = filterdata[0]
+  setIndex(filterdata[0].index)
   return (
     <>
       {data === undefined ?

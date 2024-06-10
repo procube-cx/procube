@@ -9,6 +9,8 @@ const Career = () => {
 
   React.useEffect(() => {
     document.title = 'Careers | Come Join Us'
+    const setMetaDescription = document.querySelector('meta[name="description"]').setAttribute("content", "Join the dynamic team at Procube and advance your career in digital marketing, web development, app development, and more. Explore exciting job opportunities, professional growth, and a collaborative work environment.")
+
   }, [])
 
   return (

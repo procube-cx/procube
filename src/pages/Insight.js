@@ -10,12 +10,13 @@ function Insight() {
 
     React.useEffect(() => {
         document.title = 'Insights | Blogs & Latest Trends'
+        const setMetaDescription = document.querySelector('meta[name="description"]').setAttribute("content", "Stay ahead in the digital landscape with Procube's Insights. Explore expert articles, industry trends, and valuable tips on digital marketing, web development, app development, SEO, and more.")
     }, [])
 
     return (
         <div className=' text-white bg-[#121212]' >
             <Navbar />
-            <Insight1 Heading={'Insights'} filterShow={true}/>
+            <Insight1 Heading={'Insights'} filterShow={true} />
             <NextUp Heading={'Careers'} />
             <Footer />
         </div>

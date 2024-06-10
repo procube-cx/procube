@@ -4,6 +4,7 @@ import img3 from '../assets/images/Blogs/img3.webp';
 
 export const blogdata = [
     {
+        index: 0,
         heading: "Selling Your Products Online in 2023: A Step-by-Step Guide From Choosing Products to Marketing.",
         icon: img1,
         date: "October 11, 2023",
@@ -61,6 +62,7 @@ export const blogdata = [
         tags : [ "Visual Design", "Website Design", "Case Study"]
     },
     {
+        index: 1,
         heading: "Unlocking the Power of Lead Generation for Your Business; Your B2B Growth Book",
         icon: img2,
         date: "October 11, 2023",
@@ -137,6 +139,7 @@ export const blogdata = [
         tags : [ "Visual Design", "Website Design", "Case Study"]
     },
     {
+        index: 2,
         heading: "Discovering the Ideal Tech Co-Founder for Your Product Venture; From Strategizing to Scaling",
         icon: img3,
         date: "October 11, 2023",

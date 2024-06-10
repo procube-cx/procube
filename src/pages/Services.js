@@ -12,6 +12,7 @@ function Services() {
 
   React.useEffect(() => {
     document.title = 'Services | Our Expertise'
+    const setMetaDescription = document.querySelector('meta[name="description"]').setAttribute("content", "Our strategic approach guides the entire digital product lifecycle, from concept to development to ongoing optimization and scalability, ensuring your organization thrives in the online landscape.")
   }, [])
 
 

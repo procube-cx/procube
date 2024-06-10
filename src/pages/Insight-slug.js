@@ -8,16 +8,17 @@ import { blogdata } from '../data/blogdata';
 
 
 function InsightSlug() {
+    const [index, setIndex] = React.useState(0)
 
     React.useEffect(() => {
-        document.title = {blogdata:blogdata}.blogdata[0].heading
-    }, [])
+        document.title = {blogdata:blogdata}.blogdata[index].heading
+    }, [index])
 
 
     return (
         <div className=' text-white bg-[#121212]' >
             <Navbar />
-            <Insightview blogdata = {blogdata} />
+            <Insightview blogdata = {blogdata} setIndex={setIndex}/>
             <Insight1 Heading={'More Insights'} filterShow={false}/>
             <NextUp Heading={'Careers'} />
             <Footer />
