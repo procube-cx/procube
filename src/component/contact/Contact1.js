@@ -1,43 +1,56 @@
-import React, { useState } from 'react'
-import '../hero/hero.css'
+import React, { useState } from 'react';
+import '../hero/hero.css';
 import AnimatedParagraph from '../AnimatedPara';
+import emailjs from '@emailjs/browser';
 
-const filter = ["DIGITAL STRATEGY", "DESIGNING", "DEVELOPMENT", "MARKETING"]
-
+const filter = ["DIGITAL STRATEGY", "DESIGNING", "DEVELOPMENT", "MARKETING"];
 
 const Contact1 = () => {
-
-  const [id, setId] = React.useState(['Development']);
+  const [id, setId] = useState(['DEVELOPMENT']);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [project, setProject] = useState('');
   const [suggestionTaken, setSuggestionTaken] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
-    console.log('ID:', id);
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
-    console.log('Project:', project);
+    const formData = {
+      id: id.join(', '),
+      name,
+      email,
+      phone,
+      project
+    };
+    console.log('Form Data:', formData);
+
+    emailjs.send('service_apq2h5q', 'template_89s3mo', formData, 'nHXBvpDegqpAmszG5')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSuccess(true);
+        setError('');
+        // Clear form fields
+        setName('');
+        setEmail('');
+        setPhone('');
+        setProject('');
+        setId([]);
+      }, (error) => {
+        console.log('FAILED...', error.text);
+        setError(error.text);
+      });
   };
-
-  const handleSuggestionTaken = () => {
-    setSuggestionTaken(true);
-  };
-
-
 
   return (
     <div className='px-6 md:px-24 pt-24 md:pt-48'>
       <AnimatedParagraph className='font-normal text-4xl md:text-7xl max-w-3xl text-center mx-auto pb-10 md:pb-[70px] uppercase !leading-tight'>Got Ideas? Let’s team up</AnimatedParagraph>
       <form onSubmit={handleFormSubmit} className='flex flex-col items-start gap-y-8 md:gap-y-10 w-full'>
         <p className='font-normal text-2xl md:text-4xl max-w-xs text-left'>You need to do</p>
-        <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto' style={{ scrollbarWidth : 'none'}}>
+        <div className='flex flex-row gap-4 md:gap-8 w-full overflow-x-auto' style={{ scrollbarWidth: 'none' }}>
           {filter.map((item, index) => (
-            <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${id.includes(item) ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => id.includes(item) ? setId(id.filter(i => i !== item)) : setId([...id,item])} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
+            <div className={`flex items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer ${id.includes(item) ? 'bg-[#7605C1]' : 'border-[0.25px]'}`} key={index} onClick={() => id.includes(item) ? setId(id.filter(i => i !== item)) : setId([...id, item])} style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
               <p className='text-sm md:text-lg'>{item}</p>
             </div>
           ))}
@@ -72,12 +85,15 @@ const Contact1 = () => {
         />
         <button
           className='button-hover flex ml-auto items-center px-5 py-2 md:px-10 md:py-3 rounded-full cursor-pointer bg-[#7605C1] md:text-3xl '
+          type='submit'
         >
           Submit
         </button>
+        {success && <p className='text-green-500'>Form submitted successfully!</p>}
+        {error && <p className='text-red-500'>Form submission failed: {error}</p>}
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Contact1
+export default Contact1;

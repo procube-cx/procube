@@ -34,7 +34,7 @@ const data = {
             links: '.'
         },
         {
-            title: 'About\ Us',
+            title: 'About Us',
             links: 'about'
         },
         {

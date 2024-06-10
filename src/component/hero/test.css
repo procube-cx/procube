@@ -1,47 +1,47 @@
+.text {
+  color: rgba(242, 240, 240, 0.2);
+  background: linear-gradient(to right, #b6b6b6, #ffffff) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-size cubic-bezier(.1, .5, .5, 1) 0.5s;
+}
 
-    .text {
-        color: rgba(242, 240, 240, 0.2);
-        background: linear-gradient(to right, #b6b6b6, #ffffff) no-repeat;
-        -webkit-background-clip: text;
-        background-clip: text;
-        transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
-    }
+
+button {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .span-mother {
+  display: flex;
+  overflow: hidden;
+}
 
 
-    button {
-      cursor: pointer;
-      width: auto;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    button .span-mother {
-      display: flex;
-      overflow: hidden;
-    }
-    
-    
-    button:hover .span-mother span {
-      transform: translateY(-1.2em);
-    }
-  
-    
-    button .span-mother2 {
-      display: flex;
-      position: absolute;
-      overflow: hidden;
-    }
-    
-    button .span-mother2 span {
-      transform: translateY(1.2em);
-    }
-    
-    button:hover .span-mother2 span {
-      transform: translateY(0);
-    }
-    
+button:hover .span-mother span {
+  transform: translateY(-1.2em);
+}
 
-    
-    
+
+button .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+button .span-mother2 span {
+  transform: translateY(1.2em);
+}
+
+button:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+.span-mother,
+.span-mother2 {
+  white-space: pre-wrap;
+}
