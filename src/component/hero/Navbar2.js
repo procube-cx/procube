@@ -76,7 +76,7 @@ const data = {
         },
         {
             title: 'Dribbble',
-            links: 'https://dribbble.com/procube'
+            links: 'https://dribbble.com/procube/about?utm_source=Clipboard_%22clipboard_about%22&utm_campaign=%22procube%22&utm_content=%22About%20procube%22&utm_medium=Social_Share'
         },
         {
             title: 'Linkedin',
