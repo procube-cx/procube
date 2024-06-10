@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 
 const NextUp = ({ Heading }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const headingWithoutSpaces = Heading.split(' ')[0];;
     return (
         <div className='px-6 md:px-24 py-10 md:py-48 flex flex-col justify-center items-center'>
-            <a href={Heading}>
+            <a href={headingWithoutSpaces}>
             <p className='font-normal text-sm md:text-xl uppercase text-left opacity-60 py-3'>Next up</p>
                 <p
                     className='font-normal text-4xl md:text-7xl text-center uppercase cursor-pointer'
