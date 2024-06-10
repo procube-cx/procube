@@ -8,7 +8,7 @@ import Career2 from '../component/career/Career2';
 const Career = () => {
 
   React.useEffect(() => {
-    document.title = 'Careers'
+    document.title = 'Careers | Come Join Us'
   }, [])
 
   return (

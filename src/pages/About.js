@@ -14,7 +14,7 @@ function About() {
   const [loading,setLoading] = React.useState(false)
 
   React.useEffect(() => {
-    document.title = 'About Us'
+    document.title = 'About Us | Who we are'
     const interval = setInterval(()=>{
       setLoading(true)
     },2000)

@@ -9,7 +9,7 @@ import Project1 from '../component/project/Project1';
 const Projects = () => {
 
   React.useEffect(() => {
-    document.title = 'Projects'
+    document.title = 'Projects | Our Major Works'
   }
   , [])
   return (

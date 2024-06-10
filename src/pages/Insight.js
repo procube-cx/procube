@@ -9,7 +9,7 @@ import Insight1 from '../component/insight/Insight1';
 function Insight() {
 
     React.useEffect(() => {
-        document.title = 'Insights'
+        document.title = 'Insights | Blogs & Latest Trends'
     }, [])
 
     return (

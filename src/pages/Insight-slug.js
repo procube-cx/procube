@@ -9,6 +9,10 @@ import { blogdata } from '../data/blogdata';
 
 function InsightSlug() {
 
+    React.useEffect(() => {
+        document.title = {blogdata:blogdata}.blogdata[0].heading
+    }, [])
+
 
     return (
         <div className=' text-white bg-[#121212]' >

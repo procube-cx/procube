@@ -11,7 +11,7 @@ import Services2 from '../component/services/Services2';
 function Services() {
 
   React.useEffect(() => {
-    document.title = 'Services'
+    document.title = 'Services | Our Expertise'
   }, [])
 
 
