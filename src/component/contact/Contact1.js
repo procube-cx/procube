@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 const filter = ["DIGITAL STRATEGY", "DESIGNING", "DEVELOPMENT", "MARKETING"];
 
 const Contact1 = () => {
-  const [id, setId] = useState(['DEVELOPMENT']);
+  const [id, setId] = useState(['']);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
