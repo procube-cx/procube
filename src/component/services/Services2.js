@@ -37,7 +37,7 @@ const Card = ({ heading, index, tags }) => {
             className={`flex w-full py-3 md:py-5 cursor-pointer`}
             key={index}
         >
-            <div className='grid grid-cols-4 w-full gap-y-3 md:gap-y-8  bg-[#1A1A1A] md:py-16 px-5 py-5 md:px-24 rounded-xl'>
+            <div className='grid grid-cols-4 w-full gap-y-3 md:gap-y-8  bg-[#1A1A1A] md:py-16 pl-5 py-5 md:pl-[4.33vw] rounded-xl'>
                 <p className='col-span-4 md:col-span-1 font-normal text-2xl md:text-5xl my-0 md:my-auto mx-auto md:mx-0'>{heading}</p>
                 <div className='flex flex-row col-span-4 md:col-span-3 gap-x-2 md:gap-x-12 gap-y-2 md:gap-y-4 overflow-hidden justify-center md:justify-start'>
                     {tags.map((tag, index) => (
