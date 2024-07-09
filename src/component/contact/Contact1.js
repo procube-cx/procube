@@ -7,26 +7,29 @@ const filter = ["DIGITAL STRATEGY", "DESIGNING", "DEVELOPMENT", "MARKETING"];
 
 const Contact1 = () => {
   const [id, setId] = useState(['']);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [project, setProject] = useState('');
+  const [FirstName, setName] = useState('');
+  const [Email, setEmail] = useState('');
+  const [PhoneNumber, setPhone] = useState('');
+  const [Message, setProject] = useState('');
   const [suggestionTaken, setSuggestionTaken] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [Services, setServices] = useState('');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!name || !email || !phone || !project) {
+    if (!FirstName || !Email || !PhoneNumber || !Message) {
       setError('Please fill out all required fields');
+      setServices(id)
       return;
     }
     const formData = {
       id: id.join(', '),
-      name,
-      email,
-      phone,
-      project
+      FirstName,
+      Email,
+      PhoneNumber,
+      Message,
+      Services
     };
     console.log('Form Data:', formData);
 
@@ -63,7 +66,7 @@ const Contact1 = () => {
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-7 md:pb-12 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
             }`}
           placeholder='Name'
-          value={name}
+          value={FirstName}
           onChange={(e) => setName(e.target.value)}
           autoComplete={`no-${Math.random()}`}
         />
@@ -71,7 +74,7 @@ const Contact1 = () => {
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-7 md:pb-12 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
             }`}
           placeholder='Email'
-          value={email}
+          value={Email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete={`no-${Math.random()}`}
         />
@@ -79,7 +82,7 @@ const Contact1 = () => {
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-7 md:pb-12 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
             }`}
           placeholder='Phone Number'
-          value={phone}
+          value={PhoneNumber}
           onChange={(e) => setPhone(e.target.value)}
           autoComplete={`no-${Math.random()}`}
         />
@@ -87,7 +90,7 @@ const Contact1 = () => {
           className={`w-full bg-transparent border-b-[1px] border-white border-opacity-50 pb-20 md:pb-36 font-normal text-base md:text-3xl focus:!outline-none ${suggestionTaken ? 'bg-gray-200' : ''
             }`}
           placeholder='Tell Us About Your Project'
-          value={project}
+          value={Message}
           onChange={(e) => setProject(e.target.value)}
         />
         <button
