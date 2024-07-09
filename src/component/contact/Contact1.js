@@ -30,7 +30,7 @@ const Contact1 = () => {
     };
     console.log('Form Data:', formData);
 
-    emailjs.send('service_apq2h5q', 'template_89s3mo', formData, 'nHXBvpDegqpAmszG5')
+    emailjs.send('service_dqzou3d', 'template_ndyp3qv', formData, 'OSdguLHcc1wS19BTq')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess(true);
