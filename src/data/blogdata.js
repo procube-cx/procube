@@ -1,6 +1,9 @@
 import img1 from '../assets/images/Blogs/img1.webp';
 import img2 from '../assets/images/Blogs/img2.webp';
 import img3 from '../assets/images/Blogs/img3.webp';
+import img4 from '../assets/images/Blogs/img4.png'
+import img5 from '../assets/images/Blogs/img5.png'
+
 
 export const blogdata = [
     {
@@ -59,7 +62,7 @@ export const blogdata = [
                 type: "content"
             }
         ],
-        tags : [ "Visual Design", "Website Design", "Case Study"]
+        tags: ["Visual Design", "Website Design", "Case Study"]
     },
     {
         index: 1,
@@ -136,7 +139,7 @@ export const blogdata = [
                 type: "content"
             }
         ],
-        tags : [ "Visual Design", "Website Design", "Case Study"]
+        tags: ["Visual Design", "Website Design", "Case Study"]
     },
     {
         index: 2,
@@ -190,11 +193,40 @@ export const blogdata = [
             {
                 content: "Your journey to find the perfect tech founder and create a successful product company is a transformative adventure. With Procube Product Labs as your guiding light, you have access to the resources, expertise, and network needed to realize your vision. Don't let your dream product remain a dream ",
                 type: "ul",
-                ul : [
+                ul: [
                     "take the first step with Procube Product Labs and turn your product company into a thriving success story. Your path to innovation and strategic success begins here, and we're here to walk it with you. Join us in the pursuit of excellence and watch your vision come to life."
                 ]
             }
         ],
-        tags : ["Product Design", "Visual Design", "Website Design", "Case Study"]
+        tags: ["Product Design", "Visual Design", "Website Design", "Case Study"]
+    }, {
+        index: 3,
+        heading: "Custom ERP Solutions: A Comprehensive Guide to Tailored Enterprise Resource Planning",
+        icon: img4,
+        date: "July 12, 2024",
+        slug: "custom-erp-solutions-guide-tailored-enterprise-resource-planning",
+        content: [{
+            content: "Small and Medium-Sized Enterprises (SMEs) are the lifeblood of many economies. They drive innovation, create jobs, and foster a dynamic business environment. But keeping up with the demands of today's competitive market can be a challenge for SMEs. They often lack the resources of larger corporations, struggling with manual processes, data silos, and limited scalability. This is where Enterprise Resource Planning (ERP) systems come in. Traditionally used by large enterprises, ERP has evolved into a powerful tool that can transform SME operations and propel them towards long-term success.",
+            type: "content"
+        },{
+            content: "Overcoming the SME Challenge: A Patchwork of Inefficiencies",
+            type: "subheading"
+        },{
+            content: "Many SMEs rely on a patchwork of outdated systems, manual processes, and spreadsheets to manage their operations. This fragmented approach leads to a number of inefficiencies that hinder growth:",
+            type:"content"
+        },{
+            content: "",
+            type:"content"
+        }],
+        tags: []
+    },
+    {
+        index: 4,
+        heading: "ERP Systems: The Essential Tool to Scale SME Businesses",
+        icon: img5,
+        date: "July 20, 2024",
+        slug: "erp-systems-essential-tool-scale-sme-businesses",
+        content: [],
+        tags: []
     }
 ];
