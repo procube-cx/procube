@@ -121,7 +121,7 @@ const Insight1 = ({ Heading, filterShow }) => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "blog"]{
+        `*[_type == "blog"] | order(publishedAt desc){
                   title,
                   subtitle,
                   publishedAt,

@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 
-/procube-blogs/node_modules
 /procube-blogs/.sanity
+/procube-blogs/node_modules
 
 # testing
 /coverage
